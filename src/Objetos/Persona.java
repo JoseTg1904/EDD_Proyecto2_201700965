@@ -1,27 +1,30 @@
 package Objetos;
 
+import java.math.BigInteger;
+
 /**
  *
  * @author chepe
  */
 public class Persona {
-    private int dpi;
-    private String nombres, apellidos, genero, telefono, direccion;
+    private BigInteger dpi;
+    private String nombres, apellidos, genero, fechaNac, telefono, direccion;
     
-    public Persona(int dpi, String nombres, String apellidos, String genero, String telefono, String direccion){
+    public Persona(BigInteger dpi, String nombres, String apellidos, String genero, String fechaNac, String telefono, String direccion){
         this.dpi = dpi;
         this.nombres = nombres;
         this.apellidos = apellidos;
+        this.fechaNac = fechaNac;
         this.genero = genero;
         this.telefono = telefono;
         this.direccion = direccion;
     }
 
-    public int getDpi() {
+    public BigInteger getDpi() {
         return dpi;
     }
 
-    public void setDpi(int dpi) {
+    public void setDpi(BigInteger dpi) {
         this.dpi = dpi;
     }
 

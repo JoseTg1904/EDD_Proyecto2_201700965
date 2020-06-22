@@ -1,6 +1,7 @@
 package Estructuras;
 
 import Objetos.Conductor;
+import java.math.BigInteger;
 
 /**
  *
@@ -10,7 +11,7 @@ public class ListaDobleCircular {
     private NodoL cabeza, cola;
     private int tamanio;
 
-    public Conductor buscar(int llave){
+    public Conductor buscar(BigInteger llave){
         Conductor conductor = null;
         NodoL aux = this.cabeza;
         
@@ -25,7 +26,7 @@ public class ListaDobleCircular {
         return conductor;
     }
     
-    public boolean eliminar(int llave){
+    public boolean eliminar(BigInteger llave){
         boolean band = false;
         if(this.tamanio == 1){
             if(this.cabeza.getConductor().getDpi() == llave){
@@ -85,7 +86,7 @@ public class ListaDobleCircular {
     if(tam <= this.tamanio){
         NodoL aux = this.cabeza;
         do {
-            if(aux.getConductor().getDpi() > temp.getConductor().getDpi()){
+            if(aux.getConductor().getDpi().compareTo(temp.getConductor().getDpi()) == 1){
                 Conductor conductor = aux.getConductor();
                 aux.setConductor(temp.getConductor());
                 temp.setConductor(conductor);

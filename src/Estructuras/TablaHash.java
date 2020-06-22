@@ -1,6 +1,7 @@
 package Estructuras;
 
 import Objetos.Cliente;
+import java.math.BigInteger;
 
 /**
  *
@@ -17,21 +18,21 @@ public class TablaHash {
         this.ocupados = 0;
     }
     
-    public Cliente buscar(int llave){
+    public Cliente buscar(BigInteger llave){
         Cliente cliente = null;
         int posicion = this.funcionHash(llave);
         cliente = tabla[posicion].buscar(llave);
         return cliente;
     }
     
-    public boolean eliminar(int llave){
+    public boolean eliminar(BigInteger llave){
         boolean band = false;
         int posicion = this.funcionHash(llave);
         band = tabla[posicion].eliminar(llave);
         return band;
     }
     
-    public void insertar(Cliente cliente, int llave){
+    public void insertar(Cliente cliente, BigInteger llave){
         int posicion = this.funcionHash(llave); 
         
         if(this.ocupados <= ((int)(this.tamanio*0.75)) ){
@@ -46,7 +47,7 @@ public class TablaHash {
         }
     }
     
-    private void expansion(Cliente cliente, int llave){
+    private void expansion(Cliente cliente, BigInteger llave){
         Cola aux = new Cola();
         //sacando todos los elementos de la tabla para hacer la re insercion
         for(int i = 0;i<this.tamanio;i++){
@@ -60,7 +61,7 @@ public class TablaHash {
         }
        
         this.ocupados = 0;
-        this.tamanio = this.tamanio*2;
+        this.tamanio = this.tamanio + 37;
         
         //aumentar el doble a la tabla
         this.tabla = new Cola[this.tamanio];
@@ -75,7 +76,7 @@ public class TablaHash {
         }
     }
 
-    private int funcionHash(int llave){
-        return llave % this.tamanio;
+    private int funcionHash(BigInteger llave){
+        return llave.mod(BigInteger.valueOf(this.tamanio)).intValue();
     }
 }

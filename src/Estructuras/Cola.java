@@ -1,6 +1,7 @@
 package Estructuras;
 
 import Objetos.Cliente;
+import java.math.BigInteger;
 /**
  *
  * @author chepe
@@ -8,7 +9,7 @@ import Objetos.Cliente;
 public class Cola {
     private NodoC cabeza;
      
-    public Cliente buscar(int llave){
+    public Cliente buscar(BigInteger llave){
         
         Cliente cliente = null;
         NodoC aux = this.cabeza;
@@ -24,7 +25,7 @@ public class Cola {
         return cliente;
     }
     
-    public boolean eliminar(int llave){
+    public boolean eliminar(BigInteger llave){
         boolean band = false;
         
         if(this.cabeza.getCliente().getDpi() == llave){
