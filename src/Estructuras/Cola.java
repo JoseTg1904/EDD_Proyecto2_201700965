@@ -45,6 +45,7 @@ public class Cola {
                     aux1 = aux1.getSiguiente();
                 }
                 aux1.setSiguiente(aux.getSiguiente());
+                aux.setSiguiente(null);
             }
         }
         return band;
