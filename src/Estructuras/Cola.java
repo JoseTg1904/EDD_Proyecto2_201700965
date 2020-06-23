@@ -61,6 +61,24 @@ public class Cola {
         }
     }
     
+    public String grafoCola(int origen){
+        String dot = "";
+        String rank = "{rank = same; " + origen + "; ";
+        NodoC aux = this.cabeza;
+        while(aux!=null){
+            dot+= "\"" + aux.getCliente().getDpi() + "\" [label = \"Dpi: "+ aux.getCliente().getDpi() + 
+                    "\nNombre completo: "+ aux.getCliente().getNombres()+" "+aux.getCliente().getApellidos()  +"\"]\n";
+            rank += "\"" + aux.getCliente().getDpi() + "\"; ";
+            if(aux.getSiguiente() != null){
+                dot += "\"" + aux.getCliente().getDpi() + "\" -> \"" + aux.getSiguiente().getCliente().getDpi() + "\"\n";
+            }
+            aux = aux.getSiguiente();
+        }
+        rank += "}\n";
+        dot += rank;
+        return dot;
+    }
+    
     public Cola(){
         this.cabeza = null;
     }
