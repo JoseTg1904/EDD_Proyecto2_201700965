@@ -20,6 +20,14 @@ public class Persona {
         this.direccion = direccion;
     }
 
+    public String getFechaNac() {
+        return fechaNac;
+    }
+
+    public void setFechaNac(String fechaNac) {
+        this.fechaNac = fechaNac;
+    }
+    
     public BigInteger getDpi() {
         return dpi;
     }

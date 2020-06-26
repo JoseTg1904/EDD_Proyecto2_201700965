@@ -5,7 +5,9 @@
  */
 package Ventanas;
 
+import Estructuras.ArbolB;
 import Estructuras.ListaAdyacencia;
+import Estructuras.ListaDobleCircular;
 import Estructuras.TablaHash;
 import Objetos.VerticeGrafo;
 import java.io.BufferedReader;
@@ -144,19 +146,25 @@ public class Inicial extends javax.swing.JFrame {
     //estructuras
     public static ListaAdyacencia grafo = new ListaAdyacencia();
     public static TablaHash clientes = new TablaHash();
+    public static ArbolB vehiculos = new ArbolB();
+    public static ListaDobleCircular conductores = new ListaDobleCircular();
     
     
     private void cargaMasivaRutas(File archivoRutas) throws FileNotFoundException, IOException{
         FileReader lector = new FileReader(archivoRutas);
         BufferedReader almacenador = new BufferedReader(lector);
-        String linea;
-        String[] aux;
+        String linea, contenido = "";
+        String[] aux, aux1;
         while( (linea = almacenador.readLine()) != null ){
-            aux = linea.split("/");
-            grafo.insertarOrigen(new VerticeGrafo(aux[0]));
-            grafo.insertarOrigen(new VerticeGrafo(aux[1]));
-            int peso =  Integer.parseInt(aux[2].substring(0, aux[2].length()-1));
-            grafo.insertarAdyacente(new VerticeGrafo(aux[1], peso), aux[0]);
+            contenido += linea;
+        }
+        aux1 = contenido.split("%");
+        for(int i=0;i<aux1.length;i++){
+            aux = aux1[i].split("/");
+            grafo.insertarOrigen(new VerticeGrafo(aux[0].trim()));
+            grafo.insertarOrigen(new VerticeGrafo(aux[1].trim()));
+            int peso =  Integer.parseInt(aux[2].trim());
+            grafo.insertarAdyacente(new VerticeGrafo(aux[1].trim(), peso), aux[0].trim());
         }
         JOptionPane.showMessageDialog(this,"Se han cargado las rutas exitosamente!\nYa puede continuar con la ejecucion del programa");
         this.jButton2.setEnabled(true);

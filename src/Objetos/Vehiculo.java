@@ -1,17 +1,17 @@
-package Objetos;
+    package Objetos;
 
 /**
  *
  * @author chepe
  */
 public class Vehiculo {
-    private String placa, marca, modelo, año, color, precio, transmision;
+    private String placa, marca, modelo, anio, color, precio, transmision;
 
-    public Vehiculo(String placa, String marca, String modelo, String año, String color, String precio, String transmision) {
+    public Vehiculo(String placa, String marca, String modelo, String anio, String color, String precio, String transmision) {
         this.placa = placa;
         this.marca = marca;
         this.modelo = modelo;
-        this.año = año;
+        this.anio = anio;
         this.color = color;
         this.precio = precio;
         this.transmision = transmision;
@@ -41,12 +41,12 @@ public class Vehiculo {
         this.modelo = modelo;
     }
 
-    public String getAño() {
-        return año;
+    public String getAnio() {
+        return anio;
     }
 
-    public void setAño(String año) {
-        this.año = año;
+    public void setAnio(String anio) {
+        this.anio = anio;
     }
 
     public String getColor() {

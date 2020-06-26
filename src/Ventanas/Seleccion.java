@@ -44,8 +44,18 @@ public class Seleccion extends javax.swing.JFrame {
         });
 
         jButton2.setText("Vehiculos");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Conductores");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("Viajes");
 
@@ -94,9 +104,24 @@ public class Seleccion extends javax.swing.JFrame {
 
     private void clienteBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clienteBActionPerformed
         ClienteV clienteV = new ClienteV();
+        clienteV.listadoDPI();
         clienteV.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_clienteBActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        VehiculoV vehiculoV = new VehiculoV();
+        vehiculoV.listadoPlacas();
+        vehiculoV.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        ConductoresV conductoresV = new ConductoresV();
+        conductoresV.listadoDPI();
+        conductoresV.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments

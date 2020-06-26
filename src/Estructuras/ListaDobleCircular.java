@@ -2,6 +2,7 @@ package Estructuras;
 
 import Objetos.Conductor;
 import java.math.BigInteger;
+import java.util.ArrayList;
 
 /**
  *
@@ -10,13 +11,40 @@ import java.math.BigInteger;
 public class ListaDobleCircular {
     private NodoL cabeza, cola;
     private int tamanio;
-
+    
+    public ArrayList<String> listadoDPI(){
+        ArrayList<String> listado = new ArrayList<>();
+        NodoL aux = this.cabeza;
+        do {            
+            listado.add(aux.getConductor().getDpi().toString());
+            aux = aux.getSiguiente();
+        } while (aux != this.cabeza);
+        return listado;
+    }
+    
+    public String grafoListaDobleCircular(){
+        String dot = "digraph ListaDobleCircular{\n";
+        NodoL aux = this.cabeza;
+        do {            
+            dot += "\""+aux.getConductor().getDpi()+"\" [label = \"Dpi: "+aux.getConductor().getDpi()+"\nNombre completo: "+aux.getConductor().getNombres()+" "+
+                    aux.getConductor().getApellidos()+"\"]\n";
+            dot += "\""+aux.getConductor().getDpi()+"\" -> \""+aux.getSiguiente().getConductor().getDpi()+"\"\n";
+            aux = aux.getSiguiente();
+        } while (aux != this.cabeza);
+        aux = this.cabeza;
+        do {            
+            dot += "\""+aux.getConductor().getDpi() + "\" -> \""+aux.getAnterior().getConductor().getDpi()+"\"\n";
+            aux = aux.getAnterior();
+        } while (aux != this.cabeza);
+        return dot;
+    }
+    
     public Conductor buscar(BigInteger llave){
         Conductor conductor = null;
         NodoL aux = this.cabeza;
         
         do {            
-            if(aux.getConductor().getDpi() == llave){
+            if(aux.getConductor().getDpi().compareTo(llave) == 0){
                 conductor = aux.getConductor();
                 break;
             }
@@ -26,10 +54,12 @@ public class ListaDobleCircular {
         return conductor;
     }
     
+    
+    
     public boolean eliminar(BigInteger llave){
         boolean band = false;
         if(this.tamanio == 1){
-            if(this.cabeza.getConductor().getDpi() == llave){
+            if(this.cabeza.getConductor().getDpi().compareTo(llave) == 0){
                 this.cabeza = this.cola = null;
                 this.tamanio--;
                 band = true;
@@ -37,7 +67,7 @@ public class ListaDobleCircular {
         }else{
             NodoL aux = this.cabeza;
             do {                
-                if(aux.getConductor().getDpi() == llave){
+                if(aux.getConductor().getDpi().compareTo(llave) == 0){
                     band = true;
                     this.tamanio--;
                     break;

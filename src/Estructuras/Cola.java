@@ -2,20 +2,30 @@ package Estructuras;
 
 import Objetos.Cliente;
 import java.math.BigInteger;
+import java.util.ArrayList;
 /**
  *
  * @author chepe
  */
 public class Cola {
+    
     private NodoC cabeza;
      
+    public void agregarDPI(ArrayList<String> listado){
+        NodoC aux = this.cabeza;
+        while(aux != null){
+            listado.add(aux.getCliente().getDpi().toString());
+            aux = aux.getSiguiente();
+        }
+    }
+    
     public Cliente buscar(BigInteger llave){
         
         Cliente cliente = null;
         NodoC aux = this.cabeza;
         
         while(aux != null){
-            if(aux.getCliente().getDpi() == llave){
+            if(aux.getCliente().getDpi().compareTo(llave) == 0){
                 cliente = aux.getCliente();
                 break;
             }
@@ -27,14 +37,13 @@ public class Cola {
     
     public boolean eliminar(BigInteger llave){
         boolean band = false;
-        
-        if(this.cabeza.getCliente().getDpi() == llave){
+        if(this.cabeza.getCliente().getDpi().compareTo(llave) == 0){
             this.cabeza = this.cabeza.getSiguiente();
             band = true;
         }else{
             NodoC aux = this.cabeza, aux1 = this.cabeza;
-            while(aux!=null){
-                if(aux.getCliente().getDpi() == llave){
+            while(aux != null){
+                if(aux.getCliente().getDpi().compareTo(llave) == 0){
                     band = true;
                     break;
                 }

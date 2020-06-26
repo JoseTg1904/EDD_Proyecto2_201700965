@@ -2,6 +2,7 @@ package Estructuras;
 
 import Objetos.Cliente;
 import java.math.BigInteger;
+import java.util.ArrayList;
 
 /**
  *
@@ -27,7 +28,8 @@ public class TablaHash {
     
     public boolean eliminar(BigInteger llave){
         boolean band = false;
-        int posicion = this.funcionHash(llave);
+        int posicion = this.funcionHash(llave); 
+        System.out.print(posicion);
         band = tabla[posicion].eliminar(llave);
         return band;
     }
@@ -98,7 +100,17 @@ public class TablaHash {
         
         return dot;
     }
-
+    
+    public ArrayList<String> listadoDPI(){
+        ArrayList<String> listado = new ArrayList<String>();
+        for(int i = 0;i < this.tamanio; i++){
+            if(this.tabla[i] !=null){
+                this.tabla[i].agregarDPI(listado);
+            }    
+        }
+        return listado;
+    }
+    
     private int funcionHash(BigInteger llave){
         return llave.mod(BigInteger.valueOf(this.tamanio)).intValue();
     }
