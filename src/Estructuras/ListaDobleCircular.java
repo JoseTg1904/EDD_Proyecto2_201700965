@@ -15,10 +15,12 @@ public class ListaDobleCircular {
     public ArrayList<String> listadoDPI(){
         ArrayList<String> listado = new ArrayList<>();
         NodoL aux = this.cabeza;
-        do {            
-            listado.add(aux.getConductor().getDpi().toString());
-            aux = aux.getSiguiente();
-        } while (aux != this.cabeza);
+        if(this.cabeza != null){ 
+            do {            
+                listado.add(aux.getConductor().getDpi().toString());
+                aux = aux.getSiguiente();
+            } while (aux != this.cabeza);
+        }
         return listado;
     }
     

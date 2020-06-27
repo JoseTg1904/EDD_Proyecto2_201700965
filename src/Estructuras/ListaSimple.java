@@ -1,5 +1,7 @@
 package Estructuras;
 
+import Objetos.VerticeGrafo;
+
 /**
  *
  * @author chepe
@@ -19,19 +21,103 @@ public class ListaSimple {
         }
     }
     
+    public String grafoListaSimple(){
+        String dot = "digraph ListaSimple{\n";
+        NodoLS aux = this.cabeza;
+        while(aux != null){
+            dot += "\""+aux+"\" [label = \"Lugar: "+aux.getVerticeGrafo().getNombre()+"\nDistancia recorrida: "+aux.getVerticeGrafo().getPeso()+"\"]\n";
+            dot += "\""+aux+"\" -> \""+aux.getSiguiente()+"\"\n";
+            aux = aux.getSiguiente();
+        }
+        dot += "}";
+        return dot;
+    }
+    
+    
+    public void recorrer(){
+        NodoLS aux = this.cabeza;
+        System.out.println("recorrido:");
+        while(aux != null){
+            System.out.println("Lugar: "+aux.getVerticeGrafo().getNombre()+" Peso: "+aux.getVerticeGrafo().getPeso());
+            aux = aux.getSiguiente();
+        } 
+    }
+    
+    public boolean estaVacia(){
+        if(this.cabeza == null){
+            return true;
+        }
+        return false;
+    }
+    
+    public VerticeGrafo obtenerCabeza(){
+        VerticeGrafo vertice = null;
+        if(this.cabeza != null){
+            vertice = this.cabeza.getVerticeGrafo();
+            this.cabeza = this.cabeza.getSiguiente();
+        }
+        return vertice;
+    }
+    
+    public void insertar(VerticeGrafo verticeGrafo){
+        if(cabeza == null){
+            cola = cabeza = new NodoLS(verticeGrafo);
+        }else{
+            NodoLS nuevo = new NodoLS(verticeGrafo);
+            cola.setSiguiente(nuevo);
+            cola = nuevo;
+        }
+    }
+    
+    public void ordenarAscendente(){
+        this.ordenarAscendente(this.cabeza);
+    }
+    
+    private void ordenarAscendente(NodoLS aux){
+        if(aux != null){
+            NodoLS temp = this.cabeza;
+            while(temp != null){
+                if(temp.getVerticeGrafo().getPeso() > aux.getVerticeGrafo().getPeso()){
+                    VerticeGrafo vertice = temp.getVerticeGrafo();
+                    temp.setVerticeGrafo(aux.getVerticeGrafo());
+                    aux.setVerticeGrafo(vertice);
+                }
+                temp = temp.getSiguiente();
+            }
+            this.ordenarAscendente(aux.getSiguiente());
+        }
+    } 
+    
     public ListaSimple() {
         this.cabeza = null;
     }
     
+    public NodoLS getCabeza(){
+        return this.cabeza;
+    }
 }
 
 class NodoLS{
     private NodoLS siguiente;
+    private VerticeGrafo verticeGrafo;
     private String ruta;
     
     public  NodoLS(String ruta){
         this.siguiente = null;
         this.ruta = ruta;
+    }
+    
+    public  NodoLS(VerticeGrafo verticeGrafo){
+        this.siguiente = null;
+        this.verticeGrafo = verticeGrafo;
+    }
+
+    public VerticeGrafo getVerticeGrafo() {
+        return verticeGrafo;
+    }
+
+    public void setVerticeGrafo(VerticeGrafo verticeGrafo) {
+        this.verticeGrafo = verticeGrafo;
     }
 
     public NodoLS getSiguiente() {

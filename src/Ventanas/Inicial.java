@@ -168,6 +168,7 @@ public class Inicial extends javax.swing.JFrame {
         }
         JOptionPane.showMessageDialog(this,"Se han cargado las rutas exitosamente!\nYa puede continuar con la ejecucion del programa");
         this.jButton2.setEnabled(true);
+        grafo.generarRuta("A","F");
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

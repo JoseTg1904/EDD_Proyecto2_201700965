@@ -77,15 +77,15 @@ public class ConductoresV extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jComboBox4 = new javax.swing.JComboBox<>();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        direccionMod = new javax.swing.JTextField();
+        telefonoMod = new javax.swing.JTextField();
+        generoMod = new javax.swing.JComboBox<>();
+        licenciaMod = new javax.swing.JComboBox<>();
+        apellidoMod = new javax.swing.JTextField();
+        nombreMod = new javax.swing.JTextField();
         jButton6 = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        fechaMod = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -150,12 +150,11 @@ public class ConductoresV extends javax.swing.JFrame {
                         .addComponent(jLabel8))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(121, 121, 121)
-                        .addComponent(comboEli, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(comboEli, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(162, 162, 162)
+                        .addComponent(jButton3)))
                 .addContainerGap(120, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton3)
-                .addGap(148, 148, 148))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -164,9 +163,9 @@ public class ConductoresV extends javax.swing.JFrame {
                 .addComponent(jLabel8)
                 .addGap(37, 37, 37)
                 .addComponent(comboEli, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
+                .addGap(39, 39, 39)
                 .addComponent(jButton3)
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addContainerGap(131, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Eliminar", jPanel3);
@@ -276,6 +275,11 @@ public class ConductoresV extends javax.swing.JFrame {
         comboMod.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jButton4.setText("Buscar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jLabel10.setText("Nombre");
 
@@ -289,23 +293,18 @@ public class ConductoresV extends javax.swing.JFrame {
 
         jLabel15.setText("Direccion");
 
-        jTextField1.setText("jTextField1");
+        generoMod.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Femenino" }));
 
-        jTextField2.setText("jTextField2");
-
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jTextField3.setText("jTextField3");
-
-        jTextField4.setText("jTextField4");
+        licenciaMod.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A", "B", "C" }));
 
         jButton6.setText("Modificar");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         jLabel17.setText("Fecha de Nac");
-
-        jTextField5.setText("jTextField5");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -337,13 +336,13 @@ public class ConductoresV extends javax.swing.JFrame {
                                 .addComponent(jLabel12)))
                         .addGap(62, 62, 62)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
-                            .addComponent(jTextField2)
-                            .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jComboBox4, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTextField3)
-                            .addComponent(jTextField4)
-                            .addComponent(jTextField5)))
+                            .addComponent(direccionMod)
+                            .addComponent(telefonoMod)
+                            .addComponent(generoMod, 0, 140, Short.MAX_VALUE)
+                            .addComponent(licenciaMod, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(apellidoMod)
+                            .addComponent(nombreMod)
+                            .addComponent(fechaMod)))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(173, 173, 173)
                         .addComponent(jButton6)))
@@ -360,31 +359,31 @@ public class ConductoresV extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nombreMod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(apellidoMod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel12)
-                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(licenciaMod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel13)
-                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(generoMod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel17)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fechaMod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel14)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(telefonoMod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel15)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(direccionMod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jButton6)
                 .addContainerGap(7, Short.MAX_VALUE))
@@ -442,6 +441,14 @@ public class ConductoresV extends javax.swing.JFrame {
         eliminarConductor();
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        buscarConductor();
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+       modificarConductor();
+    }//GEN-LAST:event_jButton6ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -475,6 +482,52 @@ public class ConductoresV extends javax.swing.JFrame {
                 new ConductoresV().setVisible(true);
             }
         });
+    }
+    
+    private void modificarConductor(){
+        if(conductor != null){
+            if(nombreMod.getText().length() > 0){
+                conductor.setNombres(nombreMod.getText().trim());
+            }
+            if(apellidoMod.getText().length() > 0){
+                conductor.setApellidos(apellidoMod.getText().trim());
+            }
+            conductor.setLicencia((String)licenciaMod.getSelectedItem());
+            conductor.setGenero((String)generoMod.getSelectedItem());
+            if(fechaMod.getText().length() > 0){
+                conductor.setFechaNac(fechaMod.getText().trim());
+            }
+            if(telefonoCre.getText().length() > 0){
+                conductor.setTelefono(telefonoMod.getText().trim());
+            }
+            if(direccionMod.getText().length() > 0){
+                conductor.setDireccion(direccionMod.getText().trim());
+            }
+        }else{
+            JOptionPane.showMessageDialog(this, "Debe de seleccionar un conductor para poder modificar sus datos!");
+        }
+    }
+    
+    Conductor conductor;
+    
+    private void buscarConductor(){
+        conductor = Inicial.conductores.buscar(new BigInteger((String)comboMod.getSelectedItem()));
+        if(conductor != null){
+            JOptionPane.showMessageDialog(this, "Ya se pueden modificar los datos del conductor");
+            nombreMod.setText(conductor.getNombres());
+            apellidoMod.setText(conductor.getApellidos());
+            licenciaMod.setSelectedItem(conductor.getLicencia().toUpperCase());
+            if(conductor.getGenero().toLowerCase() == "masculino"){
+                generoMod.setSelectedIndex(0);
+            }else{
+                generoMod.setSelectedIndex(1);
+            }
+            fechaMod.setText(conductor.getFechaNac());
+            telefonoMod.setText(conductor.getTelefono());
+            direccionMod.setText(conductor.getDireccion());
+        }else{
+            JOptionPane.showMessageDialog(this,"El DPI ingresado no se encuentra en el sistema!");
+        }
     }
     
     private void eliminarConductor(){
@@ -526,20 +579,22 @@ public class ConductoresV extends javax.swing.JFrame {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField apellidoCre;
+    private javax.swing.JTextField apellidoMod;
     private javax.swing.JComboBox<String> comboEli;
     private javax.swing.JComboBox<String> comboMod;
     private javax.swing.JTextField direccionCre;
+    private javax.swing.JTextField direccionMod;
     private javax.swing.JTextField dpiCre;
     private javax.swing.JTextField fechaCre;
+    private javax.swing.JTextField fechaMod;
     private javax.swing.JComboBox<String> generoCre;
+    private javax.swing.JComboBox<String> generoMod;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -562,13 +617,11 @@ public class ConductoresV extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
     private javax.swing.JComboBox<String> licenciaCre;
+    private javax.swing.JComboBox<String> licenciaMod;
     private javax.swing.JTextField nombreCre;
+    private javax.swing.JTextField nombreMod;
     private javax.swing.JTextField telefonoCre;
+    private javax.swing.JTextField telefonoMod;
     // End of variables declaration//GEN-END:variables
 }

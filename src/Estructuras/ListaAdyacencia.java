@@ -10,6 +10,64 @@ public class ListaAdyacencia {
     
     private NodoLA cabeza;
 
+    private VerticeGrafo obtenerRutaCorta(String origen, String destino){
+        String[] ruta;
+        VerticeGrafo temp = null;
+        ListaSimple actual = new ListaSimple(), aux;
+        actual.insertar(new VerticeGrafo(origen, 0));
+        while(actual.estaVacia() == false){
+            temp = actual.obtenerCabeza();
+            ruta = temp.getNombre().split("%");
+            if(ruta[ruta.length-1].equals(destino)){
+                break;
+            }
+            aux = obtenerSucesores(ruta[ruta.length-1]);
+            NodoLS aux1 = aux.getCabeza();
+            while(aux1 != null){
+                actual.insertar(new VerticeGrafo(temp.getNombre()+"%"+aux1.getVerticeGrafo().getNombre(),
+                        temp.getPeso()+aux1.getVerticeGrafo().getPeso()));
+                aux1 = aux1.getSiguiente();
+            }
+            actual.ordenarAscendente();
+        }
+        return temp;
+    }
+    
+    public ListaSimple generarRuta(String origen, String destino){
+        ListaSimple ruta = new ListaSimple();
+        VerticeGrafo vertice = this.obtenerRutaCorta(origen, destino), aux;
+        System.out.println(vertice.getNombre());
+        String[] temp = vertice.getNombre().split("%");
+        int peso = 0;
+        if(temp[temp.length-1].equals(destino)){
+            ruta.insertar(new VerticeGrafo(temp[0],0));
+            for(int i = 1; i < temp.length;i++){                
+                aux = this.devolverAdyacente(temp[i-1], temp[i]);
+                peso += aux.getPeso();
+                ruta.insertar(new VerticeGrafo(aux.getNombre(), peso));
+            }
+            ruta.recorrer();
+        }
+        return ruta;
+    }
+    
+    private ListaSimple obtenerSucesores(String origen){
+        NodoLA aux = this.cabeza, aux1 = null;
+        ListaSimple retorno = new ListaSimple();
+        while(aux != null){
+            if(aux.getVerticeGrafo().getNombre().equals(origen)){
+                aux1 = aux.getAdyacente();
+                while(aux1 != null){
+                    retorno.insertar(aux1.getVerticeGrafo());
+                    aux1 = aux1.getAdyacente();
+                }
+                break;
+            }
+            aux = aux.getSiguiente();
+        }
+        return retorno;
+    }
+    
     public void insertarOrigen(VerticeGrafo verticeGrafo){
         if(cabeza == null){
             cabeza = new NodoLA(verticeGrafo);
@@ -19,6 +77,20 @@ public class ListaAdyacencia {
                 cabeza = nuevo;
             }
         }
+    }
+    
+    private VerticeGrafo devolverAdyacente(String llave, String llave2){
+        VerticeGrafo vertice = null;
+        NodoLA origen = devolverOrigen(llave);
+        origen = origen.getAdyacente();
+        while(origen != null){
+            if(origen.getVerticeGrafo().getNombre().equals(llave2)){
+                vertice = origen.getVerticeGrafo();
+                break;
+            }
+            origen = origen.getAdyacente();
+        } 
+        return vertice;
     }
     
     public void insertarAdyacente(VerticeGrafo verticeGrafo, String llave){
