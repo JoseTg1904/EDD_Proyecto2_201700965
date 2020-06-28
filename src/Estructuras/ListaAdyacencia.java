@@ -163,7 +163,7 @@ public class ListaAdyacencia {
     }
     
     public String grafo(){
-        String dot = "digraph ListaAdyacencia{\n node[shape = circle] \n";
+        String dot = "subgraph cluster_grafo{\nlabel=\"grafo\"\nstyle=filled\ncolor=paleturquoise\n";
         NodoLA aux = this.cabeza, auxAdyacente;
         while(aux != null){
             if(aux.getAdyacente() != null){

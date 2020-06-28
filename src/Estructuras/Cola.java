@@ -88,7 +88,7 @@ public class Cola {
         String rank = "{rank = same; " + origen + "; ";
         NodoC aux = this.cabeza;
         while(aux!=null){
-            dot+= "\"" + aux.getCliente().getDpi() + "\" [label = \"Dpi: "+ aux.getCliente().getDpi() + 
+            dot+= "\"" + aux.getCliente().getDpi() + "\" [shape = box label = \"Dpi: "+ aux.getCliente().getDpi() + 
                     "\nNombre completo: "+ aux.getCliente().getNombres()+" "+aux.getCliente().getApellidos()  +"\"]\n";
             rank += "\"" + aux.getCliente().getDpi() + "\"; ";
             if(aux.getSiguiente() != null){

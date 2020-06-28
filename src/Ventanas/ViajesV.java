@@ -5,7 +5,12 @@
  */
 package Ventanas;
 
+import Estructuras.ListaSimple;
+import Objetos.Viaje;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -65,6 +70,11 @@ public class ViajesV extends javax.swing.JFrame {
         comboVehiculos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jButton1.setText("Solicitar viaje");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Regresar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -141,6 +151,14 @@ public class ViajesV extends javax.swing.JFrame {
        this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        try {
+            crearViaje();
+        } catch (NoSuchAlgorithmException ex) {
+            Logger.getLogger(ViajesV.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -176,8 +194,12 @@ public class ViajesV extends javax.swing.JFrame {
         });
     }
     
-    private void crearViaje(){
-        
+    private void crearViaje() throws NoSuchAlgorithmException{
+        //lista con la ruta minima
+        ListaSimple ruta = Inicial.grafo.generarRuta((String)comboOrigen.getSelectedItem(), (String)comboDestino.getSelectedItem());
+        Inicial.blockChain.insertarBlockChain((String)comboConductores.getSelectedItem(),(String)comboClientes.getSelectedItem(), 
+                (String)comboVehiculos.getSelectedItem(), ruta,new Viaje((String)comboOrigen.getSelectedItem(), (String)comboDestino.getSelectedItem(),"a"));
+        System.out.println(Inicial.blockChain.grafoBlockChain());
     }
     
 

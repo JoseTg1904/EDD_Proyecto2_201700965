@@ -53,9 +53,36 @@ public class ListaDobleCircular {
     }
     
     public String grafoBlockChain(){
+        int it = 0;
         String dot = "digraph BlockChain{\n";
+        //apuntar con el dpi
+        dot += Inicial.clientes.grafoParcial();
+        //apuntar con el dpi
+        dot += Inicial.conductores.grafoParcial();
+        //apuntar con direccion de memoria y placa "direccion:placa"
+        dot += Inicial.vehiculos.grafoParcial();
         
-        
+        dot += "subgraph cluster_block{label=\"Block chain\"style=filled\ncolor=palegreen"; 
+        NodoL aux = this.cabeza;
+        do {            
+            dot += "\""+aux+"\" [label = \"Llave: "+aux.getLlave()+"\"]\n";
+            dot += "\""+aux+"\" -> \""+aux.getSiguiente()+"\"\n";
+            dot += "\""+aux+"\" -> \""+aux.getApuntadorCliente().getCliente().getDpi()+"\"\n";
+            dot += "\""+aux+"\" -> \""+aux.getApuntadorConductor().getConductor().getDpi()+"\"\n";
+            dot += "\""+aux+"\" -> \""+aux.getApuntadorVehiculo()+"\"\n";
+            dot += "\""+aux+"\" -> \""+aux.getApuntadorRuta().getCabeza()+"\"\n";
+            dot += aux.getApuntadorRuta().grafoParcial(it);
+            it++;
+            aux = aux.getSiguiente();
+        } while (aux != this.cabeza);
+        aux = this.cabeza;
+        do {            
+            dot += "\""+aux + "\" -> \""+aux.getAnterior()+"\"\n";
+            aux = aux.getAnterior();
+        } while (aux != this.cabeza);
+        dot += "}\n";
+        dot += Inicial.grafo.grafo();
+        dot += "}";
         return dot;
     }
     
@@ -73,6 +100,25 @@ public class ListaDobleCircular {
             dot += "\""+aux.getConductor().getDpi() + "\" -> \""+aux.getAnterior().getConductor().getDpi()+"\"\n";
             aux = aux.getAnterior();
         } while (aux != this.cabeza);
+        dot += "}";
+        return dot;
+    }
+    
+    public String grafoParcial(){
+        String dot = "subgraph cluster_doble{\nstyle=filled\nlabel=\"Lista Doble Circular\"\nColor=aquamarine\n";
+        NodoL aux = this.cabeza;
+        do {            
+            dot += "\""+aux.getConductor().getDpi()+"\" [label = \"Dpi: "+aux.getConductor().getDpi()+"\nNombre completo: "+aux.getConductor().getNombres()+" "+
+                    aux.getConductor().getApellidos()+"\"]\n";
+            dot += "\""+aux.getConductor().getDpi()+"\" -> \""+aux.getSiguiente().getConductor().getDpi()+"\"\n";
+            aux = aux.getSiguiente();
+        } while (aux != this.cabeza);
+        aux = this.cabeza;
+        do {            
+            dot += "\""+aux.getConductor().getDpi() + "\" -> \""+aux.getAnterior().getConductor().getDpi()+"\"\n";
+            aux = aux.getAnterior();
+        } while (aux != this.cabeza);
+        dot += "}\n";
         return dot;
     }
     

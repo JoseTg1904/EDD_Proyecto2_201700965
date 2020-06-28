@@ -21,12 +21,14 @@ public class ListaSimple {
         }
     }
     
-    public String grafoListaSimple(){
-        String dot = "digraph ListaSimple{\n";
+    public String grafoParcial(int it){
+        String dot = "subgraph cluster_"+it+"{\ncolor=lightpink\nstyle=filled\nlabel=\"Lista simple\"";
         NodoLS aux = this.cabeza;
         while(aux != null){
             dot += "\""+aux+"\" [label = \"Lugar: "+aux.getVerticeGrafo().getNombre()+"\nDistancia recorrida: "+aux.getVerticeGrafo().getPeso()+"\"]\n";
+            if(aux.getSiguiente()!=null){
             dot += "\""+aux+"\" -> \""+aux.getSiguiente()+"\"\n";
+            }
             aux = aux.getSiguiente();
         }
         dot += "}";

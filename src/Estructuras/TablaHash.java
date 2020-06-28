@@ -87,9 +87,7 @@ public class TablaHash {
     
     public String grafoHash(){
         String dot = "digraph TablaHash{\n node[shape = box]\n";
-        String rank;
         int itOrigen = 0;
-        boolean primero = true;
         while(itOrigen < this.tamanio){
             dot += itOrigen + " [ label = \"Origen: " + itOrigen + "\" ]\n";
             if(tabla[itOrigen] != null){
@@ -102,8 +100,24 @@ public class TablaHash {
             itOrigen++;
         }
         dot += "}";
-        
-        
+        return dot;
+    }
+    
+    public String grafoParcial(){
+        String dot = "subgraph cluster_hash{\nstyle = filled\ncolor=aliceblue\nlabel=\"Tabla Hash\"\n";
+        int itOrigen = 0;
+        while(itOrigen < this.tamanio){
+            dot += itOrigen + " [ shape = box label = \"Origen: " + itOrigen + "\" ]\n";
+            if(tabla[itOrigen] != null){
+                dot += itOrigen + " -> \"" + tabla[itOrigen].getCabeza().getCliente().getDpi() + "\"\n";
+                dot += tabla[itOrigen].grafoCola(itOrigen);
+            } 
+            if( (itOrigen+1)<this.tamanio ){
+                dot += itOrigen + " -> " + (itOrigen+1)+"\n";
+            }
+            itOrigen++;
+        }
+        dot += "}\n";
         return dot;
     }
     

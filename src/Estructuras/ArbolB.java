@@ -42,16 +42,16 @@ public class ArbolB {
     }
     
     public Vehiculo retornarVehiculo(String llave, int tipo){
-        vehiculo = null;
-        band = false;
+        this.vehiculo = null;
+        this.band = false;
         this.buscar(this.raiz, llave);
         return vehiculo;
     }
     
     public NodoAB retornarNodo(String llave){
-        retorno = null;
-        band = false;
-        this.buscar(raiz, llave);
+        this.retorno = null;
+        this.band = false;
+        this.buscarNodo(raiz, llave);
         return retorno;
     }
     
@@ -59,8 +59,8 @@ public class ArbolB {
         for(int i = 0; i < actual.getVehiculos().length; i++){
             if(actual.getVehiculos()[i] != null){
                if(actual.getVehiculos()[i].equals(llave));
-                    band = true;
-                    vehiculo = actual.getVehiculos()[i];
+                    this.band = true;
+                    this.vehiculo = actual.getVehiculos()[i];
             }
         }
         
@@ -77,8 +77,8 @@ public class ArbolB {
         for(int i = 0; i < actual.getVehiculos().length; i++){
             if(actual.getVehiculos()[i] != null){
                if(actual.getVehiculos()[i].equals(llave));
-                    band = true;
-                    retorno = actual;
+                    this.band = true;
+                    this.retorno = actual;
             }
         }
         
@@ -139,6 +139,13 @@ public class ArbolB {
         }
     }
     
+    public String grafoParcial(){
+        dot = "subgraph cluster_arbolB{\nstyle=filled\nlabel=\"Arbol B\"\ncolor=beige\n";
+        this.grafoArbolB(this.raiz);
+        dot += "}\n";
+        return dot;
+    }
+    
     public String devolverGrafo(){
         dot = "digraph ArbolB{\nnode[shape=record]\n";
         this.grafoArbolB(this.raiz);
@@ -147,12 +154,18 @@ public class ArbolB {
     }
     
     private void grafoArbolB(NodoAB aux){
-        dot += "\""+aux+"\" [label = \"";
+        dot += "\""+aux+"\" [shape = record label = \"";
         
         for(int i = 0; i < aux.getVehiculos().length; i++){
             if(aux.getVehiculos()[i] != null){
-            dot += "<"+aux.getVehiculos()[i].getPlaca()+">Placa: "+aux.getVehiculos()[i].getPlaca()+"\nMarca: "+aux.getVehiculos()[i].getMarca()+
-                    "\nModelo: "+aux.getVehiculos()[i].getModelo()+"|";
+                if(i == aux.getVehiculos().length-1){
+                    dot += "<"+aux.getVehiculos()[i].getPlaca()+">Placa: "+aux.getVehiculos()[i].getPlaca()+"\n Marca: "+aux.getVehiculos()[i].getMarca()+
+                    "\n Modelo: "+aux.getVehiculos()[i].getModelo();
+                }else{
+                    dot += "<"+aux.getVehiculos()[i].getPlaca()+">Placa: "+aux.getVehiculos()[i].getPlaca()+"\n Marca: "+aux.getVehiculos()[i].getMarca()+
+                    "\n Modelo: "+aux.getVehiculos()[i].getModelo()+"|";
+                }
+            
             }
             
         }
