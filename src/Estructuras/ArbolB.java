@@ -12,6 +12,7 @@ public class ArbolB {
     private String dot;
     private ArrayList<String> placas;
     private Vehiculo vehiculo;
+    private NodoAB retorno;
     private boolean band;
     
     public ArbolB(){
@@ -43,12 +44,15 @@ public class ArbolB {
     public Vehiculo retornarVehiculo(String llave, int tipo){
         vehiculo = null;
         band = false;
-        if(tipo == 0){
-            this.buscar(this.raiz, llave);
-        }else{
-            //metodo para retornar el nodo completo
-        }
+        this.buscar(this.raiz, llave);
         return vehiculo;
+    }
+    
+    public NodoAB retornarNodo(String llave){
+        retorno = null;
+        band = false;
+        this.buscar(raiz, llave);
+        return retorno;
     }
     
     private void buscar(NodoAB actual, String llave){
@@ -57,6 +61,24 @@ public class ArbolB {
                if(actual.getVehiculos()[i].equals(llave));
                     band = true;
                     vehiculo = actual.getVehiculos()[i];
+            }
+        }
+        
+        if(band == false){
+            for(int i = 0; i < actual.getHijos().length; i++){
+                if(actual.getHijos()[i] != null){
+                    this.buscar(actual.getHijos()[i], llave);
+                }
+            }
+        }
+    }
+    
+    private void buscarNodo(NodoAB actual, String llave){
+        for(int i = 0; i < actual.getVehiculos().length; i++){
+            if(actual.getVehiculos()[i] != null){
+               if(actual.getVehiculos()[i].equals(llave));
+                    band = true;
+                    retorno = actual;
             }
         }
         

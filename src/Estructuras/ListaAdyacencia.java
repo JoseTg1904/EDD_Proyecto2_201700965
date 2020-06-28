@@ -1,6 +1,7 @@
 package Estructuras;
 
 import Objetos.VerticeGrafo;
+import java.util.ArrayList;
 
 /**
  *
@@ -10,6 +11,16 @@ public class ListaAdyacencia {
     
     private NodoLA cabeza;
 
+    public ArrayList<String> devolverLugares(){
+        ArrayList<String> listado = new ArrayList<>();
+        NodoLA aux = this.cabeza;
+        while(aux != null){
+            listado.add(aux.getVerticeGrafo().getNombre());
+            aux = aux.getSiguiente();
+        }
+        return listado;
+    }
+    
     private VerticeGrafo obtenerRutaCorta(String origen, String destino){
         String[] ruta;
         VerticeGrafo temp = null;

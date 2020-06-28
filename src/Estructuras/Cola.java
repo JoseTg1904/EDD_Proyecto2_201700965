@@ -35,6 +35,19 @@ public class Cola {
         return cliente;
     }
     
+    public NodoC buscarNodo(BigInteger llave){
+        NodoC aux = this.cabeza;
+        
+        while(aux != null){
+            if(aux.getCliente().getDpi().compareTo(llave) == 0){
+                break;
+            }
+            aux = aux.getSiguiente();
+        } 
+        
+        return aux;
+    }
+    
     public boolean eliminar(BigInteger llave){
         boolean band = false;
         if(this.cabeza.getCliente().getDpi().compareTo(llave) == 0){

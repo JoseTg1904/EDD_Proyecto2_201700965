@@ -148,6 +148,7 @@ public class Inicial extends javax.swing.JFrame {
     public static TablaHash clientes = new TablaHash();
     public static ArbolB vehiculos = new ArbolB();
     public static ListaDobleCircular conductores = new ListaDobleCircular();
+    public static ListaDobleCircular blockChain = new ListaDobleCircular();
     
     
     private void cargaMasivaRutas(File archivoRutas) throws FileNotFoundException, IOException{

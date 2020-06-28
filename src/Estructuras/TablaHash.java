@@ -26,6 +26,12 @@ public class TablaHash {
         return cliente;
     }
     
+    public NodoC buscarNodo(BigInteger llave){
+        int posicion = this.funcionHash(llave);
+        NodoC aux = tabla[posicion].buscarNodo(llave);
+        return aux;
+    }
+    
     public boolean eliminar(BigInteger llave){
         boolean band = false;
         int posicion = this.funcionHash(llave); 
