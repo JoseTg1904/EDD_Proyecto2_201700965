@@ -1,0 +1,65 @@
+digraph ListaAdyacencia{
+ node[shape = box] 
+0 [ label = "Origen: F" ]
+{rank = same; 0; }
+0 -> 1
+1 [ label = "Origen: E" ]
+-1 [ label = "Destino: C
+ Costo: 2" ]
+1 -> -1
+-2 [ label = "Destino: D
+ Costo: 3" ]
+-1 -> -2
+-3 [ label = "Destino: F
+ Costo: 1" ]
+-2 -> -3
+{rank = same; 1; -1; -2; -3; }
+1 -> 2
+2 [ label = "Origen: D" ]
+-4 [ label = "Destino: B
+ Costo: 3" ]
+2 -> -4
+-5 [ label = "Destino: E
+ Costo: 3" ]
+-4 -> -5
+-6 [ label = "Destino: F
+ Costo: 4" ]
+-5 -> -6
+{rank = same; 2; -4; -5; -6; }
+2 -> 3
+3 [ label = "Origen: C" ]
+-7 [ label = "Destino: A
+ Costo: 6" ]
+3 -> -7
+-8 [ label = "Destino: B
+ Costo: 6" ]
+-7 -> -8
+-9 [ label = "Destino: E
+ Costo: 2" ]
+-8 -> -9
+{rank = same; 3; -7; -8; -9; }
+3 -> 4
+4 [ label = "Origen: B" ]
+-10 [ label = "Destino: A
+ Costo: 5" ]
+4 -> -10
+-11 [ label = "Destino: C
+ Costo: 6" ]
+-10 -> -11
+-12 [ label = "Destino: D
+ Costo: 3" ]
+-11 -> -12
+-13 [ label = "Destino: E
+ Costo: 5" ]
+-12 -> -13
+{rank = same; 4; -10; -11; -12; -13; }
+4 -> 5
+5 [ label = "Origen: A" ]
+-14 [ label = "Destino: B
+ Costo: 5" ]
+5 -> -14
+-15 [ label = "Destino: C
+ Costo: 6" ]
+-14 -> -15
+{rank = same; 5; -14; -15; }
+}

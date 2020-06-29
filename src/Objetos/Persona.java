@@ -9,8 +9,9 @@ import java.math.BigInteger;
 public class Persona {
     private BigInteger dpi;
     private String nombres, apellidos, genero, fechaNac, telefono, direccion;
+    private int contador;
     
-    public Persona(BigInteger dpi, String nombres, String apellidos, String genero, String fechaNac, String telefono, String direccion){
+    public Persona(BigInteger dpi, String nombres, String apellidos, String genero, String fechaNac, String telefono, String direccion, int contador){
         this.dpi = dpi;
         this.nombres = nombres;
         this.apellidos = apellidos;
@@ -18,6 +19,15 @@ public class Persona {
         this.genero = genero;
         this.telefono = telefono;
         this.direccion = direccion;
+        this.contador = contador;
+    }
+
+    public int getContador() {
+        return contador;
+    }
+
+    public void setContador(int contador) {
+        this.contador = contador;
     }
 
     public String getFechaNac() {

@@ -143,6 +143,7 @@ public class ViajesV extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -199,7 +200,6 @@ public class ViajesV extends javax.swing.JFrame {
         ListaSimple ruta = Inicial.grafo.generarRuta((String)comboOrigen.getSelectedItem(), (String)comboDestino.getSelectedItem());
         Inicial.blockChain.insertarBlockChain((String)comboConductores.getSelectedItem(),(String)comboClientes.getSelectedItem(), 
                 (String)comboVehiculos.getSelectedItem(), ruta,new Viaje((String)comboOrigen.getSelectedItem(), (String)comboDestino.getSelectedItem(),"a"));
-        System.out.println(Inicial.blockChain.grafoBlockChain());
     }
     
 

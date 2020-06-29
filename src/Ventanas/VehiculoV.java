@@ -472,7 +472,7 @@ public class VehiculoV extends javax.swing.JFrame {
     private void crearVehiculo(){
         String transmision = (String)tranCre.getSelectedItem();
         Inicial.vehiculos.insertarNormal(new Vehiculo(placaCre.getText().trim(), marcaCre.getText().trim(), modeloCre.getText().trim(), 
-        anioCre.getText().trim(), colorCre.getText().trim(), precioCre.getText().trim(),transmision));
+        anioCre.getText().trim(), colorCre.getText().trim(), precioCre.getText().trim(),transmision, 0));
         JOptionPane.showMessageDialog(this,"Se a agregado el vehiculo al sistema exitosamente!");
     }
     
@@ -495,12 +495,10 @@ public class VehiculoV extends javax.swing.JFrame {
         aux1 = contenido.split(";");
         for(int i = 0; i < aux1.length; i++){
             aux = aux1[i].split(":");
-            Inicial.vehiculos.insertarNormal(new Vehiculo(aux[0].trim(), aux[1].trim(), aux[2].trim(),aux[3].trim(), aux[4].trim(), aux[5].trim(), aux[6].trim()));
-            System.out.println(Inicial.vehiculos.devolverGrafo());
+            Inicial.vehiculos.insertarNormal(new Vehiculo(aux[0].trim(), aux[1].trim(), aux[2].trim(),aux[3].trim(), aux[4].trim(), aux[5].trim(), aux[6].trim(), 0));
         }
         JOptionPane.showMessageDialog(this,"Se han cargado los vehiculos exitosamente!\nPuede continuar con la ejecucion del programa");
         listadoPlacas();
-        System.out.println(Inicial.vehiculos.devolverGrafo());
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

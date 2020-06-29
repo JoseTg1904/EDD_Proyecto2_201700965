@@ -563,10 +563,9 @@ public class ClienteV extends javax.swing.JFrame {
             aux = aux1[i].split(",");
             BigInteger dpi = new BigInteger(aux[0].trim());
             Inicial.clientes.insertar(new Cliente(dpi, aux[1].trim(), aux[2].trim(), aux[3].trim(), 
-                    aux[4].trim(), aux[5].trim(), aux[6].trim() ), dpi);
+                    aux[4].trim(), aux[5].trim(), aux[6].trim(), 0 ), dpi);
         }
         JOptionPane.showMessageDialog(this,"Se han cargado los clientes exitosamente!\nPuede continuar con la ejecucion del programa");
-        System.out.print(Inicial.clientes.grafoHash());
         listadoDPI();
     }
     
@@ -585,7 +584,7 @@ public class ClienteV extends javax.swing.JFrame {
     private void crearCliente(){
         BigInteger dpi = new BigInteger(dpiCrear.getText());
         Inicial.clientes.insertar(new Cliente(dpi,nombreCrear.getText().trim(), apellidoCrear.getText().trim(), (String)generoCrear.getSelectedItem(), 
-        fechaCrear.getText().trim(), telefonoCrear.getText().trim(), direccionCrear.getText().trim()), dpi);
+        fechaCrear.getText().trim(), telefonoCrear.getText().trim(), direccionCrear.getText().trim(), 0), dpi);
         JOptionPane.showMessageDialog(this,"Se a creado el cliente exitosamente!");
     }
     

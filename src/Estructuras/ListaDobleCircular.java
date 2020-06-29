@@ -1,6 +1,7 @@
 package Estructuras;
 
 import Objetos.Conductor;
+import Objetos.Vehiculo;
 import Objetos.Viaje;
 import Ventanas.Inicial;
 import java.math.BigInteger;
@@ -20,15 +21,44 @@ public class ListaDobleCircular {
     
     public void insertarBlockChain(String dpiConductor, String dpiCliente, String placa, ListaSimple ruta, Viaje viaje) throws NoSuchAlgorithmException{
         LocalDateTime tiempo = LocalDateTime.now();
-        String llave = placa+tiempo.getDayOfMonth()+tiempo.getMonth()+tiempo.getYear()+tiempo.getHour()+":"+tiempo.getMonth();
+        String llave = placa+tiempo.getDayOfMonth()+tiempo.getMonth()+tiempo.getYear()+tiempo.getHour()+":"+tiempo.getMinute()+":"+tiempo.getSecond();
         System.out.println(llave);
         String llaveEncriptada = encriptarMD5(llave);
         NodoL conductor = Inicial.conductores.buscarNodo(new BigInteger(dpiConductor));
         NodoAB vehiculo = Inicial.vehiculos.retornarNodo(placa);
         NodoC cliente = Inicial.clientes.buscarNodo(new BigInteger(dpiCliente));
+        conductor.getConductor().setContador(conductor.getConductor().getContador()+1);
+        cliente.getCliente().setContador(cliente.getCliente().getContador()+1);
+        Vehiculo[] ar = vehiculo.getVehiculos();
+        for(int i = 0;i<ar.length;i++){
+            if(ar[i] != null){
+                if(ar[i].getPlaca().equals(placa)){
+                    ar[i].setContador(ar[i].getContador()+1);
+                    break;
+                }
+            }
+        }
         this.insertar(llaveEncriptada, conductor, cliente, ruta, vehiculo, viaje, placa);
     }
 
+    public String devolverRuta(String llave) throws NoSuchAlgorithmException{
+        ListaSimple lista = this.buscarNodoBlockChain(llave);
+        return lista.recorrer();
+    }
+    
+    private ListaSimple buscarNodoBlockChain(String llave) throws NoSuchAlgorithmException{
+        String llaveEncriptada = encriptarMD5(llave);
+        ListaSimple lista = null;
+        NodoL aux = this.cabeza;
+        do {            
+            if(aux.getLlave().equals(llaveEncriptada)){
+                lista = aux.getApuntadorRuta();
+            }
+            aux = aux.getSiguiente();
+        } while (aux != this.cabeza);
+        return lista;
+    }
+    
     private String encriptarMD5(String llave) throws NoSuchAlgorithmException{
         MessageDigest md5 = MessageDigest.getInstance("MD5");
         md5.update(llave.getBytes());
@@ -52,7 +82,64 @@ public class ListaDobleCircular {
         return listado;
     }
     
-    public String grafoBlockChain(){
+    public String topViajesMasLargos(){
+        ListaSimple reporte = new ListaSimple();
+        NodoL aux = this.cabeza;
+        if(aux != null){
+            do{
+               reporte.insertar(aux.getApuntadorRuta());
+               aux = aux.getSiguiente();
+            }while(aux != this.cabeza);
+        }
+        reporte.ordenarXTamanio();
+        return reporte.reporteTopViajes();
+    }
+    
+    public String topClientes(){
+        ListaSimple reporte = new ListaSimple();
+        NodoL aux = this.cabeza;
+        if(aux != null){
+            do{
+               reporte.insertar(aux.getApuntadorCliente().getCliente());
+               aux = aux.getSiguiente();
+            }while(aux != this.cabeza);
+        }
+        reporte.ordenarXCliente();
+        return reporte.reporteTopClientes();
+    }
+    
+    public String topConductores(){
+        ListaSimple reporte = new ListaSimple();
+        NodoL aux = this.cabeza;
+        if(aux != null){
+            do{
+               reporte.insertar(aux.getApuntadorConductor().getConductor());
+               aux = aux.getSiguiente();
+            }while(aux != this.cabeza);
+        }
+        reporte.ordenarXConductor();
+        return reporte.reporteTopConductores();
+    }
+                
+    public String topVehiculos(){
+        ListaSimple reporte = new ListaSimple();
+        NodoL aux = this.cabeza;
+        if(aux != null){
+            do{
+               Vehiculo[] vehiculos = aux.getApuntadorVehiculo().getVehiculos();
+               for(int i = 0; i < vehiculos.length; i++){
+                   if(vehiculos[i] != null  && vehiculos[i].getContador() > 0){
+                       reporte.insertar(vehiculos[i]);
+                   }
+               }
+               aux = aux.getSiguiente();
+            }while(aux != this.cabeza);
+        }
+        reporte.ordenarXVehiculos();
+        return reporte.reporteTopVehiculos();
+    }
+    
+    public String grafoTotalBlockChain(){
         int it = 0;
         String dot = "digraph BlockChain{\n";
         //apuntar con el dpi
@@ -82,6 +169,26 @@ public class ListaDobleCircular {
         } while (aux != this.cabeza);
         dot += "}\n";
         dot += Inicial.grafo.grafo();
+        dot += "}";
+        return dot;
+    }
+    
+    public String grafoBlockChain(){
+        String dot = "digraph BlockChain{\n";
+        NodoL aux = this.cabeza;
+        do {            
+            dot += "\""+aux+"\" [label = \"Llave: "+aux.getLlave()+"\nUsuario: "+aux.getApuntadorCliente().getCliente().getDpi()+
+                    "\nConductor: "+aux.getApuntadorConductor().getConductor().getDpi()+"\nVehiculo: "+aux.getPlaca()+
+                    "\nOrigen: "+aux.getApuntadorRuta().getCabeza().getVerticeGrafo().getNombre()+
+                    "\nDestino: "+aux.getApuntadorRuta().getCola().getVerticeGrafo().getNombre()+"\"]\n";
+            dot += "\""+aux+"\" -> \""+aux.getSiguiente()+"\"\n";
+            aux = aux.getSiguiente();
+        } while (aux != this.cabeza);
+        aux = this.cabeza;
+        do {            
+            dot += "\""+ aux + "\" -> \""+aux.getAnterior()+"\"\n";
+            aux = aux.getAnterior();
+        } while (aux != this.cabeza);
         dot += "}";
         return dot;
     }

@@ -6,8 +6,9 @@
  */
 public class Vehiculo {
     private String placa, marca, modelo, anio, color, precio, transmision;
+    private int contador;
 
-    public Vehiculo(String placa, String marca, String modelo, String anio, String color, String precio, String transmision) {
+    public Vehiculo(String placa, String marca, String modelo, String anio, String color, String precio, String transmision, int contador) {
         this.placa = placa;
         this.marca = marca;
         this.modelo = modelo;
@@ -15,8 +16,17 @@ public class Vehiculo {
         this.color = color;
         this.precio = precio;
         this.transmision = transmision;
+        this.contador = contador;
     }
 
+    public int getContador() {
+        return contador;
+    }
+
+    public void setContador(int contador) {
+        this.contador = contador;
+    }
+    
     public String getPlaca() {
         return placa;
     }

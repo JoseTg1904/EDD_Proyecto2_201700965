@@ -1,0 +1,30 @@
+digraph ArbolB{
+node[shape=record]
+"Estructuras.NodoAB@4b827b04" [shape = record label = "<654ABD>Placa: 654ABD
+ Marca: Honda
+ Modelo: Corolla|"]
+"Estructuras.NodoAB@4b827b04" -> "Estructuras.NodoAB@36b012b7"
+"Estructuras.NodoAB@36b012b7" [shape = record label = "<654ABB>Placa: 654ABB
+ Marca: Suzuki
+ Modelo: Corolla|<654ABC>Placa: 654ABC
+ Marca: Toyota
+ Modelo: Corolla|<654ABD>Placa: 654ABD
+ Marca: Honda
+ Modelo: Corolla|<654ABE>Placa: 654ABE
+ Marca: Ford
+ Modelo: Corolla|<654ABF>Placa: 654ABF
+ Marca: Hyundai
+ Modelo: Corolla"]
+"Estructuras.NodoAB@4b827b04" -> "Estructuras.NodoAB@3cae4f56"
+"Estructuras.NodoAB@3cae4f56" [shape = record label = "<654ABE>Placa: 654ABE
+ Marca: Ford
+ Modelo: Corolla|<654ABF>Placa: 654ABF
+ Marca: Hyundai
+ Modelo: Corolla|<654ABG>Placa: 654ABG
+ Marca: Hyundai
+ Modelo: Corolla|<654ABH>Placa: 654ABH
+ Marca: Hyundai
+ Modelo: Corolla|<654ABI>Placa: 654ABI
+ Marca: Hyundai
+ Modelo: Corolla"]
+}

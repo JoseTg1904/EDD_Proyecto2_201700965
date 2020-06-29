@@ -47,7 +47,6 @@ public class ListaAdyacencia {
     public ListaSimple generarRuta(String origen, String destino){
         ListaSimple ruta = new ListaSimple();
         VerticeGrafo vertice = this.obtenerRutaCorta(origen, destino), aux;
-        System.out.println(vertice.getNombre());
         String[] temp = vertice.getNombre().split("%");
         int peso = 0;
         if(temp[temp.length-1].equals(destino)){
@@ -57,7 +56,6 @@ public class ListaAdyacencia {
                 peso += aux.getPeso();
                 ruta.insertar(new VerticeGrafo(aux.getNombre(), peso));
             }
-            ruta.recorrer();
         }
         return ruta;
     }
@@ -156,6 +154,25 @@ public class ListaAdyacencia {
                 dot += itOrigen + " -> " + (itOrigen+1) + "\n";
             }
             itOrigen++;
+            aux = aux.getSiguiente();
+        }
+        dot += "}";
+        return dot;
+    }
+    
+    public String grafoTotal(){
+        String dot = "digraph grafo{\n";
+        NodoLA aux = this.cabeza, auxAdyacente;
+        while(aux != null){
+            if(aux.getAdyacente() != null){
+            dot += "\"" + aux.getVerticeGrafo().getNombre() + "\" [ label = \" " + aux.getVerticeGrafo().getNombre() + "\" ]\n";
+            auxAdyacente = aux.getAdyacente();
+            while(auxAdyacente != null){
+                dot += "\"" + auxAdyacente.getVerticeGrafo().getNombre() +  "\" [ label = \"" + auxAdyacente.getVerticeGrafo().getNombre() + "\" ]\n";
+                dot += "\"" + aux.getVerticeGrafo().getNombre() + "\" -> \"" + auxAdyacente.getVerticeGrafo().getNombre() + "\" [ label = \""+ auxAdyacente.getVerticeGrafo().getPeso() +"\"]\n";
+                auxAdyacente = auxAdyacente.getAdyacente();
+            }
+            }
             aux = aux.getSiguiente();
         }
         dot += "}";

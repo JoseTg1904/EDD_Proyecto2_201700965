@@ -9,8 +9,8 @@ import java.math.BigInteger;
 public class Conductor extends Persona{
     private String licencia;
 
-    public Conductor(String licencia, BigInteger dpi, String nombres, String apellidos, String genero, String fechaNac, String telefono, String direccion) {
-        super(dpi, nombres, apellidos, genero, fechaNac, telefono, direccion);
+    public Conductor(String licencia, BigInteger dpi, String nombres, String apellidos, String genero, String fechaNac, String telefono, String direccion, int contador) {
+        super(dpi, nombres, apellidos, genero, fechaNac, telefono, direccion,contador);
         this.licencia = licencia;
     }
 

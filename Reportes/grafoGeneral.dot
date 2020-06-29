@@ -1,0 +1,235 @@
+digraph BlockChain{
+subgraph cluster_hash{
+style = filled
+color=aliceblue
+label="Tabla Hash"
+0 [ shape = box label = "Origen: 0" ]
+0 -> 1
+1 [ shape = box label = "Origen: 1" ]
+1 -> 2
+2 [ shape = box label = "Origen: 2" ]
+2 -> 3
+3 [ shape = box label = "Origen: 3" ]
+3 -> 4
+4 [ shape = box label = "Origen: 4" ]
+4 -> "2213747322311"
+"2213747322311" [shape = box label = "Dpi: 2213747322311
+Nombre completo: Jose Carlos Lopez Morales"]
+{rank = same; 4; "2213747322311"; }
+4 -> 5
+5 [ shape = box label = "Origen: 5" ]
+5 -> 6
+6 [ shape = box label = "Origen: 6" ]
+6 -> 7
+7 [ shape = box label = "Origen: 7" ]
+7 -> 8
+8 [ shape = box label = "Origen: 8" ]
+8 -> 9
+9 [ shape = box label = "Origen: 9" ]
+9 -> 10
+10 [ shape = box label = "Origen: 10" ]
+10 -> 11
+11 [ shape = box label = "Origen: 11" ]
+11 -> 12
+12 [ shape = box label = "Origen: 12" ]
+12 -> 13
+13 [ shape = box label = "Origen: 13" ]
+13 -> 14
+14 [ shape = box label = "Origen: 14" ]
+14 -> 15
+15 [ shape = box label = "Origen: 15" ]
+15 -> 16
+16 [ shape = box label = "Origen: 16" ]
+16 -> 17
+17 [ shape = box label = "Origen: 17" ]
+17 -> 18
+18 [ shape = box label = "Origen: 18" ]
+18 -> "3421239845212"
+"3421239845212" [shape = box label = "Dpi: 3421239845212
+Nombre completo: Gabriela Perez Sandoval"]
+{rank = same; 18; "3421239845212"; }
+18 -> 19
+19 [ shape = box label = "Origen: 19" ]
+19 -> "4653212322123"
+"4653212322123" [shape = box label = "Dpi: 4653212322123
+Nombre completo: Carlos Alejandro Flores Gomez"]
+{rank = same; 19; "4653212322123"; }
+19 -> 20
+20 [ shape = box label = "Origen: 20" ]
+20 -> 21
+21 [ shape = box label = "Origen: 21" ]
+21 -> 22
+22 [ shape = box label = "Origen: 22" ]
+22 -> 23
+23 [ shape = box label = "Origen: 23" ]
+23 -> 24
+24 [ shape = box label = "Origen: 24" ]
+24 -> 25
+25 [ shape = box label = "Origen: 25" ]
+25 -> 26
+26 [ shape = box label = "Origen: 26" ]
+26 -> 27
+27 [ shape = box label = "Origen: 27" ]
+27 -> 28
+28 [ shape = box label = "Origen: 28" ]
+28 -> 29
+29 [ shape = box label = "Origen: 29" ]
+29 -> 30
+30 [ shape = box label = "Origen: 30" ]
+30 -> 31
+31 [ shape = box label = "Origen: 31" ]
+31 -> 32
+32 [ shape = box label = "Origen: 32" ]
+32 -> 33
+33 [ shape = box label = "Origen: 33" ]
+33 -> 34
+34 [ shape = box label = "Origen: 34" ]
+34 -> 35
+35 [ shape = box label = "Origen: 35" ]
+35 -> 36
+36 [ shape = box label = "Origen: 36" ]
+}
+subgraph cluster_doble{
+style=filled
+label="Lista Doble Circular"
+Color=aquamarine
+"1005957733221" [label = "Dpi: 1005957733221
+Nombre completo: Rolando Lopez"]
+"1005957733221" -> "3005952367401"
+"3005952367401" [label = "Dpi: 3005952367401
+Nombre completo: Pedro Ordonez"]
+"3005952367401" -> "3033988367401"
+"3033988367401" [label = "Dpi: 3033988367401
+Nombre completo: Fernanda Lopez"]
+"3033988367401" -> "4005952367401"
+"4005952367401" [label = "Dpi: 4005952367401
+Nombre completo: Maria Alfaro"]
+"4005952367401" -> "5004153267401"
+"5004153267401" [label = "Dpi: 5004153267401
+Nombre completo: Mario Altan"]
+"5004153267401" -> "6005952367401"
+"6005952367401" [label = "Dpi: 6005952367401
+Nombre completo: Segio Chacon"]
+"6005952367401" -> "7805544360001"
+"7805544360001" [label = "Dpi: 7805544360001
+Nombre completo: Luis Ordonez"]
+"7805544360001" -> "9805952367756"
+"9805952367756" [label = "Dpi: 9805952367756
+Nombre completo: Virginia Depaz"]
+"9805952367756" -> "1005957733221"
+"1005957733221" -> "9805952367756"
+"9805952367756" -> "7805544360001"
+"7805544360001" -> "6005952367401"
+"6005952367401" -> "5004153267401"
+"5004153267401" -> "4005952367401"
+"4005952367401" -> "3033988367401"
+"3033988367401" -> "3005952367401"
+"3005952367401" -> "1005957733221"
+}
+subgraph cluster_arbolB{
+style=filled
+label="Arbol B"
+color=beige
+"Estructuras.NodoAB@4b827b04" [shape = record label = "<654ABD>Placa: 654ABD
+ Marca: Honda
+ Modelo: Corolla|"]
+"Estructuras.NodoAB@4b827b04" -> "Estructuras.NodoAB@36b012b7"
+"Estructuras.NodoAB@36b012b7" [shape = record label = "<654ABB>Placa: 654ABB
+ Marca: Suzuki
+ Modelo: Corolla|<654ABC>Placa: 654ABC
+ Marca: Toyota
+ Modelo: Corolla|<654ABD>Placa: 654ABD
+ Marca: Honda
+ Modelo: Corolla|<654ABE>Placa: 654ABE
+ Marca: Ford
+ Modelo: Corolla|<654ABF>Placa: 654ABF
+ Marca: Hyundai
+ Modelo: Corolla"]
+"Estructuras.NodoAB@4b827b04" -> "Estructuras.NodoAB@3cae4f56"
+"Estructuras.NodoAB@3cae4f56" [shape = record label = "<654ABE>Placa: 654ABE
+ Marca: Ford
+ Modelo: Corolla|<654ABF>Placa: 654ABF
+ Marca: Hyundai
+ Modelo: Corolla|<654ABG>Placa: 654ABG
+ Marca: Hyundai
+ Modelo: Corolla|<654ABH>Placa: 654ABH
+ Marca: Hyundai
+ Modelo: Corolla|<654ABI>Placa: 654ABI
+ Marca: Hyundai
+ Modelo: Corolla"]
+}
+subgraph cluster_block{label="Block chain"style=filled
+color=palegreen"Estructuras.NodoL@9867890" [label = "Llave: 421ca601224fa3ef112aadc1c7e7a"]
+"Estructuras.NodoL@9867890" -> "Estructuras.NodoL@5aecc5c1"
+"Estructuras.NodoL@9867890" -> "2213747322311"
+"Estructuras.NodoL@9867890" -> "1005957733221"
+"Estructuras.NodoL@9867890" -> "Estructuras.NodoAB@4b827b04"
+"Estructuras.NodoL@9867890" -> "Estructuras.NodoLS@35da3caa"
+subgraph cluster_0{
+color=lightpink
+style=filled
+label="Lista simple""Estructuras.NodoLS@35da3caa" [label = "Lugar: A
+Tiempo recorrido: 0"]
+"Estructuras.NodoLS@35da3caa" -> "Estructuras.NodoLS@22849aad"
+"Estructuras.NodoLS@22849aad" [label = "Lugar: C
+Tiempo recorrido: 6"]
+"Estructuras.NodoLS@22849aad" -> "Estructuras.NodoLS@73e48b9"
+"Estructuras.NodoLS@73e48b9" [label = "Lugar: E
+Tiempo recorrido: 8"]
+"Estructuras.NodoLS@73e48b9" -> "Estructuras.NodoLS@183a0dd"
+"Estructuras.NodoLS@183a0dd" [label = "Lugar: F
+Tiempo recorrido: 9"]
+}"Estructuras.NodoL@5aecc5c1" [label = "Llave: efac6872f824531132671e5bbc9b67a5"]
+"Estructuras.NodoL@5aecc5c1" -> "Estructuras.NodoL@9867890"
+"Estructuras.NodoL@5aecc5c1" -> "3421239845212"
+"Estructuras.NodoL@5aecc5c1" -> "4005952367401"
+"Estructuras.NodoL@5aecc5c1" -> "Estructuras.NodoAB@4b827b04"
+"Estructuras.NodoL@5aecc5c1" -> "Estructuras.NodoLS@6a7f2b4b"
+subgraph cluster_1{
+color=lightpink
+style=filled
+label="Lista simple""Estructuras.NodoLS@6a7f2b4b" [label = "Lugar: A
+Tiempo recorrido: 0"]
+}"Estructuras.NodoL@9867890" -> "Estructuras.NodoL@5aecc5c1"
+"Estructuras.NodoL@5aecc5c1" -> "Estructuras.NodoL@9867890"
+}
+subgraph cluster_grafo{
+label="grafo"
+style=filled
+color=paleturquoise
+"E" [ label = " E" ]
+"C" [ label = "C" ]
+"E" -> "C" [ label = "2"]
+"D" [ label = "D" ]
+"E" -> "D" [ label = "3"]
+"F" [ label = "F" ]
+"E" -> "F" [ label = "1"]
+"D" [ label = " D" ]
+"B" [ label = "B" ]
+"D" -> "B" [ label = "3"]
+"E" [ label = "E" ]
+"D" -> "E" [ label = "3"]
+"F" [ label = "F" ]
+"D" -> "F" [ label = "4"]
+"C" [ label = " C" ]
+"A" [ label = "A" ]
+"C" -> "A" [ label = "6"]
+"B" [ label = "B" ]
+"C" -> "B" [ label = "6"]
+"E" [ label = "E" ]
+"C" -> "E" [ label = "2"]
+"B" [ label = " B" ]
+"A" [ label = "A" ]
+"B" -> "A" [ label = "5"]
+"C" [ label = "C" ]
+"B" -> "C" [ label = "6"]
+"D" [ label = "D" ]
+"B" -> "D" [ label = "3"]
+"E" [ label = "E" ]
+"B" -> "E" [ label = "5"]
+"A" [ label = " A" ]
+"B" [ label = "B" ]
+"A" -> "B" [ label = "5"]
+"C" [ label = "C" ]
+"A" -> "C" [ label = "6"]
+}}

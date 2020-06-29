@@ -543,7 +543,7 @@ public class ConductoresV extends javax.swing.JFrame {
         BigInteger dpi = new BigInteger(dpiCre.getText().trim());
         Inicial.conductores.insertar(new Conductor( (String)licenciaCre.getSelectedItem(), dpi, nombreCre.getText().trim(),
                 apellidoCre.getText().trim(), (String)generoCre.getSelectedItem(), fechaCre.getText().trim(), telefonoCre.getText().trim(),
-                direccionCre.getText().trim()));
+                direccionCre.getText().trim(), 0));
         JOptionPane.showMessageDialog(this,"Se a creado el conductor exitosamente!");
     }
     
@@ -570,10 +570,9 @@ public class ConductoresV extends javax.swing.JFrame {
             aux = aux1[i].split("%");
             BigInteger dpi = new BigInteger(aux[0].trim());
             Inicial.conductores.insertar(new Conductor(aux[3].trim(), dpi, aux[1].trim(), aux[2].trim(), aux[4].trim(), 
-                    aux[5].trim(), aux[6].trim(), aux[7].trim()));
+                    aux[5].trim(), aux[6].trim(), aux[7].trim(), 0));
         }
         JOptionPane.showMessageDialog(this,"Se han cargado los conductores exitosamente!\nPuede continuar con la ejecucion del programa");
-        System.out.print(Inicial.conductores.grafoListaDobleCircular());
         listadoDPI();
     }
     
