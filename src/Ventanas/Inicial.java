@@ -47,6 +47,7 @@ public class Inicial extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Carga del grafo");
 
         cargaRutas.setText("Cargar archivo de rutas");
         cargaRutas.addActionListener(new java.awt.event.ActionListener() {

@@ -1,11 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Ventanas;
 
-import Objetos.Cliente;
 import Objetos.Conductor;
 import java.io.BufferedReader;
 import java.io.File;
@@ -88,6 +82,7 @@ public class ConductoresV extends javax.swing.JFrame {
         fechaMod = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Conductores");
 
         jButton1.setText("Cargar archivo de conductores");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -183,6 +178,18 @@ public class ConductoresV extends javax.swing.JFrame {
         jLabel6.setText("Telefono");
 
         jLabel7.setText("Direccion");
+
+        dpiCre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                dpiCreKeyTyped(evt);
+            }
+        });
+
+        telefonoCre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                telefonoCreKeyTyped(evt);
+            }
+        });
 
         licenciaCre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A", "B", "C" }));
 
@@ -293,6 +300,12 @@ public class ConductoresV extends javax.swing.JFrame {
 
         jLabel15.setText("Direccion");
 
+        telefonoMod.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                telefonoModKeyTyped(evt);
+            }
+        });
+
         generoMod.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Femenino" }));
 
         licenciaMod.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A", "B", "C" }));
@@ -346,7 +359,7 @@ public class ConductoresV extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(173, 173, 173)
                         .addComponent(jButton6)))
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -395,7 +408,7 @@ public class ConductoresV extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 442, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -431,9 +444,13 @@ public class ConductoresV extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         if(dpiCre.getText().length() > 0 && nombreCre.getText().length() > 0 && apellidoCre.getText().length() > 0 && telefonoCre.getText().length() > 0 &&
                 direccionCre.getText().length() > 0 && fechaCre.getText().length() > 0) {
+            if(dpiCre.getText().length() == 13){
                 crearConductor();
+            }else{
+                JOptionPane.showMessageDialog(this, "El dpi debe de tener 13 digitos!");
+            }
         }else{
-            JOptionPane.showMessageDialog(this,"Debe de rellenar todos los campos");
+            JOptionPane.showMessageDialog(this,"Debe de rellenar todos los campos!");
         }
     }//GEN-LAST:event_jButton5ActionPerformed
 
@@ -448,6 +465,33 @@ public class ConductoresV extends javax.swing.JFrame {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
        modificarConductor();
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void dpiCreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_dpiCreKeyTyped
+        char validar = evt.getKeyChar();
+        if (Character.isLetter(validar)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(this, "Solo se permiten numeros!");
+        }
+    }//GEN-LAST:event_dpiCreKeyTyped
+
+    private void telefonoCreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_telefonoCreKeyTyped
+        char validar = evt.getKeyChar();
+        if (Character.isLetter(validar)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(this, "Solo se permiten numeros!");
+        }
+    }//GEN-LAST:event_telefonoCreKeyTyped
+
+    private void telefonoModKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_telefonoModKeyTyped
+        char validar = evt.getKeyChar();
+        if (Character.isLetter(validar)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(this, "Solo se permiten numeros!");
+        }
+    }//GEN-LAST:event_telefonoModKeyTyped
 
     /**
      * @param args the command line arguments
@@ -503,6 +547,12 @@ public class ConductoresV extends javax.swing.JFrame {
             if(direccionMod.getText().length() > 0){
                 conductor.setDireccion(direccionMod.getText().trim());
             }
+            nombreMod.setText("");
+            apellidoMod.setText("");
+            fechaMod.setText("");
+            telefonoMod.setText("");
+            direccionMod.setText("");
+            JOptionPane.showMessageDialog(this, "Los datos del conductor han sido modificados!");
         }else{
             JOptionPane.showMessageDialog(this, "Debe de seleccionar un conductor para poder modificar sus datos!");
         }
@@ -545,6 +595,12 @@ public class ConductoresV extends javax.swing.JFrame {
                 apellidoCre.getText().trim(), (String)generoCre.getSelectedItem(), fechaCre.getText().trim(), telefonoCre.getText().trim(),
                 direccionCre.getText().trim(), 0));
         JOptionPane.showMessageDialog(this,"Se a creado el conductor exitosamente!");
+        dpiCre.setText("");
+        nombreCre.setText("");
+        apellidoCre.setText("");
+        fechaCre.setText("");
+        telefonoCre.setText("");
+        direccionCre.setText("");
     }
     
     public void listadoDPI(){

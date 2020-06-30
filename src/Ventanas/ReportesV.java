@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Ventanas;
 
 import Estructuras.ArbolBB;
@@ -11,11 +6,9 @@ import Objetos.DuplaLetra;
 import Objetos.DuplaResultado;
 import java.awt.Desktop;
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.security.NoSuchAlgorithmException;
@@ -71,6 +64,7 @@ public class ReportesV extends javax.swing.JFrame {
         jButton17 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Reportes");
 
         jLabel1.setText("Grafo estructuras");
 
@@ -211,9 +205,9 @@ public class ReportesV extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton14)
-                        .addGap(18, 18, 18)
+                        .addGap(24, 24, 24)
                         .addComponent(jButton15)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton16)
                         .addGap(18, 18, 18)
                         .addComponent(jButton17)
@@ -418,62 +412,78 @@ public class ReportesV extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-        JFileChooser selector = new JFileChooser();
-        selector.showOpenDialog(this);
-        File archivo = selector.getSelectedFile();
-        if( archivo != null && !(archivo.getName().equals("")) ){
-            try {
-                decodificarViajesMasLargos(archivo);
-            } catch (FileNotFoundException ex) {
-                Logger.getLogger(Inicial.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (IOException ex) {
-                Logger.getLogger(Inicial.class.getName()).log(Level.SEVERE, null, ex);
+        if(duplaViajes != null){
+            JFileChooser selector = new JFileChooser();
+            selector.showOpenDialog(this);
+            File archivo = selector.getSelectedFile();
+            if( archivo != null && !(archivo.getName().equals("")) ){
+                try {
+                    decodificarViajesMasLargos(archivo);
+                } catch (FileNotFoundException ex) {
+                    Logger.getLogger(Inicial.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (IOException ex) {
+                    Logger.getLogger(Inicial.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
+        }else{
+            JOptionPane.showMessageDialog(this, "Debe de generar primero el reporte para poder decodificarlo!");
         }
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
-        JFileChooser selector = new JFileChooser();
-        selector.showOpenDialog(this);
-        File archivo = selector.getSelectedFile();
-        if( archivo != null && !(archivo.getName().equals("")) ){
-            try {
-                decodificarTopClientes(archivo);
-            } catch (FileNotFoundException ex) {
-                Logger.getLogger(Inicial.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (IOException ex) {
-                Logger.getLogger(Inicial.class.getName()).log(Level.SEVERE, null, ex);
-            }
+        if(duplaClientes!= null){
+            JFileChooser selector = new JFileChooser();
+            selector.showOpenDialog(this);
+            File archivo = selector.getSelectedFile();
+            if( archivo != null && !(archivo.getName().equals("")) ){
+                try {
+                    decodificarTopClientes(archivo);
+                } catch (FileNotFoundException ex) {
+                    Logger.getLogger(Inicial.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (IOException ex) {
+                    Logger.getLogger(Inicial.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                }
+        }else{
+            JOptionPane.showMessageDialog(this, "Debe de generar primero el reporte para poder decodificarlo!");
         }
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
-               JFileChooser selector = new JFileChooser();
-        selector.showOpenDialog(this);
-        File archivo = selector.getSelectedFile();
-        if( archivo != null && !(archivo.getName().equals("")) ){
-            try {
-                decodificarTopConductores(archivo);
-            } catch (FileNotFoundException ex) {
-                Logger.getLogger(Inicial.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (IOException ex) {
-                Logger.getLogger(Inicial.class.getName()).log(Level.SEVERE, null, ex);
+        if(duplaConductores != null){
+            JFileChooser selector = new JFileChooser();
+            selector.showOpenDialog(this);
+            File archivo = selector.getSelectedFile();
+            if( archivo != null && !(archivo.getName().equals("")) ){
+                try {
+                    decodificarTopConductores(archivo);
+                } catch (FileNotFoundException ex) {
+                    Logger.getLogger(Inicial.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (IOException ex) {
+                    Logger.getLogger(Inicial.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
+        }else{
+            JOptionPane.showMessageDialog(this, "Debe de generar primero el reporte para poder decodificarlo!");
         }
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
-                   JFileChooser selector = new JFileChooser();
-        selector.showOpenDialog(this);
-        File archivo = selector.getSelectedFile();
-        if( archivo != null && !(archivo.getName().equals("")) ){
-            try {
-                decodificarTopVehiculos(archivo);
-            } catch (FileNotFoundException ex) {
-                Logger.getLogger(Inicial.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (IOException ex) {
-                Logger.getLogger(Inicial.class.getName()).log(Level.SEVERE, null, ex);
+        if(duplaVehiculos != null){
+            JFileChooser selector = new JFileChooser();
+            selector.showOpenDialog(this);
+            File archivo = selector.getSelectedFile();
+            if( archivo != null && !(archivo.getName().equals("")) ){
+                try {
+                    decodificarTopVehiculos(archivo);
+                } catch (FileNotFoundException ex) {
+                    Logger.getLogger(Inicial.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (IOException ex) {
+                    Logger.getLogger(Inicial.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
+        }else{
+            JOptionPane.showMessageDialog(this, "Debe de generar primero el reporte para poder decodificarlo!");
         }
     }//GEN-LAST:event_jButton17ActionPerformed
 
@@ -516,6 +526,7 @@ public class ReportesV extends javax.swing.JFrame {
     private void obtenerRuta() throws NoSuchAlgorithmException{
         if(llaveBloque.getText().length() > 0){
         areaDeReporte.setText(Inicial.blockChain.devolverRuta(llaveBloque.getText().trim()));
+        llaveBloque.setText("");
         }else{
             JOptionPane.showMessageDialog(this,"Debe de llenar los campos necesarios");
         }

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Ventanas;
 
 import Objetos.Cliente;
@@ -86,6 +81,7 @@ public class ClienteV extends javax.swing.JFrame {
         jLabel9.setText("jLabel9");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Cliente");
 
         cargaM.setText("Cargar Archivo de Clientes");
         cargaM.addActionListener(new java.awt.event.ActionListener() {
@@ -105,20 +101,20 @@ public class ClienteV extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(123, 123, 123)
-                .addComponent(cargaM)
-                .addContainerGap(149, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 370, Short.MAX_VALUE)
                 .addComponent(jButton1))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(cargaM)
+                .addGap(132, 132, 132))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(155, 155, 155)
+                .addContainerGap(164, Short.MAX_VALUE)
                 .addComponent(cargaM)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 144, Short.MAX_VALUE)
+                .addGap(135, 135, 135)
                 .addComponent(jButton1)
                 .addContainerGap())
         );
@@ -139,6 +135,12 @@ public class ClienteV extends javax.swing.JFrame {
 
         jLabel7.setText("Direccion");
 
+        telefonoCrear.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                telefonoCrearKeyTyped(evt);
+            }
+        });
+
         apellidoCrear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 apellidoCrearActionPerformed(evt);
@@ -148,6 +150,11 @@ public class ClienteV extends javax.swing.JFrame {
         dpiCrear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dpiCrearActionPerformed(evt);
+            }
+        });
+        dpiCrear.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                dpiCrearKeyTyped(evt);
             }
         });
 
@@ -254,6 +261,12 @@ public class ClienteV extends javax.swing.JFrame {
         nombreMod.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nombreModActionPerformed(evt);
+            }
+        });
+
+        telefonoMod.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                telefonoModKeyTyped(evt);
             }
         });
 
@@ -406,7 +419,7 @@ public class ClienteV extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 455, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -437,11 +450,16 @@ public class ClienteV extends javax.swing.JFrame {
     }//GEN-LAST:event_modClienteActionPerformed
 
     private void crearIndividualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearIndividualActionPerformed
-       if( dpiCrear.getText().length() > 0 && nombreCrear.getText().length() > 0 && apellidoCrear.getText().length() > 0 && 
+
+        if( dpiCrear.getText().length() > 0 && nombreCrear.getText().length() > 0 && apellidoCrear.getText().length() > 0 && 
                telefonoCrear.getText().length() > 0 && fechaCrear.getText().length() > 0 && direccionCrear.getText().length() > 0 ){
-            crearCliente();
-       }else{
-           JOptionPane.showMessageDialog(this,"Debe de llenar todos los campos");
+            if(dpiCrear.getText().length() == 13){
+                crearCliente();
+            }else{
+                JOptionPane.showMessageDialog(this, "El dpi debe de tener 13 digitos!");
+            }
+        }else{
+           JOptionPane.showMessageDialog(this,"Debe de llenar todos los campos!");
        }
     }//GEN-LAST:event_crearIndividualActionPerformed
 
@@ -470,6 +488,33 @@ public class ClienteV extends javax.swing.JFrame {
         seleccion.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void dpiCrearKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_dpiCrearKeyTyped
+        char validar = evt.getKeyChar();
+        if (Character.isLetter(validar)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(this, "Solo se permiten numeros!");
+        }
+    }//GEN-LAST:event_dpiCrearKeyTyped
+
+    private void telefonoCrearKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_telefonoCrearKeyTyped
+        char validar = evt.getKeyChar();
+        if (Character.isLetter(validar)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(this, "Solo se permiten numeros!");
+        }
+    }//GEN-LAST:event_telefonoCrearKeyTyped
+
+    private void telefonoModKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_telefonoModKeyTyped
+        char validar = evt.getKeyChar();
+        if (Character.isLetter(validar)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(this, "Solo se permiten numeros!");
+        }
+    }//GEN-LAST:event_telefonoModKeyTyped
 
     /**
      * @param args the command line arguments
@@ -509,21 +554,29 @@ public class ClienteV extends javax.swing.JFrame {
     private void modificarCliente(){
         if(cliente != null){
             if(nombreMod.getText().length()!=0){
-                cliente.setNombres(nombreMod.getText());
+                cliente.setNombres(nombreMod.getText().trim());
             }
             if(apellidoMod.getText().length()!=0){
-                cliente.setApellidos(apellidoMod.getText());
+                cliente.setApellidos(apellidoMod.getText().trim());
             }
             cliente.setGenero((String)generoMod.getSelectedItem());
             if(telefonoMod.getText().length()!=0){
-                cliente.setTelefono(telefonoMod.getText());
+                cliente.setTelefono(telefonoMod.getText().trim());
             }
             if(fechaMod.getText().length()!=0){
-                cliente.setFechaNac(fechaMod.getText());
+                cliente.setFechaNac(fechaMod.getText().trim());
             }
             if(direccionMod.getText().length()!=0){
-                cliente.setDireccion(direccionMod.getText());
+                cliente.setDireccion(direccionMod.getText().trim());
             }
+            JOptionPane.showMessageDialog(this, "Los datos han sido modificados exitosamente!");
+            nombreMod.setText("");
+            apellidoMod.setText("");
+            telefonoMod.setText("");
+            fechaMod.setText("");
+            direccionMod.setText("");
+        }else{
+            JOptionPane.showMessageDialog(this,"Debe de buscar un cliente para poder modificar sus datos!");
         }
     }
     
@@ -586,6 +639,12 @@ public class ClienteV extends javax.swing.JFrame {
         Inicial.clientes.insertar(new Cliente(dpi,nombreCrear.getText().trim(), apellidoCrear.getText().trim(), (String)generoCrear.getSelectedItem(), 
         fechaCrear.getText().trim(), telefonoCrear.getText().trim(), direccionCrear.getText().trim(), 0), dpi);
         JOptionPane.showMessageDialog(this,"Se a creado el cliente exitosamente!");
+        dpiCrear.setText("");
+        nombreCrear.setText("");
+        apellidoCrear.setText("");
+        fechaCrear.setText("");
+        telefonoCrear.setText("");
+        direccionCrear.setText("");
     }
     
     public void listadoDPI(){

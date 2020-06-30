@@ -1,18 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Ventanas;
 
-import Objetos.Cliente;
 import Objetos.Vehiculo;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -81,6 +74,7 @@ public class VehiculoV extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Vehiculos");
 
         jButton1.setText("Cargar archivo de vehiculos");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -133,6 +127,12 @@ public class VehiculoV extends javax.swing.JFrame {
         jLabel6.setText("Precio");
 
         jLabel7.setText("Transmision");
+
+        anioCre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                anioCreKeyTyped(evt);
+            }
+        });
 
         tranCre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Automatica", "Mecanica" }));
 
@@ -260,6 +260,12 @@ public class VehiculoV extends javax.swing.JFrame {
 
         jLabel15.setText("Transmision");
 
+        anioMod.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                anioModKeyTyped(evt);
+            }
+        });
+
         tranMod.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Automatica", "Mecanica" }));
 
         jButton4.setText("Modificar datos");
@@ -348,7 +354,7 @@ public class VehiculoV extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 442, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -413,6 +419,24 @@ public class VehiculoV extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton5ActionPerformed
 
+    private void anioCreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_anioCreKeyTyped
+        char validar = evt.getKeyChar();
+        if (Character.isLetter(validar)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(this, "Solo se permiten numeros!");
+        }
+    }//GEN-LAST:event_anioCreKeyTyped
+
+    private void anioModKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_anioModKeyTyped
+        char validar = evt.getKeyChar();
+        if (Character.isLetter(validar)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(this, "Solo se permiten numeros!");
+        }
+    }//GEN-LAST:event_anioModKeyTyped
+
     /**
      * @param args the command line arguments
      */
@@ -466,6 +490,14 @@ public class VehiculoV extends javax.swing.JFrame {
                 vehiculo.setPrecio(precioMod.getText().trim());
             }
             vehiculo.setTransmision((String)tranMod.getSelectedItem());
+            marcaMod.setText("");
+            modeloMod.setText("");
+            anioMod.setText("");
+            colorMod.setText("");
+            precioMod.setText("");
+            JOptionPane.showMessageDialog(this, "Se han modificado los datos del vehiculo!");
+        }else{
+            JOptionPane.showMessageDialog(this, "Debe de seleccionar un vehiculo primero!");
         }
     }
 
@@ -474,6 +506,12 @@ public class VehiculoV extends javax.swing.JFrame {
         Inicial.vehiculos.insertarNormal(new Vehiculo(placaCre.getText().trim(), marcaCre.getText().trim(), modeloCre.getText().trim(), 
         anioCre.getText().trim(), colorCre.getText().trim(), precioCre.getText().trim(),transmision, 0));
         JOptionPane.showMessageDialog(this,"Se a agregado el vehiculo al sistema exitosamente!");
+        placaCre.setText("");
+        marcaCre.setText("");
+        modeloCre.setText("");
+        anioCre.setText("");
+        colorCre.setText("");
+        precioCre.setText("");
     }
     
     public void listadoPlacas(){
