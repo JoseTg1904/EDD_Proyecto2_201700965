@@ -5,14 +5,23 @@
  */
 package Ventanas;
 
+import Estructuras.ArbolBB;
+import Estructuras.ListaSimple;
+import Objetos.DuplaLetra;
+import Objetos.DuplaResultado;
+import java.awt.Desktop;
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.security.NoSuchAlgorithmException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
 /**
@@ -55,6 +64,11 @@ public class ReportesV extends javax.swing.JFrame {
         jButton12 = new javax.swing.JButton();
         llaveBloque = new javax.swing.JTextField();
         jButton13 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jButton14 = new javax.swing.JButton();
+        jButton15 = new javax.swing.JButton();
+        jButton16 = new javax.swing.JButton();
+        jButton17 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -158,42 +172,86 @@ public class ReportesV extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setText("Decodificar reportes top");
+
+        jButton14.setText("Top viajes");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+
+        jButton15.setText("Top clientes");
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
+
+        jButton16.setText("Top conductores");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
+
+        jButton17.setText("Top vehiculos");
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton17ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2)
-                    .addComponent(jButton12)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jButton9, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton10, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton11, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(llaveBloque, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton13))
-                            .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1))
+                        .addComponent(jButton14)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton15)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton16)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton17)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton12))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton3)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton4)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton5)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton6)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton7)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel1)
+                                .addComponent(jLabel2)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(jButton9, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jButton10, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jButton11, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                            .addComponent(llaveBloque, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(jButton13))
+                                        .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jScrollPane1))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jButton1)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jButton2)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jButton3)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jButton4)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jButton5)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jButton6)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jButton7)))
+                            .addComponent(jLabel3))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -227,9 +285,16 @@ public class ReportesV extends javax.swing.JFrame {
                             .addComponent(llaveBloque, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton13)))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addComponent(jButton12)
-                .addContainerGap())
+                .addGap(18, 18, 18)
+                .addComponent(jLabel3)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton14)
+                    .addComponent(jButton15)
+                    .addComponent(jButton16)
+                    .addComponent(jButton17)
+                    .addComponent(jButton12))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -247,13 +312,17 @@ public class ReportesV extends javax.swing.JFrame {
             generarGrafoHash();
         } catch (IOException ex) {
             Logger.getLogger(ReportesV.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(ReportesV.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-              try {
+        try {
             generarGrafoArbolB();   
         } catch (IOException ex) {
+            Logger.getLogger(ReportesV.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InterruptedException ex) {
             Logger.getLogger(ReportesV.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -263,6 +332,8 @@ public class ReportesV extends javax.swing.JFrame {
             generarGrafoListaDobleCiruclar();
         } catch (IOException ex) {
             Logger.getLogger(ReportesV.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(ReportesV.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -270,6 +341,8 @@ public class ReportesV extends javax.swing.JFrame {
         try {
             generarGrafoDelGrafo();
         } catch (IOException ex) {
+            Logger.getLogger(ReportesV.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InterruptedException ex) {
             Logger.getLogger(ReportesV.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton5ActionPerformed
@@ -279,6 +352,8 @@ public class ReportesV extends javax.swing.JFrame {
             generarGrafoListaAdyacencia();
         } catch (IOException ex) {
             Logger.getLogger(ReportesV.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(ReportesV.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton6ActionPerformed
 
@@ -286,6 +361,8 @@ public class ReportesV extends javax.swing.JFrame {
         try {
             generarGrafoGeneral();
         } catch (IOException ex) {
+            Logger.getLogger(ReportesV.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InterruptedException ex) {
             Logger.getLogger(ReportesV.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton7ActionPerformed
@@ -295,23 +372,41 @@ public class ReportesV extends javax.swing.JFrame {
             generarGrafoBlockChain();
         } catch (IOException ex) {
             Logger.getLogger(ReportesV.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(ReportesV.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        topViajesMasLargos();
+        try {
+            topViajesMasLargos();
+        } catch (IOException ex) {
+            Logger.getLogger(ReportesV.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        topClientes();
+        try {
+            topClientes();
+        } catch (IOException ex) {
+            Logger.getLogger(ReportesV.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        topConductores();
+        try {
+            topConductores();
+        } catch (IOException ex) {
+            Logger.getLogger(ReportesV.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        topVehiculos();
+        try {
+            topVehiculos();
+        } catch (IOException ex) {
+            Logger.getLogger(ReportesV.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
@@ -321,6 +416,66 @@ public class ReportesV extends javax.swing.JFrame {
             Logger.getLogger(ReportesV.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        JFileChooser selector = new JFileChooser();
+        selector.showOpenDialog(this);
+        File archivo = selector.getSelectedFile();
+        if( archivo != null && !(archivo.getName().equals("")) ){
+            try {
+                decodificarViajesMasLargos(archivo);
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(Inicial.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IOException ex) {
+                Logger.getLogger(Inicial.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+        JFileChooser selector = new JFileChooser();
+        selector.showOpenDialog(this);
+        File archivo = selector.getSelectedFile();
+        if( archivo != null && !(archivo.getName().equals("")) ){
+            try {
+                decodificarTopClientes(archivo);
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(Inicial.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IOException ex) {
+                Logger.getLogger(Inicial.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }//GEN-LAST:event_jButton15ActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+               JFileChooser selector = new JFileChooser();
+        selector.showOpenDialog(this);
+        File archivo = selector.getSelectedFile();
+        if( archivo != null && !(archivo.getName().equals("")) ){
+            try {
+                decodificarTopConductores(archivo);
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(Inicial.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IOException ex) {
+                Logger.getLogger(Inicial.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+                   JFileChooser selector = new JFileChooser();
+        selector.showOpenDialog(this);
+        File archivo = selector.getSelectedFile();
+        if( archivo != null && !(archivo.getName().equals("")) ){
+            try {
+                decodificarTopVehiculos(archivo);
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(Inicial.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IOException ex) {
+                Logger.getLogger(Inicial.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }//GEN-LAST:event_jButton17ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -357,6 +512,7 @@ public class ReportesV extends javax.swing.JFrame {
         });
     }
     
+    
     private void obtenerRuta() throws NoSuchAlgorithmException{
         if(llaveBloque.getText().length() > 0){
         areaDeReporte.setText(Inicial.blockChain.devolverRuta(llaveBloque.getText().trim()));
@@ -365,24 +521,224 @@ public class ReportesV extends javax.swing.JFrame {
         }
     }
     
-    private void topViajesMasLargos(){
-        areaDeReporte.setText(Inicial.blockChain.topViajesMasLargos());
+    ArbolBB abbViajes, abbClientes, abbConductores, abbVehiculos;
+    ListaSimple topViajes,topClientes,topConductores,topVehiculos;
+    DuplaResultado[] duplaViajes, duplaClientes, duplaConductores, duplaVehiculos;
+    
+    public void decodificarTopVehiculos(File archivo) throws FileNotFoundException, IOException{
+        FileReader lector = new FileReader(archivo);
+        BufferedReader almacenador = new BufferedReader(lector);
+        String linea, contenido = "", resultado = "";
+        while( (linea = almacenador.readLine()) != null ){
+            contenido += linea;
+        }
+        String[] ar = contenido.split(" ");
+        for( int i = 0; i < ar.length; i++){
+            for( int j = 0; j < duplaVehiculos.length; j++){
+                if(duplaVehiculos[j].getCodigo().equals(ar[i])){
+                    resultado += duplaVehiculos[j].getCaracter();
+                }
+            }
+        }
+        areaDeReporte.setText(resultado);
     }
     
-    private void topClientes(){
-        areaDeReporte.setText(Inicial.blockChain.topClientes() );
+    public void decodificarTopConductores(File archivo) throws FileNotFoundException, IOException{
+        FileReader lector = new FileReader(archivo);
+        BufferedReader almacenador = new BufferedReader(lector);
+        String linea, contenido = "", resultado = "";
+        while( (linea = almacenador.readLine()) != null ){
+            contenido += linea;
+        }
+        String[] ar = contenido.split(" ");
+        for( int i = 0; i < ar.length; i++){
+            for( int j = 0; j < duplaConductores.length; j++){
+                if(duplaConductores[j].getCodigo().equals(ar[i])){
+                    resultado += duplaConductores[j].getCaracter();
+                }
+            }
+        }
+        areaDeReporte.setText(resultado);
     }
     
-    private void topConductores(){
-        areaDeReporte.setText(Inicial.blockChain.topConductores() );
+    public void decodificarTopClientes(File archivo) throws FileNotFoundException, IOException{
+        FileReader lector = new FileReader(archivo);
+        BufferedReader almacenador = new BufferedReader(lector);
+        String linea, contenido = "", resultado = "";
+        while( (linea = almacenador.readLine()) != null ){
+            contenido += linea;
+        }
+        String[] ar = contenido.split(" ");
+        for( int i = 0; i < ar.length; i++){
+            for( int j = 0; j < duplaClientes.length; j++){
+                if(duplaClientes[j].getCodigo().equals(ar[i])){
+                    resultado += duplaClientes[j].getCaracter();
+                }
+            }
+        }
+        areaDeReporte.setText(resultado);
+    }
+    
+    public void decodificarViajesMasLargos(File archivo) throws FileNotFoundException, IOException{
+        FileReader lector = new FileReader(archivo);
+        BufferedReader almacenador = new BufferedReader(lector);
+        String linea, contenido = "", resultado = "";
+        while( (linea = almacenador.readLine()) != null ){
+            contenido += linea;
+        }
+        String[] ar = contenido.split(" ");
+        for( int i = 0; i < ar.length; i++){
+            for( int j = 0; j < duplaViajes.length; j++){
+                if(duplaViajes[j].getCodigo().equals(ar[i])){
+                    resultado += duplaViajes[j].getCaracter();
+                }
+            }
+        }
+        areaDeReporte.setText(resultado);
+    }
+    
+    private void topViajesMasLargos() throws IOException{
+        ListaSimple aux = new ListaSimple();
+        topViajes = new ListaSimple();
+        String reporte = Inicial.blockChain.topViajesMasLargos();
+        areaDeReporte.setText(reporte);
+        for(int i = 0; i < reporte.length();i++){
+           topViajes.insertar(new DuplaLetra(reporte.charAt(i)));
+        }
+        topViajes.ordenarHuffman();
+        aux.copiarLista(topViajes, aux);
+        abbViajes = topViajes.crearABBHuffman(topViajes);
+        duplaViajes = aux.obtenerCodigos(aux, abbViajes);
+        String pathCodificado = ".\\Reportes\\topViajesCodificado.txt";
+        String textoCodificado = " ";
+        for ( int i = 0; i < reporte.length(); i++){
+            for( int j = 0; j < duplaViajes.length; j++ ){
+                if( duplaViajes[j].getCaracter() == reporte.charAt(i)){
+                    if( textoCodificado.equals(" ")){
+                        textoCodificado = duplaViajes[j].getCodigo()+" ";
+                    }else{
+                       textoCodificado += duplaViajes[j].getCodigo()+" ";
+                    }
+                }
+            }
+        }
+        File archivo = new File(pathCodificado);
+        if(!archivo.exists()){
+            archivo.createNewFile();
+        }
+        PrintWriter pintor = new PrintWriter(archivo,"UTF-8");
+        pintor.print(textoCodificado);
+        pintor.close();
+        Desktop.getDesktop().open(archivo);
+    }
+    
+    private void topClientes() throws IOException{
+        ListaSimple aux = new ListaSimple();
+        topClientes = new ListaSimple();
+        String reporte = Inicial.blockChain.topClientes();
+        areaDeReporte.setText(reporte);
+        for(int i = 0; i < reporte.length();i++){
+           topClientes.insertar(new DuplaLetra(reporte.charAt(i)));
+        }
+        topClientes.ordenarHuffman();
+        aux.copiarLista(topClientes, aux);
+        abbClientes = topClientes.crearABBHuffman(topClientes);
+        duplaClientes = aux.obtenerCodigos(aux, abbClientes);
+        String pathCodificado = ".\\Reportes\\topClientesCodificado.txt";
+        String textoCodificado = " ";
+        for ( int i = 0; i < reporte.length(); i++){
+            for( int j = 0; j < duplaClientes.length; j++ ){
+                if( duplaClientes[j].getCaracter() == reporte.charAt(i)){
+                    if( textoCodificado.equals(" ")){
+                        textoCodificado = duplaClientes[j].getCodigo()+" ";
+                    }else{
+                       textoCodificado += duplaClientes[j].getCodigo()+" ";
+                    }
+                }
+            }
+        }
+        File archivo = new File(pathCodificado);
+        if(!archivo.exists()){
+            archivo.createNewFile();
+        }
+        PrintWriter pintor = new PrintWriter(archivo,"UTF-8");
+        pintor.print(textoCodificado);
+        pintor.close();
+        Desktop.getDesktop().open(archivo);
+    }
+    
+    private void topConductores() throws IOException{
+        ListaSimple aux = new ListaSimple();
+        topClientes = new ListaSimple();
+        String reporte = Inicial.blockChain.topConductores();
+        areaDeReporte.setText(reporte);
+        for(int i = 0; i < reporte.length();i++){
+           topConductores.insertar(new DuplaLetra(reporte.charAt(i)));
+        }
+        topConductores.ordenarHuffman();
+        aux.copiarLista(topConductores, aux);
+        abbConductores = topConductores.crearABBHuffman(topConductores);
+        duplaConductores = aux.obtenerCodigos(aux, abbConductores);
+        String pathCodificado = ".\\Reportes\\topConductoresCodificado.txt";
+        String textoCodificado = " ";
+        for ( int i = 0; i < reporte.length(); i++){
+            for( int j = 0; j < duplaConductores.length; j++ ){
+                if( duplaConductores[j].getCaracter() == reporte.charAt(i)){
+                    if( textoCodificado.equals(" ")){
+                        textoCodificado = duplaConductores[j].getCodigo()+" ";
+                    }else{
+                       textoCodificado += duplaConductores[j].getCodigo()+" ";
+                    }
+                }
+            }
+        }
+        File archivo = new File(pathCodificado);
+        if(!archivo.exists()){
+            archivo.createNewFile();
+        }
+        PrintWriter pintor = new PrintWriter(archivo,"UTF-8");
+        pintor.print(textoCodificado);
+        pintor.close();
+        Desktop.getDesktop().open(archivo);
     }
         
-    private void topVehiculos(){
-        areaDeReporte.setText(Inicial.blockChain.topVehiculos() );
+    private void topVehiculos() throws IOException{
+        ListaSimple aux = new ListaSimple();
+        topClientes = new ListaSimple();
+        String reporte = Inicial.blockChain.topVehiculos();
+        areaDeReporte.setText(reporte);
+        for(int i = 0; i < reporte.length();i++){
+           topVehiculos.insertar(new DuplaLetra(reporte.charAt(i)));
+        }
+        topVehiculos.ordenarHuffman();
+        aux.copiarLista(topVehiculos, aux);
+        abbVehiculos = topVehiculos.crearABBHuffman(topVehiculos);
+        duplaVehiculos = aux.obtenerCodigos(aux, abbVehiculos);
+        String pathCodificado = ".\\Reportes\\topVehiculosCodificado.txt";
+        String textoCodificado = " ";
+        for ( int i = 0; i < reporte.length(); i++){
+            for( int j = 0; j < duplaVehiculos.length; j++ ){
+                if( duplaVehiculos[j].getCaracter() == reporte.charAt(i)){
+                    if( textoCodificado.equals(" ")){
+                        textoCodificado = duplaVehiculos[j].getCodigo()+" ";
+                    }else{
+                       textoCodificado += duplaVehiculos[j].getCodigo()+" ";
+                    }
+                }
+            }
+        }
+        File archivo = new File(pathCodificado);
+        if(!archivo.exists()){
+            archivo.createNewFile();
+        }
+        PrintWriter pintor = new PrintWriter(archivo,"UTF-8");
+        pintor.print(textoCodificado);
+        pintor.close();
+        Desktop.getDesktop().open(archivo);
     }
     
-    private void generarGrafoBlockChain() throws IOException{
-        String pathDot = "./Reportes/grafoBlockChain.dot", pathImagen = "./Reportes/grafoBlockChain.png";
+    private void generarGrafoBlockChain() throws IOException, InterruptedException{
+        String pathDot = ".\\Reportes\\grafoBlockChain.dot", pathImagen = ".\\Reportes\\grafoBlockChain.png";
         String contenido = Inicial.blockChain.grafoBlockChain();
         File archivo = new File(pathDot);
         if(!archivo.exists()){
@@ -391,16 +747,16 @@ public class ReportesV extends javax.swing.JFrame {
         PrintWriter pintor = new PrintWriter(archivo,"UTF-8");
         pintor.print(contenido);
         pintor.close();
-        String comando = "dot -Tpng -o "+pathImagen+" "+pathDot;
-        Runtime rt = Runtime.getRuntime();
-        rt.exec(comando);
+        ProcessBuilder cmd = new ProcessBuilder("dot","-Tpng","-o",pathImagen,pathDot);
+        cmd.redirectErrorStream(true);
+        cmd.start().waitFor(); 
         VisualizacionV visualizacion = new VisualizacionV();
         visualizacion.setVisible(true);
         visualizacion.setearImagen(pathImagen);
     }
     
-    private void generarGrafoGeneral() throws IOException{
-        String pathDot = "./Reportes/grafoGeneral.dot", pathImagen = "./Reportes/grafoGeneral.png";
+    private void generarGrafoGeneral() throws IOException, InterruptedException{
+        String pathDot = ".\\Reportes\\grafoGeneral.dot", pathImagen = ".\\Reportes\\grafoGeneral.png";
         String contenido = Inicial.blockChain.grafoTotalBlockChain();
         File archivo = new File(pathDot);
         if(!archivo.exists()){
@@ -409,16 +765,16 @@ public class ReportesV extends javax.swing.JFrame {
         PrintWriter pintor = new PrintWriter(archivo,"UTF-8");
         pintor.print(contenido);
         pintor.close();
-        String comando = "dot -Tpng -o "+pathImagen+" "+pathDot;
-        Runtime rt = Runtime.getRuntime();
-        rt.exec(comando);
+        ProcessBuilder cmd = new ProcessBuilder("dot","-Tpng","-o",pathImagen,pathDot);
+        cmd.redirectErrorStream(true);
+        cmd.start().waitFor(); 
         VisualizacionV visualizacion = new VisualizacionV();
         visualizacion.setVisible(true);
         visualizacion.setearImagen(pathImagen);
     }
     
-    private void generarGrafoListaAdyacencia() throws IOException{
-        String pathDot = "./Reportes/grafoListaAdyacencia.dot", pathImagen = "./Reportes/grafoListaAdyacencia.png";
+    private void generarGrafoListaAdyacencia() throws IOException, InterruptedException{
+        String pathDot = ".\\Reportes\\grafoListaAdyacencia.dot", pathImagen = ".\\Reportes\\grafoListaAdyacencia.png";
         String contenido = Inicial.grafo.grafoLista();
         File archivo = new File(pathDot);
         if(!archivo.exists()){
@@ -427,16 +783,16 @@ public class ReportesV extends javax.swing.JFrame {
         PrintWriter pintor = new PrintWriter(archivo,"UTF-8");
         pintor.print(contenido);
         pintor.close();
-        String comando = "dot -Tpng -o "+pathImagen+" "+pathDot;
-        Runtime rt = Runtime.getRuntime();
-        rt.exec(comando);
+        ProcessBuilder cmd = new ProcessBuilder("dot","-Tpng","-o",pathImagen,pathDot);
+        cmd.redirectErrorStream(true);
+        cmd.start().waitFor(); 
         VisualizacionV visualizacion = new VisualizacionV();
         visualizacion.setVisible(true);
         visualizacion.setearImagen(pathImagen);
     }
     
-    private void generarGrafoDelGrafo() throws IOException{
-        String pathDot = "./Reportes/grafoGrafo.dot", pathImagen = "./Reportes/grafoGrafo.png";
+    private void generarGrafoDelGrafo() throws IOException, InterruptedException{
+        String pathDot = ".\\Reportes\\grafoGrafo.dot", pathImagen = ".\\Reportes\\grafoGrafo.png";
         String contenido = Inicial.grafo.grafoTotal();
         File archivo = new File(pathDot);
         if(!archivo.exists()){
@@ -445,16 +801,16 @@ public class ReportesV extends javax.swing.JFrame {
         PrintWriter pintor = new PrintWriter(archivo,"UTF-8");
         pintor.print(contenido);
         pintor.close();
-        String comando = "dot -Tpng -o "+pathImagen+" "+pathDot;
-        Runtime rt = Runtime.getRuntime();
-        rt.exec(comando);
+        ProcessBuilder cmd = new ProcessBuilder("dot","-Tpng","-o",pathImagen,pathDot);
+        cmd.redirectErrorStream(true);
+        cmd.start().waitFor(); 
         VisualizacionV visualizacion = new VisualizacionV();
         visualizacion.setVisible(true);
         visualizacion.setearImagen(pathImagen);
     }
     
-    private void generarGrafoListaDobleCiruclar() throws IOException{
-        String pathDot = "./Reportes/grafoListaDobleCircular.dot", pathImagen = "./Reportes/grafoListaDobleCircular.png";
+    private void generarGrafoListaDobleCiruclar() throws IOException, InterruptedException{
+        String pathDot = ".\\Reportes\\grafoListaDobleCircular.dot", pathImagen = ".\\Reportes\\grafoListaDobleCircular.png";
         String contenido = Inicial.conductores.grafoListaDobleCircular();
         File archivo = new File(pathDot);
         if(!archivo.exists()){
@@ -463,16 +819,16 @@ public class ReportesV extends javax.swing.JFrame {
         PrintWriter pintor = new PrintWriter(archivo,"UTF-8");
         pintor.print(contenido);
         pintor.close();
-        String comando = "dot -Tpng -o "+pathImagen+" "+pathDot;
-        Runtime rt = Runtime.getRuntime();
-        rt.exec(comando);
+        ProcessBuilder cmd = new ProcessBuilder("dot","-Tpng","-o",pathImagen,pathDot);
+        cmd.redirectErrorStream(true);
+        cmd.start().waitFor(); 
         VisualizacionV visualizacion = new VisualizacionV();
         visualizacion.setVisible(true);
         visualizacion.setearImagen(pathImagen);
     }
     
-    private void generarGrafoArbolB() throws IOException{
-        String pathDot = "./Reportes/grafoArbolB.dot", pathImagen = "./Reportes/grafoArbolB.png";
+    private void generarGrafoArbolB() throws IOException, InterruptedException{
+        String pathDot = ".\\Reportes\\grafoArbolB.dot", pathImagen = ".\\Reportes\\grafoArbolB.png";
         String contenido = Inicial.vehiculos.devolverGrafo();
         File archivo = new File(pathDot);
         if(!archivo.exists()){
@@ -481,16 +837,16 @@ public class ReportesV extends javax.swing.JFrame {
         PrintWriter pintor = new PrintWriter(archivo,"UTF-8");
         pintor.print(contenido);
         pintor.close();
-        String comando = "dot -Tpng -o "+pathImagen+" "+pathDot;
-        Runtime rt = Runtime.getRuntime();
-        rt.exec(comando);
+        ProcessBuilder cmd = new ProcessBuilder("dot","-Tpng","-o",pathImagen,pathDot);
+        cmd.redirectErrorStream(true);
+        cmd.start().waitFor(); 
         VisualizacionV visualizacion = new VisualizacionV();
         visualizacion.setVisible(true);
         visualizacion.setearImagen(pathImagen);
     }
     
-    private void generarGrafoHash() throws IOException{
-        String pathDot = "./Reportes/grafoHash.dot", pathImagen = "./Reportes/grafoHash.png";
+    private void generarGrafoHash() throws IOException, InterruptedException{
+        String pathDot = ".\\Reportes\\grafoHash.dot", pathImagen = ".\\Reportes\\grafoHash.png";
         String contenido = Inicial.clientes.grafoHash();
         File archivo = new File(pathDot);
         if(!archivo.exists()){
@@ -499,9 +855,9 @@ public class ReportesV extends javax.swing.JFrame {
         PrintWriter pintor = new PrintWriter(archivo,"UTF-8");
         pintor.print(contenido);
         pintor.close();
-        String comando = "dot -Tpng -o "+pathImagen+" "+pathDot;
-        Runtime rt = Runtime.getRuntime();
-        rt.exec(comando);
+        ProcessBuilder cmd = new ProcessBuilder("dot","-Tpng","-o",pathImagen,pathDot);
+        cmd.redirectErrorStream(true);
+        cmd.start().waitFor(); 
         VisualizacionV visualizacion = new VisualizacionV();
         visualizacion.setVisible(true);
         visualizacion.setearImagen(pathImagen);
@@ -514,6 +870,10 @@ public class ReportesV extends javax.swing.JFrame {
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -524,6 +884,7 @@ public class ReportesV extends javax.swing.JFrame {
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField llaveBloque;
     // End of variables declaration//GEN-END:variables

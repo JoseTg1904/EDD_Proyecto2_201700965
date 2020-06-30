@@ -2,6 +2,8 @@ package Estructuras;
 
 import Objetos.Cliente;
 import Objetos.Conductor;
+import Objetos.DuplaLetra;
+import Objetos.DuplaResultado;
 import Objetos.Vehiculo;
 import Objetos.VerticeGrafo;
 
@@ -121,6 +123,76 @@ public class ListaSimple {
         return vertice;
     }
     
+    public void insertar(DuplaLetra duplaLetra){
+        if(cabeza == null){
+            cola = cabeza = new NodoLS(new NodoABB(duplaLetra));
+            this.tamanio++;
+        }else{
+            if(this.buscar(duplaLetra) == false){
+                NodoLS nuevo = new NodoLS(new NodoABB(duplaLetra));
+                cola.setSiguiente(nuevo);
+                cola = nuevo;
+                this.tamanio++;
+            }
+        }
+    }
+    
+    public void recorrerHuffman(){
+        NodoLS aux = this.cabeza;
+        while(aux!=null){
+            System.out.println("Caracter: "+aux.getNodoABB().getDuplaLetra().getCaracter()+" Frecuencia: "+aux.getNodoABB().getDuplaLetra().getFrecuencia());
+            aux = aux.getSiguiente();
+        }
+    }
+    
+    public ArbolBB crearABBHuffman(ListaSimple lista){
+        this.crearABBHuffman(lista.getCabeza(), lista);
+        ArbolBB huffman = new ArbolBB(lista.getCola().getNodoABB());
+        return huffman;
+    }
+    
+    private void crearABBHuffman(NodoLS aux, ListaSimple lista){
+        if(aux.getSiguiente() != null){
+            NodoABB izquierda = aux.getNodoABB();
+            NodoABB derecha = aux.getSiguiente().getNodoABB();
+            DuplaLetra nuevo = new DuplaLetra('\t');
+            nuevo.setFrecuencia(izquierda.getDuplaLetra().getFrecuencia()+derecha.getDuplaLetra().getFrecuencia());
+            NodoABB raiz = new NodoABB(nuevo);
+            raiz.setIzquierda(izquierda);
+            raiz.setDerecha(derecha);
+            izquierda.setPadre(raiz);
+            derecha.setPadre(raiz);
+            lista.insertarCola(raiz);
+            crearABBHuffman(aux.getSiguiente().getSiguiente(), lista);
+        } 
+    }
+    
+    public void copiarLista(ListaSimple original, ListaSimple copia){
+        NodoLS aux = original.cabeza;
+        while(aux != null){
+            copia.insertar(aux.getNodoABB().getDuplaLetra());
+            aux = aux.getSiguiente();
+        }
+    }
+    
+    public DuplaResultado[] obtenerCodigos(ListaSimple lista, ArbolBB arbol){
+        DuplaResultado[] dupla = new DuplaResultado[lista.getTamanio()];
+        int it = 0;
+        NodoLS aux = lista.getCabeza();
+        while(aux != null){
+            dupla[it] = new DuplaResultado(aux.getNodoABB().getDuplaLetra().getCaracter() ,arbol.buscarCaracter(aux.getNodoABB().getDuplaLetra().getCaracter()));  
+            aux = aux.getSiguiente();
+            it++;
+        }
+        return dupla;
+    }
+    
+    public void insertarCola(NodoABB nodo){
+        NodoLS nuevo = new NodoLS(nodo);
+        cola.setSiguiente(nuevo);
+        cola = nuevo;
+    }
+    
     public void insertar(VerticeGrafo verticeGrafo){
         if(cabeza == null){
             cola = cabeza = new NodoLS(verticeGrafo);
@@ -200,6 +272,20 @@ public class ListaSimple {
         return retorno;
     }
     
+    private boolean buscar(DuplaLetra duplaLetra){
+        boolean retorno = false;
+        NodoLS aux = this.cabeza;
+        while(aux != null){
+            if(aux.getNodoABB().getDuplaLetra().getCaracter() == duplaLetra.getCaracter()){
+                aux.getNodoABB().getDuplaLetra().setFrecuencia(aux.getNodoABB().getDuplaLetra().getFrecuencia()+1);
+                retorno = true;
+                break;
+            }
+            aux = aux.getSiguiente();
+        }
+        return retorno;
+    }
+    
     private boolean buscar(Vehiculo vehiculo){
         boolean retorno = false;
         NodoLS aux = this.cabeza;
@@ -225,6 +311,25 @@ public class ListaSimple {
         }
         return retorno;
     }
+    
+    public void ordenarHuffman(){
+        this.ordenarHuffman(this.cabeza);
+    }
+    
+    private void ordenarHuffman(NodoLS aux){
+        if(aux != null){
+            NodoLS temp = this.cabeza;
+            while(temp != null){
+                if(temp.getNodoABB().getDuplaLetra().getFrecuencia() > aux.getNodoABB().getDuplaLetra().getFrecuencia()){
+                    NodoABB nodo = temp.getNodoABB();
+                    temp.setNodoABB(aux.getNodoABB());
+                    aux.setNodoABB(nodo);
+                }
+                temp = temp.getSiguiente();
+            }
+            this.ordenarHuffman(aux.getSiguiente());
+        }
+    } 
     
     
     public void ordenarAscendente(){
@@ -323,13 +428,6 @@ public class ListaSimple {
         }
     } 
     
-    
-    
-    
-    
-    
-    
-    
     public int getTamanio(){
         return this.tamanio;
     }
@@ -341,6 +439,10 @@ public class ListaSimple {
     
     public NodoLS getCabeza(){
         return this.cabeza;
+    }
+    
+    public void setCabeza(NodoLS cabeza){
+        this.cabeza = cabeza;
     }
     
     public NodoLS getCola(){
@@ -357,6 +459,12 @@ class NodoLS{
     private Cliente cliente;
     private Conductor conductor;
     private Vehiculo vehiculo;
+    private NodoABB nodoABB;
+    
+    public NodoLS(NodoABB nodoABB){
+        this.nodoABB = nodoABB;
+        this.siguiente = null;
+    }
     
     public NodoLS(Vehiculo vehiculo){
         this.vehiculo = vehiculo;
@@ -386,6 +494,18 @@ class NodoLS{
     public  NodoLS(VerticeGrafo verticeGrafo){
         this.siguiente = null;
         this.verticeGrafo = verticeGrafo;
+    }
+
+    NodoLS(DuplaLetra duplaLetra) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public NodoABB getNodoABB() {
+        return nodoABB;
+    }
+
+    public void setNodoABB(NodoABB nodoABB) {
+        this.nodoABB = nodoABB;
     }
 
     public Conductor getConductor() {

@@ -93,48 +93,44 @@ subgraph cluster_doble{
 style=filled
 label="Lista Doble Circular"
 Color=aquamarine
-"1005957733221" [label = "Dpi: 1005957733221
-Nombre completo: Rolando Lopez"]
-"1005957733221" -> "3005952367401"
-"3005952367401" [label = "Dpi: 3005952367401
-Nombre completo: Pedro Ordonez"]
-"3005952367401" -> "3033988367401"
-"3033988367401" [label = "Dpi: 3033988367401
-Nombre completo: Fernanda Lopez"]
-"3033988367401" -> "4005952367401"
-"4005952367401" [label = "Dpi: 4005952367401
-Nombre completo: Maria Alfaro"]
-"4005952367401" -> "5004153267401"
-"5004153267401" [label = "Dpi: 5004153267401
-Nombre completo: Mario Altan"]
-"5004153267401" -> "6005952367401"
-"6005952367401" [label = "Dpi: 6005952367401
-Nombre completo: Segio Chacon"]
-"6005952367401" -> "7805544360001"
-"7805544360001" [label = "Dpi: 7805544360001
-Nombre completo: Luis Ordonez"]
-"7805544360001" -> "9805952367756"
-"9805952367756" [label = "Dpi: 9805952367756
-Nombre completo: Virginia Depaz"]
-"9805952367756" -> "1005957733221"
-"1005957733221" -> "9805952367756"
-"9805952367756" -> "7805544360001"
-"7805544360001" -> "6005952367401"
-"6005952367401" -> "5004153267401"
-"5004153267401" -> "4005952367401"
-"4005952367401" -> "3033988367401"
-"3033988367401" -> "3005952367401"
-"3005952367401" -> "1005957733221"
+"2897107230101" [label = "Dpi: 2897107230101
+Nombre completo: NPedrito Alonzo"]
+"2897107230101" -> "2897107230102"
+"2897107230102" [label = "Dpi: 2897107230102
+Nombre completo: NPedrito Alonzo"]
+"2897107230102" -> "2897107230103"
+"2897107230103" [label = "Dpi: 2897107230103
+Nombre completo: NPedrito Alonzo"]
+"2897107230103" -> "2897107230104"
+"2897107230104" [label = "Dpi: 2897107230104
+Nombre completo: NPedrito Alonzo"]
+"2897107230104" -> "2897107230105"
+"2897107230105" [label = "Dpi: 2897107230105
+Nombre completo: NPedrito Alonzo"]
+"2897107230105" -> "2897107230106"
+"2897107230106" [label = "Dpi: 2897107230106
+Nombre completo: NPedrito Alonzo"]
+"2897107230106" -> "2897107230107"
+"2897107230107" [label = "Dpi: 2897107230107
+Nombre completo: NPedrito Alonzo"]
+"2897107230107" -> "2897107230101"
+"2897107230101" -> "2897107230107"
+"2897107230107" -> "2897107230106"
+"2897107230106" -> "2897107230105"
+"2897107230105" -> "2897107230104"
+"2897107230104" -> "2897107230103"
+"2897107230103" -> "2897107230102"
+"2897107230102" -> "2897107230101"
 }
 subgraph cluster_arbolB{
 style=filled
 label="Arbol B"
 color=beige
-"Estructuras.NodoAB@4b827b04" [shape = record label = "<654ABD>Placa: 654ABD
+"Estructuras.NodoAB@3cb23549" [shape = record label = "<654ABD>Placa: 654ABD
  Marca: Honda
  Modelo: Corolla|"]
-"Estructuras.NodoAB@4b827b04" -> "Estructuras.NodoAB@36b012b7"
-"Estructuras.NodoAB@36b012b7" [shape = record label = "<654ABB>Placa: 654ABB
+"Estructuras.NodoAB@3cb23549" -> "Estructuras.NodoAB@367f4a37"
+"Estructuras.NodoAB@367f4a37" [shape = record label = "<654ABB>Placa: 654ABB
  Marca: Suzuki
  Modelo: Corolla|<654ABC>Placa: 654ABC
  Marca: Toyota
@@ -145,8 +141,8 @@ color=beige
  Modelo: Corolla|<654ABF>Placa: 654ABF
  Marca: Hyundai
  Modelo: Corolla"]
-"Estructuras.NodoAB@4b827b04" -> "Estructuras.NodoAB@3cae4f56"
-"Estructuras.NodoAB@3cae4f56" [shape = record label = "<654ABE>Placa: 654ABE
+"Estructuras.NodoAB@3cb23549" -> "Estructuras.NodoAB@17a4843d"
+"Estructuras.NodoAB@17a4843d" [shape = record label = "<654ABE>Placa: 654ABE
  Marca: Ford
  Modelo: Corolla|<654ABF>Placa: 654ABF
  Marca: Hyundai
@@ -159,39 +155,42 @@ color=beige
  Modelo: Corolla"]
 }
 subgraph cluster_block{label="Block chain"style=filled
-color=palegreen"Estructuras.NodoL@9867890" [label = "Llave: 421ca601224fa3ef112aadc1c7e7a"]
-"Estructuras.NodoL@9867890" -> "Estructuras.NodoL@5aecc5c1"
-"Estructuras.NodoL@9867890" -> "2213747322311"
-"Estructuras.NodoL@9867890" -> "1005957733221"
-"Estructuras.NodoL@9867890" -> "Estructuras.NodoAB@4b827b04"
-"Estructuras.NodoL@9867890" -> "Estructuras.NodoLS@35da3caa"
+color=palegreen"Estructuras.NodoL@62d3180d" [label = "Llave: eeda40cb134238261dfca14c833917c"]
+"Estructuras.NodoL@62d3180d" -> "Estructuras.NodoL@4fe66163"
+"Estructuras.NodoL@62d3180d" -> "2213747322311"
+"Estructuras.NodoL@62d3180d" -> "2897107230101"
+"Estructuras.NodoL@62d3180d" -> "Estructuras.NodoAB@3cb23549"
+"Estructuras.NodoL@62d3180d" -> "Estructuras.NodoLS@384a45a"
 subgraph cluster_0{
 color=lightpink
 style=filled
-label="Lista simple""Estructuras.NodoLS@35da3caa" [label = "Lugar: A
+label="Lista simple""Estructuras.NodoLS@384a45a" [label = "Lugar: A
 Tiempo recorrido: 0"]
-"Estructuras.NodoLS@35da3caa" -> "Estructuras.NodoLS@22849aad"
-"Estructuras.NodoLS@22849aad" [label = "Lugar: C
+"Estructuras.NodoLS@384a45a" -> "Estructuras.NodoLS@30b25d7b"
+"Estructuras.NodoLS@30b25d7b" [label = "Lugar: C
 Tiempo recorrido: 6"]
-"Estructuras.NodoLS@22849aad" -> "Estructuras.NodoLS@73e48b9"
-"Estructuras.NodoLS@73e48b9" [label = "Lugar: E
+"Estructuras.NodoLS@30b25d7b" -> "Estructuras.NodoLS@4adb3810"
+"Estructuras.NodoLS@4adb3810" [label = "Lugar: E
 Tiempo recorrido: 8"]
-"Estructuras.NodoLS@73e48b9" -> "Estructuras.NodoLS@183a0dd"
-"Estructuras.NodoLS@183a0dd" [label = "Lugar: F
+"Estructuras.NodoLS@4adb3810" -> "Estructuras.NodoLS@36caa551"
+"Estructuras.NodoLS@36caa551" [label = "Lugar: F
 Tiempo recorrido: 9"]
-}"Estructuras.NodoL@5aecc5c1" [label = "Llave: efac6872f824531132671e5bbc9b67a5"]
-"Estructuras.NodoL@5aecc5c1" -> "Estructuras.NodoL@9867890"
-"Estructuras.NodoL@5aecc5c1" -> "3421239845212"
-"Estructuras.NodoL@5aecc5c1" -> "4005952367401"
-"Estructuras.NodoL@5aecc5c1" -> "Estructuras.NodoAB@4b827b04"
-"Estructuras.NodoL@5aecc5c1" -> "Estructuras.NodoLS@6a7f2b4b"
+}"Estructuras.NodoL@4fe66163" [label = "Llave: e7fc43764dac9d3a8f58b338a71cb2"]
+"Estructuras.NodoL@4fe66163" -> "Estructuras.NodoL@62d3180d"
+"Estructuras.NodoL@4fe66163" -> "2213747322311"
+"Estructuras.NodoL@4fe66163" -> "2897107230101"
+"Estructuras.NodoL@4fe66163" -> "Estructuras.NodoAB@3cb23549"
+"Estructuras.NodoL@4fe66163" -> "Estructuras.NodoLS@10ca61a6"
 subgraph cluster_1{
 color=lightpink
 style=filled
-label="Lista simple""Estructuras.NodoLS@6a7f2b4b" [label = "Lugar: A
+label="Lista simple""Estructuras.NodoLS@10ca61a6" [label = "Lugar: A
 Tiempo recorrido: 0"]
-}"Estructuras.NodoL@9867890" -> "Estructuras.NodoL@5aecc5c1"
-"Estructuras.NodoL@5aecc5c1" -> "Estructuras.NodoL@9867890"
+"Estructuras.NodoLS@10ca61a6" -> "Estructuras.NodoLS@3231bf41"
+"Estructuras.NodoLS@3231bf41" [label = "Lugar: B
+Tiempo recorrido: 5"]
+}"Estructuras.NodoL@62d3180d" -> "Estructuras.NodoL@4fe66163"
+"Estructuras.NodoL@4fe66163" -> "Estructuras.NodoL@62d3180d"
 }
 subgraph cluster_grafo{
 label="grafo"

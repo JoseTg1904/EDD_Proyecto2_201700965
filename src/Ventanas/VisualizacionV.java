@@ -127,7 +127,10 @@ public class VisualizacionV extends javax.swing.JFrame {
     
     public void setearImagen(String path){
         this.path = path;
-        icono.setIcon(new ImageIcon(path));  
+        ImageIcon icon = new ImageIcon(path);
+        icon.getImage().flush();
+        ImageIcon iconx2 = new ImageIcon(icon.getImage());
+        icono.setIcon(iconx2);  
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
