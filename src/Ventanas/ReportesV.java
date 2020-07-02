@@ -620,7 +620,7 @@ public class ReportesV extends javax.swing.JFrame {
         aux.copiarLista(topViajes, aux);
         abbViajes = topViajes.crearABBHuffman(topViajes);
         duplaViajes = aux.obtenerCodigos(aux, abbViajes);
-        String pathCodificado = ".\\Reportes\\topViajesCodificado.txt";
+        String pathCodificado = ".\\Reportes\\topViajesCodificado.edd";
         String textoCodificado = " ";
         for ( int i = 0; i < reporte.length(); i++){
             for( int j = 0; j < duplaViajes.length; j++ ){
@@ -655,7 +655,7 @@ public class ReportesV extends javax.swing.JFrame {
         aux.copiarLista(topClientes, aux);
         abbClientes = topClientes.crearABBHuffman(topClientes);
         duplaClientes = aux.obtenerCodigos(aux, abbClientes);
-        String pathCodificado = ".\\Reportes\\topClientesCodificado.txt";
+        String pathCodificado = ".\\Reportes\\topClientesCodificado.edd";
         String textoCodificado = " ";
         for ( int i = 0; i < reporte.length(); i++){
             for( int j = 0; j < duplaClientes.length; j++ ){
@@ -690,7 +690,7 @@ public class ReportesV extends javax.swing.JFrame {
         aux.copiarLista(topConductores, aux);
         abbConductores = topConductores.crearABBHuffman(topConductores);
         duplaConductores = aux.obtenerCodigos(aux, abbConductores);
-        String pathCodificado = ".\\Reportes\\topConductoresCodificado.txt";
+        String pathCodificado = ".\\Reportes\\topConductoresCodificado.edd";
         String textoCodificado = " ";
         for ( int i = 0; i < reporte.length(); i++){
             for( int j = 0; j < duplaConductores.length; j++ ){
@@ -725,7 +725,7 @@ public class ReportesV extends javax.swing.JFrame {
         aux.copiarLista(topVehiculos, aux);
         abbVehiculos = topVehiculos.crearABBHuffman(topVehiculos);
         duplaVehiculos = aux.obtenerCodigos(aux, abbVehiculos);
-        String pathCodificado = ".\\Reportes\\topVehiculosCodificado.txt";
+        String pathCodificado = ".\\Reportes\\topVehiculosCodificado.edd";
         String textoCodificado = " ";
         for ( int i = 0; i < reporte.length(); i++){
             for( int j = 0; j < duplaVehiculos.length; j++ ){

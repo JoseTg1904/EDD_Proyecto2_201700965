@@ -9,13 +9,11 @@ import Objetos.DuplaLetra;
 public class ArbolBB {
     
     private NodoABB raiz, aux;
-    
+    private String dot;
     
     public ArbolBB(NodoABB raiz){
         this.raiz = raiz;
     }
-    
-    
     
     public String buscarCaracter(Character caracter){
         aux = this.raiz;
@@ -23,7 +21,8 @@ public class ArbolBB {
             this.buscarNodo(this.raiz, caracter);
         }
         
-        return generarBinario(aux);
+        StringBuilder constructor = new StringBuilder(generarBinario(aux));
+        return constructor.reverse().toString();
     }
     
     private void buscarNodo(NodoABB temp, Character caracter){
@@ -66,7 +65,7 @@ public class ArbolBB {
         return cadena;
     }
     
-    String dot;
+    
     public String grafo(){
         dot = "digraph G{\n";
         dot += "\""+this.raiz+"\" [label = \"Caracter: "+this.raiz.getDuplaLetra().getCaracter()+"\nFrecuencia: "+this.raiz.getDuplaLetra().getFrecuencia()+"\" ]\n";
