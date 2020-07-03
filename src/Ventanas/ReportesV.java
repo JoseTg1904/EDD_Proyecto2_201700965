@@ -680,7 +680,7 @@ public class ReportesV extends javax.swing.JFrame {
     
     private void topConductores() throws IOException{
         ListaSimple aux = new ListaSimple();
-        topClientes = new ListaSimple();
+        topConductores = new ListaSimple();
         String reporte = Inicial.blockChain.topConductores();
         areaDeReporte.setText(reporte);
         for(int i = 0; i < reporte.length();i++){
@@ -715,7 +715,7 @@ public class ReportesV extends javax.swing.JFrame {
         
     private void topVehiculos() throws IOException{
         ListaSimple aux = new ListaSimple();
-        topClientes = new ListaSimple();
+        topVehiculos = new ListaSimple();
         String reporte = Inicial.blockChain.topVehiculos();
         areaDeReporte.setText(reporte);
         for(int i = 0; i < reporte.length();i++){
