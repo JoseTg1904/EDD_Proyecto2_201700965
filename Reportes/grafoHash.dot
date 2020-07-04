@@ -1,0 +1,235 @@
+digraph TablaHash{
+ node[shape = box]
+0 [ label = "Origen: 0" ]
+0 -> "3000853708101"
+"3000853708101" [shape = box label = "Dpi: 3000853708101
+Nombre completo: Surely Juarez"]
+"3000853708101" -> "3000853700701"
+"3000853700701" [shape = box label = "Dpi: 3000853700701
+Nombre completo: Oscar Gutierrez"]
+"3000853700701" -> "3000853700109"
+"3000853700109" [shape = box label = "Dpi: 3000853700109
+Nombre completo: Alejandra Rivera"]
+{rank = same; 0; "3000853708101"; "3000853700701"; "3000853700109"; }
+0 -> 1
+1 [ label = "Origen: 1" ]
+1 -> "3000853709101"
+"3000853709101" [shape = box label = "Dpi: 3000853709101
+Nombre completo: Ashley Boanerges"]
+"3000853709101" -> "3000853700110"
+"3000853700110" [shape = box label = "Dpi: 3000853700110
+Nombre completo: Paola Castillo"]
+{rank = same; 1; "3000853709101"; "3000853700110"; }
+1 -> 2
+2 [ label = "Origen: 2" ]
+2 -> "3000853710101"
+"3000853710101" [shape = box label = "Dpi: 3000853710101
+Nombre completo: Shirley Pinillos"]
+{rank = same; 2; "3000853710101"; }
+2 -> 3
+3 [ label = "Origen: 3" ]
+3 -> 4
+4 [ label = "Origen: 4" ]
+4 -> 5
+5 [ label = "Origen: 5" ]
+5 -> "2897107230101"
+"2897107230101" [shape = box label = "Dpi: 2897107230101
+Nombre completo: Jose Carlos I Alonzo Colocho"]
+"2897107230101" -> "3000853700151"
+"3000853700151" [shape = box label = "Dpi: 3000853700151
+Nombre completo: Alejandro Arriola"]
+{rank = same; 5; "2897107230101"; "3000853700151"; }
+5 -> 6
+6 [ label = "Origen: 6" ]
+6 -> 7
+7 [ label = "Origen: 7" ]
+7 -> "3000853700301"
+"3000853700301" [shape = box label = "Dpi: 3000853700301
+Nombre completo: Maximiliano Rivera"]
+{rank = same; 7; "3000853700301"; }
+7 -> 8
+8 [ label = "Origen: 8" ]
+8 -> "3000853790101"
+"3000853790101" [shape = box label = "Dpi: 3000853790101
+Nombre completo: Modificado Arriola"]
+"3000853790101" -> "3000853700191"
+"3000853700191" [shape = box label = "Dpi: 3000853700191
+Nombre completo: Ulysses Benitez"]
+{rank = same; 8; "3000853790101"; "3000853700191"; }
+8 -> 9
+9 [ label = "Origen: 9" ]
+9 -> 10
+10 [ label = "Origen: 10" ]
+10 -> 11
+11 [ label = "Origen: 11" ]
+11 -> "3000853700601"
+"3000853700601" [shape = box label = "Dpi: 3000853700601
+Nombre completo: Raul Pelaez"]
+{rank = same; 11; "3000853700601"; }
+11 -> 12
+12 [ label = "Origen: 12" ]
+12 -> "3000853720101"
+"3000853720101" [shape = box label = "Dpi: 3000853720101
+Nombre completo: Mynor Montserrat"]
+"3000853720101" -> "3000853700121"
+"3000853700121" [shape = box label = "Dpi: 3000853700121
+Nombre completo: Dominga Retana"]
+{rank = same; 12; "3000853720101"; "3000853700121"; }
+12 -> 13
+13 [ label = "Origen: 13" ]
+13 -> 14
+14 [ label = "Origen: 14" ]
+14 -> 15
+15 [ label = "Origen: 15" ]
+15 -> "3000853760101"
+"3000853760101" [shape = box label = "Dpi: 3000853760101
+Nombre completo: Rafael Ruano"]
+"3000853760101" -> "3000853700901"
+"3000853700901" [shape = box label = "Dpi: 3000853700901
+Nombre completo: Flor Castillo"]
+"3000853700901" -> "3000853700161"
+"3000853700161" [shape = box label = "Dpi: 3000853700161
+Nombre completo: Samuel Ruiz"]
+{rank = same; 15; "3000853760101"; "3000853700901"; "3000853700161"; }
+15 -> 16
+16 [ label = "Origen: 16" ]
+16 -> 17
+17 [ label = "Origen: 17" ]
+17 -> 18
+18 [ label = "Origen: 18" ]
+18 -> "3000853700201"
+"3000853700201" [shape = box label = "Dpi: 3000853700201
+Nombre completo: Pancho Orellana"]
+{rank = same; 18; "3000853700201"; }
+18 -> 19
+19 [ label = "Origen: 19" ]
+19 -> 20
+20 [ label = "Origen: 20" ]
+20 -> 21
+21 [ label = "Origen: 21" ]
+21 -> 22
+22 [ label = "Origen: 22" ]
+22 -> "3000853730101"
+"3000853730101" [shape = box label = "Dpi: 3000853730101
+Nombre completo: Geovanni Chavez"]
+"3000853730101" -> "3000853700501"
+"3000853700501" [shape = box label = "Dpi: 3000853700501
+Nombre completo: Daniel Castro"]
+"3000853700501" -> "3000853700131"
+"3000853700131" [shape = box label = "Dpi: 3000853700131
+Nombre completo: Luli Lopez"]
+{rank = same; 22; "3000853730101"; "3000853700501"; "3000853700131"; }
+22 -> 23
+23 [ label = "Origen: 23" ]
+23 -> 24
+24 [ label = "Origen: 24" ]
+24 -> 25
+25 [ label = "Origen: 25" ]
+25 -> "3000853770101"
+"3000853770101" [shape = box label = "Dpi: 3000853770101
+Nombre completo: Christian Pelaez"]
+"3000853770101" -> "3000853700171"
+"3000853700171" [shape = box label = "Dpi: 3000853700171
+Nombre completo: Miguel Gomez"]
+{rank = same; 25; "3000853770101"; "3000853700171"; }
+25 -> 26
+26 [ label = "Origen: 26" ]
+26 -> "3000853700801"
+"3000853700801" [shape = box label = "Dpi: 3000853700801
+Nombre completo: Linda Retana2"]
+{rank = same; 26; "3000853700801"; }
+26 -> 27
+27 [ label = "Origen: 27" ]
+27 -> 28
+28 [ label = "Origen: 28" ]
+28 -> 29
+29 [ label = "Origen: 29" ]
+29 -> "3000853700101"
+"3000853700101" [shape = box label = "Dpi: 3000853700101
+Nombre completo: Susel Retana"]
+{rank = same; 29; "3000853700101"; }
+29 -> 30
+30 [ label = "Origen: 30" ]
+30 -> "3001853700101"
+"3001853700101" [shape = box label = "Dpi: 3001853700101
+Nombre completo: Hernaldo Juarez"]
+"3001853700101" -> "3000853701101"
+"3000853701101" [shape = box label = "Dpi: 3000853701101
+Nombre completo: Estephanie De Leon"]
+"3000853701101" -> "3000853700102"
+"3000853700102" [shape = box label = "Dpi: 3000853700102
+Nombre completo: Leila Gomez"]
+{rank = same; 30; "3001853700101"; "3000853701101"; "3000853700102"; }
+30 -> 31
+31 [ label = "Origen: 31" ]
+31 -> "3002853700101"
+"3002853700101" [shape = box label = "Dpi: 3002853700101
+Nombre completo: Luis Filomeno"]
+"3002853700101" -> "3000853702101"
+"3000853702101" [shape = box label = "Dpi: 3000853702101
+Nombre completo: Alany Ixchel"]
+"3000853702101" -> "3000853700103"
+"3000853700103" [shape = box label = "Dpi: 3000853700103
+Nombre completo: Emy Ruiz"]
+{rank = same; 31; "3002853700101"; "3000853702101"; "3000853700103"; }
+31 -> 32
+32 [ label = "Origen: 32" ]
+32 -> "3000853740101"
+"3000853740101" [shape = box label = "Dpi: 3000853740101
+Nombre completo: Alex Sanabria"]
+"3000853740101" -> "3000853703101"
+"3000853703101" [shape = box label = "Dpi: 3000853703101
+Nombre completo: Roxana Pu"]
+"3000853703101" -> "3000853700141"
+"3000853700141" [shape = box label = "Dpi: 3000853700141
+Nombre completo: Sebastian Retana"]
+"3000853700141" -> "3000853700104"
+"3000853700104" [shape = box label = "Dpi: 3000853700104
+Nombre completo: Roxana Lopez"]
+{rank = same; 32; "3000853740101"; "3000853703101"; "3000853700141"; "3000853700104"; }
+32 -> 33
+33 [ label = "Origen: 33" ]
+33 -> "3000853704101"
+"3000853704101" [shape = box label = "Dpi: 3000853704101
+Nombre completo: Amanda Taylor"]
+"3000853704101" -> "3000853700401"
+"3000853700401" [shape = box label = "Dpi: 3000853700401
+Nombre completo: Sergio Castillo"]
+"3000853700401" -> "3000853700105"
+"3000853700105" [shape = box label = "Dpi: 3000853700105
+Nombre completo: Angela Pelaez"]
+{rank = same; 33; "3000853704101"; "3000853700401"; "3000853700105"; }
+33 -> 34
+34 [ label = "Origen: 34" ]
+34 -> "3000853705101"
+"3000853705101" [shape = box label = "Dpi: 3000853705101
+Nombre completo: Sandra Martinez"]
+"3000853705101" -> "3000853700106"
+"3000853700106" [shape = box label = "Dpi: 3000853700106
+Nombre completo: Isabel Gutierrez"]
+{rank = same; 34; "3000853705101"; "3000853700106"; }
+34 -> 35
+35 [ label = "Origen: 35" ]
+35 -> "3000853780101"
+"3000853780101" [shape = box label = "Dpi: 3000853780101
+Nombre completo: Jian Gutierrez"]
+"3000853780101" -> "3000853706101"
+"3000853706101" [shape = box label = "Dpi: 3000853706101
+Nombre completo: Angel Pelaez"]
+"3000853706101" -> "3000853700181"
+"3000853700181" [shape = box label = "Dpi: 3000853700181
+Nombre completo: Javier Pelaez"]
+"3000853700181" -> "3000853700107"
+"3000853700107" [shape = box label = "Dpi: 3000853700107
+Nombre completo: Andrea Arriola"]
+{rank = same; 35; "3000853780101"; "3000853706101"; "3000853700181"; "3000853700107"; }
+35 -> 36
+36 [ label = "Origen: 36" ]
+36 -> "3000853707101"
+"3000853707101" [shape = box label = "Dpi: 3000853707101
+Nombre completo: Susely Gomez"]
+"3000853707101" -> "3000853700108"
+"3000853700108" [shape = box label = "Dpi: 3000853700108
+Nombre completo: Abigail Solares"]
+{rank = same; 36; "3000853707101"; "3000853700108"; }
+}

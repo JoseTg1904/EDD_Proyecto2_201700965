@@ -43,7 +43,10 @@ public class ListaDobleCircular {
 
     public String devolverRuta(String llave) throws NoSuchAlgorithmException{
         ListaSimple lista = this.buscarNodoBlockChain(llave);
-        return lista.recorrer();
+        if(lista != null){
+            return lista.recorrer();
+        }
+        return "Viaje no encontrado";
     }
     
     private ListaSimple buscarNodoBlockChain(String llave) throws NoSuchAlgorithmException{

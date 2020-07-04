@@ -1,0 +1,42 @@
+digraph BlockChain{
+"Estructuras.NodoL@6ebb85f7" [label = "Llave: b915c52b74c325ff3a4e844a84641e
+Usuario: 3000853700109
+Conductor: 1000853700102
+Vehiculo: p17lAf17
+Origen: Gerona
+Destino: Madrid"]
+"Estructuras.NodoL@6ebb85f7" -> "Estructuras.NodoL@74100f2b"
+"Estructuras.NodoL@74100f2b" [label = "Llave: 7fc69b94f66918538cd85953e11d95c0
+Usuario: 3000853708101
+Conductor: 1000853700100
+Vehiculo: p17lAf17
+Origen: Oviedo
+Destino: Zaragoza"]
+"Estructuras.NodoL@74100f2b" -> "Estructuras.NodoL@c8f90b6"
+"Estructuras.NodoL@c8f90b6" [label = "Llave: e61d2f5a5b3482e9971fd26c662b93
+Usuario: 3000853708101
+Conductor: 1000853700100
+Vehiculo: p25lAf25
+Origen: Barcelona
+Destino: Murcia"]
+"Estructuras.NodoL@c8f90b6" -> "Estructuras.NodoL@2918386f"
+"Estructuras.NodoL@2918386f" [label = "Llave: 195dad37c695a9f5fc6d43caafed07e
+Usuario: 3000853700701
+Conductor: 1000853700100
+Vehiculo: p25lAf25
+Origen: Madrid
+Destino: Albacete"]
+"Estructuras.NodoL@2918386f" -> "Estructuras.NodoL@1b3e9486"
+"Estructuras.NodoL@1b3e9486" [label = "Llave: 3d2c6431916b2052bd57a99e8e1b77f1
+Usuario: 3000853700701
+Conductor: 1000853700104
+Vehiculo: p11lAf11
+Origen: Valladolid
+Destino: Badajoz"]
+"Estructuras.NodoL@1b3e9486" -> "Estructuras.NodoL@6ebb85f7"
+"Estructuras.NodoL@6ebb85f7" -> "Estructuras.NodoL@1b3e9486"
+"Estructuras.NodoL@1b3e9486" -> "Estructuras.NodoL@2918386f"
+"Estructuras.NodoL@2918386f" -> "Estructuras.NodoL@c8f90b6"
+"Estructuras.NodoL@c8f90b6" -> "Estructuras.NodoL@74100f2b"
+"Estructuras.NodoL@74100f2b" -> "Estructuras.NodoL@6ebb85f7"
+}

@@ -1,0 +1,372 @@
+digraph ArbolB{
+node[shape=record]
+"Estructuras.NodoAB@6e7bb75b" [shape = record label = "<p17lAf17>Placa: p17lAf17
+ Marca: toyota
+ Modelo: MM18|<p25lAf25>Placa: p25lAf25
+ Marca: hyundai
+ Modelo: MM26|<p35lAf35>Placa: p35lAf35
+ Marca: volvo
+ Modelo: MM36|<p43lAf43>Placa: p43lAf43
+ Marca: modificado
+ Modelo: MM44|"]
+"Estructuras.NodoAB@6e7bb75b" -> "Estructuras.NodoAB@27527abb"
+"Estructuras.NodoAB@27527abb" [shape = record label = "<p11lAf11>Placa: p11lAf11
+ Marca: toyota
+ Modelo: MM12|<p14lAf14>Placa: p14lAf14
+ Marca: toyota
+ Modelo: MM15|<p17lAf17>Placa: p17lAf17
+ Marca: toyota
+ Modelo: MM18|<p2lAf2>Placa: p2lAf2
+ Marca: toyota
+ Modelo: MM3|<p5lAf5>Placa: p5lAf5
+ Marca: toyota
+ Modelo: MM6"]
+"Estructuras.NodoAB@27527abb" -> "Estructuras.NodoAB@34fcfa0d"
+"Estructuras.NodoAB@34fcfa0d" [shape = record label = "<123abc>Placa: 123abc
+ Marca: honda
+ Modelo: modelo|<p0lAf0>Placa: p0lAf0
+ Marca: toyota
+ Modelo: MM1|<p10lAf10>Placa: p10lAf10
+ Marca: toyota
+ Modelo: MM11|<p12lAf12>Placa: p12lAf12
+ Marca: toyota
+ Modelo: MM13|<p1lAf1>Placa: p1lAf1
+ Marca: toyota
+ Modelo: MM2"]
+"Estructuras.NodoAB@27527abb" -> "Estructuras.NodoAB@20fc1226"
+"Estructuras.NodoAB@20fc1226" [shape = record label = "<p12lAf12>Placa: p12lAf12
+ Marca: toyota
+ Modelo: MM13|<p13lAf13>Placa: p13lAf13
+ Marca: toyota
+ Modelo: MM14|<p14lAf14>Placa: p14lAf14
+ Marca: toyota
+ Modelo: MM15|<p15lAf15>Placa: p15lAf15
+ Marca: toyota
+ Modelo: MM16|<p1lAf1>Placa: p1lAf1
+ Marca: toyota
+ Modelo: MM2"]
+"Estructuras.NodoAB@27527abb" -> "Estructuras.NodoAB@138eb80d"
+"Estructuras.NodoAB@138eb80d" [shape = record label = "<p15lAf15>Placa: p15lAf15
+ Marca: toyota
+ Modelo: MM16|<p16lAf16>Placa: p16lAf16
+ Marca: toyota
+ Modelo: MM17|<p17lAf17>Placa: p17lAf17
+ Marca: toyota
+ Modelo: MM18|<p18lAf18>Placa: p18lAf18
+ Marca: hyundai
+ Modelo: MM19|<p1lAf1>Placa: p1lAf1
+ Marca: toyota
+ Modelo: MM2"]
+"Estructuras.NodoAB@27527abb" -> "Estructuras.NodoAB@27bd8f65"
+"Estructuras.NodoAB@27bd8f65" [shape = record label = "<p18lAf18>Placa: p18lAf18
+ Marca: hyundai
+ Modelo: MM19|<p19lAf19>Placa: p19lAf19
+ Marca: hyundai
+ Modelo: MM20|<p1lAf1>Placa: p1lAf1
+ Marca: toyota
+ Modelo: MM2|<p20lAf20>Placa: p20lAf20
+ Marca: hyundai
+ Modelo: MM21|<p21lAf21>Placa: p21lAf21
+ Marca: hyundai
+ Modelo: MM22"]
+"Estructuras.NodoAB@27527abb" -> "Estructuras.NodoAB@7442350d"
+"Estructuras.NodoAB@7442350d" [shape = record label = "<p30lAf30>Placa: p30lAf30
+ Marca: hyundai
+ Modelo: MM31|<p31lAf31>Placa: p31lAf31
+ Marca: hyundai
+ Modelo: MM32|<p32lAf32>Placa: p32lAf32
+ Marca: hyundai
+ Modelo: MM33|<p3lAf3>Placa: p3lAf3
+ Marca: toyota
+ Modelo: MM4|<p4lAf4>Placa: p4lAf4
+ Marca: toyota
+ Modelo: MM5"]
+"Estructuras.NodoAB@27527abb" -> "Estructuras.NodoAB@34ef6481"
+"Estructuras.NodoAB@34ef6481" [shape = record label = "<p6lAf6>Placa: p6lAf6
+ Marca: toyota
+ Modelo: MM7|<p7lAf7>Placa: p7lAf7
+ Marca: toyota
+ Modelo: MM8|<p8lAf8>Placa: p8lAf8
+ Marca: toyota
+ Modelo: MM9|<p9lAf9>Placa: p9lAf9
+ Marca: toyota
+ Modelo: MM10|"]
+"Estructuras.NodoAB@6e7bb75b" -> "Estructuras.NodoAB@5247fcc1"
+"Estructuras.NodoAB@5247fcc1" [shape = record label = "<p1lAf1>Placa: p1lAf1
+ Marca: toyota
+ Modelo: MM2|<p22lAf22>Placa: p22lAf22
+ Marca: hyundai
+ Modelo: MM23|<p25lAf25>Placa: p25lAf25
+ Marca: hyundai
+ Modelo: MM26|<p2lAf2>Placa: p2lAf2
+ Marca: toyota
+ Modelo: MM3|<p5lAf5>Placa: p5lAf5
+ Marca: toyota
+ Modelo: MM6"]
+"Estructuras.NodoAB@5247fcc1" -> "Estructuras.NodoAB@27bd8f65"
+"Estructuras.NodoAB@27bd8f65" [shape = record label = "<p18lAf18>Placa: p18lAf18
+ Marca: hyundai
+ Modelo: MM19|<p19lAf19>Placa: p19lAf19
+ Marca: hyundai
+ Modelo: MM20|<p1lAf1>Placa: p1lAf1
+ Marca: toyota
+ Modelo: MM2|<p20lAf20>Placa: p20lAf20
+ Marca: hyundai
+ Modelo: MM21|<p21lAf21>Placa: p21lAf21
+ Marca: hyundai
+ Modelo: MM22"]
+"Estructuras.NodoAB@5247fcc1" -> "Estructuras.NodoAB@194a874b"
+"Estructuras.NodoAB@194a874b" [shape = record label = "<p20lAf20>Placa: p20lAf20
+ Marca: hyundai
+ Modelo: MM21|<p21lAf21>Placa: p21lAf21
+ Marca: hyundai
+ Modelo: MM22|<p22lAf22>Placa: p22lAf22
+ Marca: hyundai
+ Modelo: MM23|<p23lAf23>Placa: p23lAf23
+ Marca: hyundai
+ Modelo: MM24|<p24lAf24>Placa: p24lAf24
+ Marca: hyundai
+ Modelo: MM25"]
+"Estructuras.NodoAB@5247fcc1" -> "Estructuras.NodoAB@7c453332"
+"Estructuras.NodoAB@7c453332" [shape = record label = "<p23lAf23>Placa: p23lAf23
+ Marca: hyundai
+ Modelo: MM24|<p24lAf24>Placa: p24lAf24
+ Marca: hyundai
+ Modelo: MM25|<p25lAf25>Placa: p25lAf25
+ Marca: hyundai
+ Modelo: MM26|<p26lAf26>Placa: p26lAf26
+ Marca: hyundai
+ Modelo: MM27|<p27lAf27>Placa: p27lAf27
+ Marca: hyundai
+ Modelo: MM28"]
+"Estructuras.NodoAB@5247fcc1" -> "Estructuras.NodoAB@33c18b57"
+"Estructuras.NodoAB@33c18b57" [shape = record label = "<p26lAf26>Placa: p26lAf26
+ Marca: hyundai
+ Modelo: MM27|<p27lAf27>Placa: p27lAf27
+ Marca: hyundai
+ Modelo: MM28|<p28lAf28>Placa: p28lAf28
+ Marca: hyundai
+ Modelo: MM29|<p29lAf29>Placa: p29lAf29
+ Marca: hyundai
+ Modelo: MM30|"]
+"Estructuras.NodoAB@5247fcc1" -> "Estructuras.NodoAB@7442350d"
+"Estructuras.NodoAB@7442350d" [shape = record label = "<p30lAf30>Placa: p30lAf30
+ Marca: hyundai
+ Modelo: MM31|<p31lAf31>Placa: p31lAf31
+ Marca: hyundai
+ Modelo: MM32|<p32lAf32>Placa: p32lAf32
+ Marca: hyundai
+ Modelo: MM33|<p3lAf3>Placa: p3lAf3
+ Marca: toyota
+ Modelo: MM4|<p4lAf4>Placa: p4lAf4
+ Marca: toyota
+ Modelo: MM5"]
+"Estructuras.NodoAB@5247fcc1" -> "Estructuras.NodoAB@34ef6481"
+"Estructuras.NodoAB@34ef6481" [shape = record label = "<p6lAf6>Placa: p6lAf6
+ Marca: toyota
+ Modelo: MM7|<p7lAf7>Placa: p7lAf7
+ Marca: toyota
+ Modelo: MM8|<p8lAf8>Placa: p8lAf8
+ Marca: toyota
+ Modelo: MM9|<p9lAf9>Placa: p9lAf9
+ Marca: toyota
+ Modelo: MM10|"]
+"Estructuras.NodoAB@6e7bb75b" -> "Estructuras.NodoAB@5e8dc81a"
+"Estructuras.NodoAB@5e8dc81a" [shape = record label = "<p2lAf2>Placa: p2lAf2
+ Marca: toyota
+ Modelo: MM3|<p32lAf32>Placa: p32lAf32
+ Marca: hyundai
+ Modelo: MM33|<p35lAf35>Placa: p35lAf35
+ Marca: volvo
+ Modelo: MM36|<p38lAf38>Placa: p38lAf38
+ Marca: volvo
+ Modelo: MM39|<p5lAf5>Placa: p5lAf5
+ Marca: toyota
+ Modelo: MM6"]
+"Estructuras.NodoAB@5e8dc81a" -> "Estructuras.NodoAB@33c18b57"
+"Estructuras.NodoAB@33c18b57" [shape = record label = "<p26lAf26>Placa: p26lAf26
+ Marca: hyundai
+ Modelo: MM27|<p27lAf27>Placa: p27lAf27
+ Marca: hyundai
+ Modelo: MM28|<p28lAf28>Placa: p28lAf28
+ Marca: hyundai
+ Modelo: MM29|<p29lAf29>Placa: p29lAf29
+ Marca: hyundai
+ Modelo: MM30|"]
+"Estructuras.NodoAB@5e8dc81a" -> "Estructuras.NodoAB@7442350d"
+"Estructuras.NodoAB@7442350d" [shape = record label = "<p30lAf30>Placa: p30lAf30
+ Marca: hyundai
+ Modelo: MM31|<p31lAf31>Placa: p31lAf31
+ Marca: hyundai
+ Modelo: MM32|<p32lAf32>Placa: p32lAf32
+ Marca: hyundai
+ Modelo: MM33|<p3lAf3>Placa: p3lAf3
+ Marca: toyota
+ Modelo: MM4|<p4lAf4>Placa: p4lAf4
+ Marca: toyota
+ Modelo: MM5"]
+"Estructuras.NodoAB@5e8dc81a" -> "Estructuras.NodoAB@13b06c5f"
+"Estructuras.NodoAB@13b06c5f" [shape = record label = "<p33lAf33>Placa: p33lAf33
+ Marca: hyundai
+ Modelo: MM34|<p34lAf34>Placa: p34lAf34
+ Marca: volvo
+ Modelo: MM35|<p35lAf35>Placa: p35lAf35
+ Marca: volvo
+ Modelo: MM36|<p3lAf3>Placa: p3lAf3
+ Marca: toyota
+ Modelo: MM4|<p4lAf4>Placa: p4lAf4
+ Marca: toyota
+ Modelo: MM5"]
+"Estructuras.NodoAB@5e8dc81a" -> "Estructuras.NodoAB@46b911b8"
+"Estructuras.NodoAB@46b911b8" [shape = record label = "<p36lAf36>Placa: p36lAf36
+ Marca: volvo
+ Modelo: MM37|<p37lAf37>Placa: p37lAf37
+ Marca: volvo
+ Modelo: MM38|<p38lAf38>Placa: p38lAf38
+ Marca: volvo
+ Modelo: MM39|<p3lAf3>Placa: p3lAf3
+ Marca: toyota
+ Modelo: MM4|<p4lAf4>Placa: p4lAf4
+ Marca: toyota
+ Modelo: MM5"]
+"Estructuras.NodoAB@5e8dc81a" -> "Estructuras.NodoAB@799da10b"
+"Estructuras.NodoAB@799da10b" [shape = record label = "<p39lAf39>Placa: p39lAf39
+ Marca: volvo
+ Modelo: MM40|<p3lAf3>Placa: p3lAf3
+ Marca: toyota
+ Modelo: MM4|<p40lAf40>Placa: p40lAf40
+ Marca: volvo
+ Modelo: MM41|<p41lAf41>Placa: p41lAf41
+ Marca: volvo
+ Modelo: MM42|<p4lAf4>Placa: p4lAf4
+ Marca: toyota
+ Modelo: MM5"]
+"Estructuras.NodoAB@5e8dc81a" -> "Estructuras.NodoAB@34ef6481"
+"Estructuras.NodoAB@34ef6481" [shape = record label = "<p6lAf6>Placa: p6lAf6
+ Marca: toyota
+ Modelo: MM7|<p7lAf7>Placa: p7lAf7
+ Marca: toyota
+ Modelo: MM8|<p8lAf8>Placa: p8lAf8
+ Marca: toyota
+ Modelo: MM9|<p9lAf9>Placa: p9lAf9
+ Marca: toyota
+ Modelo: MM10|"]
+"Estructuras.NodoAB@6e7bb75b" -> "Estructuras.NodoAB@49607b3a"
+"Estructuras.NodoAB@49607b3a" [shape = record label = "<p38lAf38>Placa: p38lAf38
+ Marca: volvo
+ Modelo: MM39|<p40lAf40>Placa: p40lAf40
+ Marca: volvo
+ Modelo: MM41|<p43lAf43>Placa: p43lAf43
+ Marca: modificado
+ Modelo: MM44|<p46lAf46>Placa: p46lAf46
+ Marca: volvo
+ Modelo: MM47|<p5lAf5>Placa: p5lAf5
+ Marca: toyota
+ Modelo: MM6"]
+"Estructuras.NodoAB@49607b3a" -> "Estructuras.NodoAB@46b911b8"
+"Estructuras.NodoAB@46b911b8" [shape = record label = "<p36lAf36>Placa: p36lAf36
+ Marca: volvo
+ Modelo: MM37|<p37lAf37>Placa: p37lAf37
+ Marca: volvo
+ Modelo: MM38|<p38lAf38>Placa: p38lAf38
+ Marca: volvo
+ Modelo: MM39|<p3lAf3>Placa: p3lAf3
+ Marca: toyota
+ Modelo: MM4|<p4lAf4>Placa: p4lAf4
+ Marca: toyota
+ Modelo: MM5"]
+"Estructuras.NodoAB@49607b3a" -> "Estructuras.NodoAB@799da10b"
+"Estructuras.NodoAB@799da10b" [shape = record label = "<p39lAf39>Placa: p39lAf39
+ Marca: volvo
+ Modelo: MM40|<p3lAf3>Placa: p3lAf3
+ Marca: toyota
+ Modelo: MM4|<p40lAf40>Placa: p40lAf40
+ Marca: volvo
+ Modelo: MM41|<p41lAf41>Placa: p41lAf41
+ Marca: volvo
+ Modelo: MM42|<p4lAf4>Placa: p4lAf4
+ Marca: toyota
+ Modelo: MM5"]
+"Estructuras.NodoAB@49607b3a" -> "Estructuras.NodoAB@592234dd"
+"Estructuras.NodoAB@592234dd" [shape = record label = "<p41lAf41>Placa: p41lAf41
+ Marca: volvo
+ Modelo: MM42|<p42lAf42>Placa: p42lAf42
+ Marca: volvo
+ Modelo: MM43|<p43lAf43>Placa: p43lAf43
+ Marca: modificado
+ Modelo: MM44|<p44lAf44>Placa: p44lAf44
+ Marca: volvo
+ Modelo: MM45|<p4lAf4>Placa: p4lAf4
+ Marca: toyota
+ Modelo: MM5"]
+"Estructuras.NodoAB@49607b3a" -> "Estructuras.NodoAB@5718ca90"
+"Estructuras.NodoAB@5718ca90" [shape = record label = "<p44lAf44>Placa: p44lAf44
+ Marca: volvo
+ Modelo: MM45|<p45lAf45>Placa: p45lAf45
+ Marca: volvo
+ Modelo: MM46|<p46lAf46>Placa: p46lAf46
+ Marca: volvo
+ Modelo: MM47|<p47lAf47>Placa: p47lAf47
+ Marca: volvo
+ Modelo: MM48|<p4lAf4>Placa: p4lAf4
+ Marca: toyota
+ Modelo: MM5"]
+"Estructuras.NodoAB@49607b3a" -> "Estructuras.NodoAB@4319bc81"
+"Estructuras.NodoAB@4319bc81" [shape = record label = "<p47lAf47>Placa: p47lAf47
+ Marca: volvo
+ Modelo: MM48|<p48lAf48>Placa: p48lAf48
+ Marca: volvo
+ Modelo: MM49|<p49lAf49>Placa: p49lAf49
+ Marca: volvo
+ Modelo: MM50|<p4lAf4>Placa: p4lAf4
+ Marca: toyota
+ Modelo: MM5|"]
+"Estructuras.NodoAB@49607b3a" -> "Estructuras.NodoAB@34ef6481"
+"Estructuras.NodoAB@34ef6481" [shape = record label = "<p6lAf6>Placa: p6lAf6
+ Marca: toyota
+ Modelo: MM7|<p7lAf7>Placa: p7lAf7
+ Marca: toyota
+ Modelo: MM8|<p8lAf8>Placa: p8lAf8
+ Marca: toyota
+ Modelo: MM9|<p9lAf9>Placa: p9lAf9
+ Marca: toyota
+ Modelo: MM10|"]
+"Estructuras.NodoAB@6e7bb75b" -> "Estructuras.NodoAB@9eaa673"
+"Estructuras.NodoAB@9eaa673" [shape = record label = "<p46lAf46>Placa: p46lAf46
+ Marca: volvo
+ Modelo: MM47|<p5lAf5>Placa: p5lAf5
+ Marca: toyota
+ Modelo: MM6|"]
+"Estructuras.NodoAB@9eaa673" -> "Estructuras.NodoAB@5718ca90"
+"Estructuras.NodoAB@5718ca90" [shape = record label = "<p44lAf44>Placa: p44lAf44
+ Marca: volvo
+ Modelo: MM45|<p45lAf45>Placa: p45lAf45
+ Marca: volvo
+ Modelo: MM46|<p46lAf46>Placa: p46lAf46
+ Marca: volvo
+ Modelo: MM47|<p47lAf47>Placa: p47lAf47
+ Marca: volvo
+ Modelo: MM48|<p4lAf4>Placa: p4lAf4
+ Marca: toyota
+ Modelo: MM5"]
+"Estructuras.NodoAB@9eaa673" -> "Estructuras.NodoAB@4319bc81"
+"Estructuras.NodoAB@4319bc81" [shape = record label = "<p47lAf47>Placa: p47lAf47
+ Marca: volvo
+ Modelo: MM48|<p48lAf48>Placa: p48lAf48
+ Marca: volvo
+ Modelo: MM49|<p49lAf49>Placa: p49lAf49
+ Marca: volvo
+ Modelo: MM50|<p4lAf4>Placa: p4lAf4
+ Marca: toyota
+ Modelo: MM5|"]
+"Estructuras.NodoAB@9eaa673" -> "Estructuras.NodoAB@34ef6481"
+"Estructuras.NodoAB@34ef6481" [shape = record label = "<p6lAf6>Placa: p6lAf6
+ Marca: toyota
+ Modelo: MM7|<p7lAf7>Placa: p7lAf7
+ Marca: toyota
+ Modelo: MM8|<p8lAf8>Placa: p8lAf8
+ Marca: toyota
+ Modelo: MM9|<p9lAf9>Placa: p9lAf9
+ Marca: toyota
+ Modelo: MM10|"]
+}

@@ -1,0 +1,951 @@
+digraph BlockChain{
+subgraph cluster_hash{
+style = filled
+color=aliceblue
+label="Tabla Hash"
+0 [ shape = box label = "Origen: 0" ]
+0 -> "3000853708101"
+"3000853708101" [shape = box label = "Dpi: 3000853708101
+Nombre completo: Surely Juarez"]
+"3000853708101" -> "3000853700701"
+"3000853700701" [shape = box label = "Dpi: 3000853700701
+Nombre completo: Oscar Gutierrez"]
+"3000853700701" -> "3000853700109"
+"3000853700109" [shape = box label = "Dpi: 3000853700109
+Nombre completo: Alejandra Rivera"]
+{rank = same; 0; "3000853708101"; "3000853700701"; "3000853700109"; }
+0 -> 1
+1 [ shape = box label = "Origen: 1" ]
+1 -> "3000853709101"
+"3000853709101" [shape = box label = "Dpi: 3000853709101
+Nombre completo: Ashley Boanerges"]
+"3000853709101" -> "3000853700110"
+"3000853700110" [shape = box label = "Dpi: 3000853700110
+Nombre completo: Paola Castillo"]
+{rank = same; 1; "3000853709101"; "3000853700110"; }
+1 -> 2
+2 [ shape = box label = "Origen: 2" ]
+2 -> "3000853710101"
+"3000853710101" [shape = box label = "Dpi: 3000853710101
+Nombre completo: Shirley Pinillos"]
+{rank = same; 2; "3000853710101"; }
+2 -> 3
+3 [ shape = box label = "Origen: 3" ]
+3 -> 4
+4 [ shape = box label = "Origen: 4" ]
+4 -> 5
+5 [ shape = box label = "Origen: 5" ]
+5 -> "2897107230101"
+"2897107230101" [shape = box label = "Dpi: 2897107230101
+Nombre completo: Jose Carlos I Alonzo Colocho"]
+"2897107230101" -> "3000853700151"
+"3000853700151" [shape = box label = "Dpi: 3000853700151
+Nombre completo: Alejandro Arriola"]
+{rank = same; 5; "2897107230101"; "3000853700151"; }
+5 -> 6
+6 [ shape = box label = "Origen: 6" ]
+6 -> 7
+7 [ shape = box label = "Origen: 7" ]
+7 -> "3000853700301"
+"3000853700301" [shape = box label = "Dpi: 3000853700301
+Nombre completo: Maximiliano Rivera"]
+{rank = same; 7; "3000853700301"; }
+7 -> 8
+8 [ shape = box label = "Origen: 8" ]
+8 -> "3000853790101"
+"3000853790101" [shape = box label = "Dpi: 3000853790101
+Nombre completo: Modificado Arriola"]
+"3000853790101" -> "3000853700191"
+"3000853700191" [shape = box label = "Dpi: 3000853700191
+Nombre completo: Ulysses Benitez"]
+{rank = same; 8; "3000853790101"; "3000853700191"; }
+8 -> 9
+9 [ shape = box label = "Origen: 9" ]
+9 -> 10
+10 [ shape = box label = "Origen: 10" ]
+10 -> 11
+11 [ shape = box label = "Origen: 11" ]
+11 -> "3000853700601"
+"3000853700601" [shape = box label = "Dpi: 3000853700601
+Nombre completo: Raul Pelaez"]
+{rank = same; 11; "3000853700601"; }
+11 -> 12
+12 [ shape = box label = "Origen: 12" ]
+12 -> "3000853720101"
+"3000853720101" [shape = box label = "Dpi: 3000853720101
+Nombre completo: Mynor Montserrat"]
+"3000853720101" -> "3000853700121"
+"3000853700121" [shape = box label = "Dpi: 3000853700121
+Nombre completo: Dominga Retana"]
+{rank = same; 12; "3000853720101"; "3000853700121"; }
+12 -> 13
+13 [ shape = box label = "Origen: 13" ]
+13 -> 14
+14 [ shape = box label = "Origen: 14" ]
+14 -> 15
+15 [ shape = box label = "Origen: 15" ]
+15 -> "3000853760101"
+"3000853760101" [shape = box label = "Dpi: 3000853760101
+Nombre completo: Rafael Ruano"]
+"3000853760101" -> "3000853700901"
+"3000853700901" [shape = box label = "Dpi: 3000853700901
+Nombre completo: Flor Castillo"]
+"3000853700901" -> "3000853700161"
+"3000853700161" [shape = box label = "Dpi: 3000853700161
+Nombre completo: Samuel Ruiz"]
+{rank = same; 15; "3000853760101"; "3000853700901"; "3000853700161"; }
+15 -> 16
+16 [ shape = box label = "Origen: 16" ]
+16 -> 17
+17 [ shape = box label = "Origen: 17" ]
+17 -> 18
+18 [ shape = box label = "Origen: 18" ]
+18 -> "3000853700201"
+"3000853700201" [shape = box label = "Dpi: 3000853700201
+Nombre completo: Pancho Orellana"]
+{rank = same; 18; "3000853700201"; }
+18 -> 19
+19 [ shape = box label = "Origen: 19" ]
+19 -> 20
+20 [ shape = box label = "Origen: 20" ]
+20 -> 21
+21 [ shape = box label = "Origen: 21" ]
+21 -> 22
+22 [ shape = box label = "Origen: 22" ]
+22 -> "3000853730101"
+"3000853730101" [shape = box label = "Dpi: 3000853730101
+Nombre completo: Geovanni Chavez"]
+"3000853730101" -> "3000853700501"
+"3000853700501" [shape = box label = "Dpi: 3000853700501
+Nombre completo: Daniel Castro"]
+"3000853700501" -> "3000853700131"
+"3000853700131" [shape = box label = "Dpi: 3000853700131
+Nombre completo: Luli Lopez"]
+{rank = same; 22; "3000853730101"; "3000853700501"; "3000853700131"; }
+22 -> 23
+23 [ shape = box label = "Origen: 23" ]
+23 -> 24
+24 [ shape = box label = "Origen: 24" ]
+24 -> 25
+25 [ shape = box label = "Origen: 25" ]
+25 -> "3000853770101"
+"3000853770101" [shape = box label = "Dpi: 3000853770101
+Nombre completo: Christian Pelaez"]
+"3000853770101" -> "3000853700171"
+"3000853700171" [shape = box label = "Dpi: 3000853700171
+Nombre completo: Miguel Gomez"]
+{rank = same; 25; "3000853770101"; "3000853700171"; }
+25 -> 26
+26 [ shape = box label = "Origen: 26" ]
+26 -> "3000853700801"
+"3000853700801" [shape = box label = "Dpi: 3000853700801
+Nombre completo: Linda Retana2"]
+{rank = same; 26; "3000853700801"; }
+26 -> 27
+27 [ shape = box label = "Origen: 27" ]
+27 -> 28
+28 [ shape = box label = "Origen: 28" ]
+28 -> 29
+29 [ shape = box label = "Origen: 29" ]
+29 -> "3000853700101"
+"3000853700101" [shape = box label = "Dpi: 3000853700101
+Nombre completo: Susel Retana"]
+{rank = same; 29; "3000853700101"; }
+29 -> 30
+30 [ shape = box label = "Origen: 30" ]
+30 -> "3001853700101"
+"3001853700101" [shape = box label = "Dpi: 3001853700101
+Nombre completo: Hernaldo Juarez"]
+"3001853700101" -> "3000853701101"
+"3000853701101" [shape = box label = "Dpi: 3000853701101
+Nombre completo: Estephanie De Leon"]
+"3000853701101" -> "3000853700102"
+"3000853700102" [shape = box label = "Dpi: 3000853700102
+Nombre completo: Leila Gomez"]
+{rank = same; 30; "3001853700101"; "3000853701101"; "3000853700102"; }
+30 -> 31
+31 [ shape = box label = "Origen: 31" ]
+31 -> "3002853700101"
+"3002853700101" [shape = box label = "Dpi: 3002853700101
+Nombre completo: Luis Filomeno"]
+"3002853700101" -> "3000853702101"
+"3000853702101" [shape = box label = "Dpi: 3000853702101
+Nombre completo: Alany Ixchel"]
+"3000853702101" -> "3000853700103"
+"3000853700103" [shape = box label = "Dpi: 3000853700103
+Nombre completo: Emy Ruiz"]
+{rank = same; 31; "3002853700101"; "3000853702101"; "3000853700103"; }
+31 -> 32
+32 [ shape = box label = "Origen: 32" ]
+32 -> "3000853740101"
+"3000853740101" [shape = box label = "Dpi: 3000853740101
+Nombre completo: Alex Sanabria"]
+"3000853740101" -> "3000853703101"
+"3000853703101" [shape = box label = "Dpi: 3000853703101
+Nombre completo: Roxana Pu"]
+"3000853703101" -> "3000853700141"
+"3000853700141" [shape = box label = "Dpi: 3000853700141
+Nombre completo: Sebastian Retana"]
+"3000853700141" -> "3000853700104"
+"3000853700104" [shape = box label = "Dpi: 3000853700104
+Nombre completo: Roxana Lopez"]
+{rank = same; 32; "3000853740101"; "3000853703101"; "3000853700141"; "3000853700104"; }
+32 -> 33
+33 [ shape = box label = "Origen: 33" ]
+33 -> "3000853704101"
+"3000853704101" [shape = box label = "Dpi: 3000853704101
+Nombre completo: Amanda Taylor"]
+"3000853704101" -> "3000853700401"
+"3000853700401" [shape = box label = "Dpi: 3000853700401
+Nombre completo: Sergio Castillo"]
+"3000853700401" -> "3000853700105"
+"3000853700105" [shape = box label = "Dpi: 3000853700105
+Nombre completo: Angela Pelaez"]
+{rank = same; 33; "3000853704101"; "3000853700401"; "3000853700105"; }
+33 -> 34
+34 [ shape = box label = "Origen: 34" ]
+34 -> "3000853705101"
+"3000853705101" [shape = box label = "Dpi: 3000853705101
+Nombre completo: Sandra Martinez"]
+"3000853705101" -> "3000853700106"
+"3000853700106" [shape = box label = "Dpi: 3000853700106
+Nombre completo: Isabel Gutierrez"]
+{rank = same; 34; "3000853705101"; "3000853700106"; }
+34 -> 35
+35 [ shape = box label = "Origen: 35" ]
+35 -> "3000853780101"
+"3000853780101" [shape = box label = "Dpi: 3000853780101
+Nombre completo: Jian Gutierrez"]
+"3000853780101" -> "3000853706101"
+"3000853706101" [shape = box label = "Dpi: 3000853706101
+Nombre completo: Angel Pelaez"]
+"3000853706101" -> "3000853700181"
+"3000853700181" [shape = box label = "Dpi: 3000853700181
+Nombre completo: Javier Pelaez"]
+"3000853700181" -> "3000853700107"
+"3000853700107" [shape = box label = "Dpi: 3000853700107
+Nombre completo: Andrea Arriola"]
+{rank = same; 35; "3000853780101"; "3000853706101"; "3000853700181"; "3000853700107"; }
+35 -> 36
+36 [ shape = box label = "Origen: 36" ]
+36 -> "3000853707101"
+"3000853707101" [shape = box label = "Dpi: 3000853707101
+Nombre completo: Susely Gomez"]
+"3000853707101" -> "3000853700108"
+"3000853700108" [shape = box label = "Dpi: 3000853700108
+Nombre completo: Abigail Solares"]
+{rank = same; 36; "3000853707101"; "3000853700108"; }
+}
+subgraph cluster_doble{
+style=filled
+label="Lista Doble Circular"
+Color=aquamarine
+"1000853700100" [label = "Dpi: 1000853700100
+Nombre completo: Susan Retana"]
+"1000853700100" -> "1000853700101"
+"1000853700101" [label = "Dpi: 1000853700101
+Nombre completo: Sonia Lopez"]
+"1000853700101" -> "1000853700102"
+"1000853700102" [label = "Dpi: 1000853700102
+Nombre completo: Rebeca Castillo"]
+"1000853700102" -> "1000853700103"
+"1000853700103" [label = "Dpi: 1000853700103
+Nombre completo: Melissa Pirir"]
+"1000853700103" -> "1000853700104"
+"1000853700104" [label = "Dpi: 1000853700104
+Nombre completo: Lourdes Ruano"]
+"1000853700104" -> "1000853700105"
+"1000853700105" [label = "Dpi: 1000853700105
+Nombre completo: Gabriela Pelaez"]
+"1000853700105" -> "1000853700106"
+"1000853700106" [label = "Dpi: 1000853700106
+Nombre completo: Jessica Lopez"]
+"1000853700106" -> "1000853700107"
+"1000853700107" [label = "Dpi: 1000853700107
+Nombre completo: Rosa Sanabria"]
+"1000853700107" -> "1000853700108"
+"1000853700108" [label = "Dpi: 1000853700108
+Nombre completo: Isabel Taylor"]
+"1000853700108" -> "1000853700109"
+"1000853700109" [label = "Dpi: 1000853700109
+Nombre completo: Evelyn Vallejo"]
+"1000853700109" -> "1000853700110"
+"1000853700110" [label = "Dpi: 1000853700110
+Nombre completo: Sindy Ruiz"]
+"1000853700110" -> "1000853700111"
+"1000853700111" [label = "Dpi: 1000853700111
+Nombre completo: Marcela Gomez"]
+"1000853700111" -> "1000853700112"
+"1000853700112" [label = "Dpi: 1000853700112
+Nombre completo: Heidy Hurtado"]
+"1000853700112" -> "1000853700113"
+"1000853700113" [label = "Dpi: 1000853700113
+Nombre completo: Alexandra Solano"]
+"1000853700113" -> "1000853700114"
+"1000853700114" [label = "Dpi: 1000853700114
+Nombre completo: Leonor Rojas"]
+"1000853700114" -> "1000853700115"
+"1000853700115" [label = "Dpi: 1000853700115
+Nombre completo: Fabiola Madrigal"]
+"1000853700115" -> "2897107230102"
+"2897107230102" [label = "Dpi: 2897107230102
+Nombre completo: Jose Alonzo"]
+"2897107230102" -> "7805544360000"
+"7805544360000" [label = "Dpi: 7805544360000
+Nombre completo: Modificado Ordonez"]
+"7805544360000" -> "7805544360002"
+"7805544360002" [label = "Dpi: 7805544360002
+Nombre completo: Henry Galicia"]
+"7805544360002" -> "7805544360003"
+"7805544360003" [label = "Dpi: 7805544360003
+Nombre completo: Alan Donis"]
+"7805544360003" -> "7805544360004"
+"7805544360004" [label = "Dpi: 7805544360004
+Nombre completo: Esteban Arriola"]
+"7805544360004" -> "7805544360005"
+"7805544360005" [label = "Dpi: 7805544360005
+Nombre completo: Josue Gutierrez"]
+"7805544360005" -> "7805544360006"
+"7805544360006" [label = "Dpi: 7805544360006
+Nombre completo: Eduardo Chavez"]
+"7805544360006" -> "7805544360007"
+"7805544360007" [label = "Dpi: 7805544360007
+Nombre completo: Melvin Belteton"]
+"7805544360007" -> "7805544360008"
+"7805544360008" [label = "Dpi: 7805544360008
+Nombre completo: Guillermo Cux"]
+"7805544360008" -> "7805544360009"
+"7805544360009" [label = "Dpi: 7805544360009
+Nombre completo: Byron Juarez"]
+"7805544360009" -> "7805544360010"
+"7805544360010" [label = "Dpi: 7805544360010
+Nombre completo: Mainor Rivera"]
+"7805544360010" -> "7805544360011"
+"7805544360011" [label = "Dpi: 7805544360011
+Nombre completo: Edgar Samayoa"]
+"7805544360011" -> "7805544360012"
+"7805544360012" [label = "Dpi: 7805544360012
+Nombre completo: Yerit Guevara"]
+"7805544360012" -> "7805544360013"
+"7805544360013" [label = "Dpi: 7805544360013
+Nombre completo: Ignacio Molina"]
+"7805544360013" -> "7805544360014"
+"7805544360014" [label = "Dpi: 7805544360014
+Nombre completo: Diego Leiva"]
+"7805544360014" -> "7805544360015"
+"7805544360015" [label = "Dpi: 7805544360015
+Nombre completo: Leonardo Moreno"]
+"7805544360015" -> "1000853700100"
+"1000853700100" -> "7805544360015"
+"7805544360015" -> "7805544360014"
+"7805544360014" -> "7805544360013"
+"7805544360013" -> "7805544360012"
+"7805544360012" -> "7805544360011"
+"7805544360011" -> "7805544360010"
+"7805544360010" -> "7805544360009"
+"7805544360009" -> "7805544360008"
+"7805544360008" -> "7805544360007"
+"7805544360007" -> "7805544360006"
+"7805544360006" -> "7805544360005"
+"7805544360005" -> "7805544360004"
+"7805544360004" -> "7805544360003"
+"7805544360003" -> "7805544360002"
+"7805544360002" -> "7805544360000"
+"7805544360000" -> "2897107230102"
+"2897107230102" -> "1000853700115"
+"1000853700115" -> "1000853700114"
+"1000853700114" -> "1000853700113"
+"1000853700113" -> "1000853700112"
+"1000853700112" -> "1000853700111"
+"1000853700111" -> "1000853700110"
+"1000853700110" -> "1000853700109"
+"1000853700109" -> "1000853700108"
+"1000853700108" -> "1000853700107"
+"1000853700107" -> "1000853700106"
+"1000853700106" -> "1000853700105"
+"1000853700105" -> "1000853700104"
+"1000853700104" -> "1000853700103"
+"1000853700103" -> "1000853700102"
+"1000853700102" -> "1000853700101"
+"1000853700101" -> "1000853700100"
+}
+subgraph cluster_arbolB{
+style=filled
+label="Arbol B"
+color=beige
+"Estructuras.NodoAB@6e7bb75b" [shape = record label = "<p17lAf17>Placa: p17lAf17
+ Marca: toyota
+ Modelo: MM18|<p25lAf25>Placa: p25lAf25
+ Marca: hyundai
+ Modelo: MM26|<p35lAf35>Placa: p35lAf35
+ Marca: volvo
+ Modelo: MM36|<p43lAf43>Placa: p43lAf43
+ Marca: modificado
+ Modelo: MM44|"]
+"Estructuras.NodoAB@6e7bb75b" -> "Estructuras.NodoAB@27527abb"
+"Estructuras.NodoAB@27527abb" [shape = record label = "<p11lAf11>Placa: p11lAf11
+ Marca: toyota
+ Modelo: MM12|<p14lAf14>Placa: p14lAf14
+ Marca: toyota
+ Modelo: MM15|<p17lAf17>Placa: p17lAf17
+ Marca: toyota
+ Modelo: MM18|<p2lAf2>Placa: p2lAf2
+ Marca: toyota
+ Modelo: MM3|<p5lAf5>Placa: p5lAf5
+ Marca: toyota
+ Modelo: MM6"]
+"Estructuras.NodoAB@27527abb" -> "Estructuras.NodoAB@34fcfa0d"
+"Estructuras.NodoAB@34fcfa0d" [shape = record label = "<123abc>Placa: 123abc
+ Marca: honda
+ Modelo: modelo|<p0lAf0>Placa: p0lAf0
+ Marca: toyota
+ Modelo: MM1|<p10lAf10>Placa: p10lAf10
+ Marca: toyota
+ Modelo: MM11|<p12lAf12>Placa: p12lAf12
+ Marca: toyota
+ Modelo: MM13|<p1lAf1>Placa: p1lAf1
+ Marca: toyota
+ Modelo: MM2"]
+"Estructuras.NodoAB@27527abb" -> "Estructuras.NodoAB@20fc1226"
+"Estructuras.NodoAB@20fc1226" [shape = record label = "<p12lAf12>Placa: p12lAf12
+ Marca: toyota
+ Modelo: MM13|<p13lAf13>Placa: p13lAf13
+ Marca: toyota
+ Modelo: MM14|<p14lAf14>Placa: p14lAf14
+ Marca: toyota
+ Modelo: MM15|<p15lAf15>Placa: p15lAf15
+ Marca: toyota
+ Modelo: MM16|<p1lAf1>Placa: p1lAf1
+ Marca: toyota
+ Modelo: MM2"]
+"Estructuras.NodoAB@27527abb" -> "Estructuras.NodoAB@138eb80d"
+"Estructuras.NodoAB@138eb80d" [shape = record label = "<p15lAf15>Placa: p15lAf15
+ Marca: toyota
+ Modelo: MM16|<p16lAf16>Placa: p16lAf16
+ Marca: toyota
+ Modelo: MM17|<p17lAf17>Placa: p17lAf17
+ Marca: toyota
+ Modelo: MM18|<p18lAf18>Placa: p18lAf18
+ Marca: hyundai
+ Modelo: MM19|<p1lAf1>Placa: p1lAf1
+ Marca: toyota
+ Modelo: MM2"]
+"Estructuras.NodoAB@27527abb" -> "Estructuras.NodoAB@27bd8f65"
+"Estructuras.NodoAB@27bd8f65" [shape = record label = "<p18lAf18>Placa: p18lAf18
+ Marca: hyundai
+ Modelo: MM19|<p19lAf19>Placa: p19lAf19
+ Marca: hyundai
+ Modelo: MM20|<p1lAf1>Placa: p1lAf1
+ Marca: toyota
+ Modelo: MM2|<p20lAf20>Placa: p20lAf20
+ Marca: hyundai
+ Modelo: MM21|<p21lAf21>Placa: p21lAf21
+ Marca: hyundai
+ Modelo: MM22"]
+"Estructuras.NodoAB@27527abb" -> "Estructuras.NodoAB@7442350d"
+"Estructuras.NodoAB@7442350d" [shape = record label = "<p30lAf30>Placa: p30lAf30
+ Marca: hyundai
+ Modelo: MM31|<p31lAf31>Placa: p31lAf31
+ Marca: hyundai
+ Modelo: MM32|<p32lAf32>Placa: p32lAf32
+ Marca: hyundai
+ Modelo: MM33|<p3lAf3>Placa: p3lAf3
+ Marca: toyota
+ Modelo: MM4|<p4lAf4>Placa: p4lAf4
+ Marca: toyota
+ Modelo: MM5"]
+"Estructuras.NodoAB@27527abb" -> "Estructuras.NodoAB@34ef6481"
+"Estructuras.NodoAB@34ef6481" [shape = record label = "<p6lAf6>Placa: p6lAf6
+ Marca: toyota
+ Modelo: MM7|<p7lAf7>Placa: p7lAf7
+ Marca: toyota
+ Modelo: MM8|<p8lAf8>Placa: p8lAf8
+ Marca: toyota
+ Modelo: MM9|<p9lAf9>Placa: p9lAf9
+ Marca: toyota
+ Modelo: MM10|"]
+"Estructuras.NodoAB@6e7bb75b" -> "Estructuras.NodoAB@5247fcc1"
+"Estructuras.NodoAB@5247fcc1" [shape = record label = "<p1lAf1>Placa: p1lAf1
+ Marca: toyota
+ Modelo: MM2|<p22lAf22>Placa: p22lAf22
+ Marca: hyundai
+ Modelo: MM23|<p25lAf25>Placa: p25lAf25
+ Marca: hyundai
+ Modelo: MM26|<p2lAf2>Placa: p2lAf2
+ Marca: toyota
+ Modelo: MM3|<p5lAf5>Placa: p5lAf5
+ Marca: toyota
+ Modelo: MM6"]
+"Estructuras.NodoAB@5247fcc1" -> "Estructuras.NodoAB@27bd8f65"
+"Estructuras.NodoAB@27bd8f65" [shape = record label = "<p18lAf18>Placa: p18lAf18
+ Marca: hyundai
+ Modelo: MM19|<p19lAf19>Placa: p19lAf19
+ Marca: hyundai
+ Modelo: MM20|<p1lAf1>Placa: p1lAf1
+ Marca: toyota
+ Modelo: MM2|<p20lAf20>Placa: p20lAf20
+ Marca: hyundai
+ Modelo: MM21|<p21lAf21>Placa: p21lAf21
+ Marca: hyundai
+ Modelo: MM22"]
+"Estructuras.NodoAB@5247fcc1" -> "Estructuras.NodoAB@194a874b"
+"Estructuras.NodoAB@194a874b" [shape = record label = "<p20lAf20>Placa: p20lAf20
+ Marca: hyundai
+ Modelo: MM21|<p21lAf21>Placa: p21lAf21
+ Marca: hyundai
+ Modelo: MM22|<p22lAf22>Placa: p22lAf22
+ Marca: hyundai
+ Modelo: MM23|<p23lAf23>Placa: p23lAf23
+ Marca: hyundai
+ Modelo: MM24|<p24lAf24>Placa: p24lAf24
+ Marca: hyundai
+ Modelo: MM25"]
+"Estructuras.NodoAB@5247fcc1" -> "Estructuras.NodoAB@7c453332"
+"Estructuras.NodoAB@7c453332" [shape = record label = "<p23lAf23>Placa: p23lAf23
+ Marca: hyundai
+ Modelo: MM24|<p24lAf24>Placa: p24lAf24
+ Marca: hyundai
+ Modelo: MM25|<p25lAf25>Placa: p25lAf25
+ Marca: hyundai
+ Modelo: MM26|<p26lAf26>Placa: p26lAf26
+ Marca: hyundai
+ Modelo: MM27|<p27lAf27>Placa: p27lAf27
+ Marca: hyundai
+ Modelo: MM28"]
+"Estructuras.NodoAB@5247fcc1" -> "Estructuras.NodoAB@33c18b57"
+"Estructuras.NodoAB@33c18b57" [shape = record label = "<p26lAf26>Placa: p26lAf26
+ Marca: hyundai
+ Modelo: MM27|<p27lAf27>Placa: p27lAf27
+ Marca: hyundai
+ Modelo: MM28|<p28lAf28>Placa: p28lAf28
+ Marca: hyundai
+ Modelo: MM29|<p29lAf29>Placa: p29lAf29
+ Marca: hyundai
+ Modelo: MM30|"]
+"Estructuras.NodoAB@5247fcc1" -> "Estructuras.NodoAB@7442350d"
+"Estructuras.NodoAB@7442350d" [shape = record label = "<p30lAf30>Placa: p30lAf30
+ Marca: hyundai
+ Modelo: MM31|<p31lAf31>Placa: p31lAf31
+ Marca: hyundai
+ Modelo: MM32|<p32lAf32>Placa: p32lAf32
+ Marca: hyundai
+ Modelo: MM33|<p3lAf3>Placa: p3lAf3
+ Marca: toyota
+ Modelo: MM4|<p4lAf4>Placa: p4lAf4
+ Marca: toyota
+ Modelo: MM5"]
+"Estructuras.NodoAB@5247fcc1" -> "Estructuras.NodoAB@34ef6481"
+"Estructuras.NodoAB@34ef6481" [shape = record label = "<p6lAf6>Placa: p6lAf6
+ Marca: toyota
+ Modelo: MM7|<p7lAf7>Placa: p7lAf7
+ Marca: toyota
+ Modelo: MM8|<p8lAf8>Placa: p8lAf8
+ Marca: toyota
+ Modelo: MM9|<p9lAf9>Placa: p9lAf9
+ Marca: toyota
+ Modelo: MM10|"]
+"Estructuras.NodoAB@6e7bb75b" -> "Estructuras.NodoAB@5e8dc81a"
+"Estructuras.NodoAB@5e8dc81a" [shape = record label = "<p2lAf2>Placa: p2lAf2
+ Marca: toyota
+ Modelo: MM3|<p32lAf32>Placa: p32lAf32
+ Marca: hyundai
+ Modelo: MM33|<p35lAf35>Placa: p35lAf35
+ Marca: volvo
+ Modelo: MM36|<p38lAf38>Placa: p38lAf38
+ Marca: volvo
+ Modelo: MM39|<p5lAf5>Placa: p5lAf5
+ Marca: toyota
+ Modelo: MM6"]
+"Estructuras.NodoAB@5e8dc81a" -> "Estructuras.NodoAB@33c18b57"
+"Estructuras.NodoAB@33c18b57" [shape = record label = "<p26lAf26>Placa: p26lAf26
+ Marca: hyundai
+ Modelo: MM27|<p27lAf27>Placa: p27lAf27
+ Marca: hyundai
+ Modelo: MM28|<p28lAf28>Placa: p28lAf28
+ Marca: hyundai
+ Modelo: MM29|<p29lAf29>Placa: p29lAf29
+ Marca: hyundai
+ Modelo: MM30|"]
+"Estructuras.NodoAB@5e8dc81a" -> "Estructuras.NodoAB@7442350d"
+"Estructuras.NodoAB@7442350d" [shape = record label = "<p30lAf30>Placa: p30lAf30
+ Marca: hyundai
+ Modelo: MM31|<p31lAf31>Placa: p31lAf31
+ Marca: hyundai
+ Modelo: MM32|<p32lAf32>Placa: p32lAf32
+ Marca: hyundai
+ Modelo: MM33|<p3lAf3>Placa: p3lAf3
+ Marca: toyota
+ Modelo: MM4|<p4lAf4>Placa: p4lAf4
+ Marca: toyota
+ Modelo: MM5"]
+"Estructuras.NodoAB@5e8dc81a" -> "Estructuras.NodoAB@13b06c5f"
+"Estructuras.NodoAB@13b06c5f" [shape = record label = "<p33lAf33>Placa: p33lAf33
+ Marca: hyundai
+ Modelo: MM34|<p34lAf34>Placa: p34lAf34
+ Marca: volvo
+ Modelo: MM35|<p35lAf35>Placa: p35lAf35
+ Marca: volvo
+ Modelo: MM36|<p3lAf3>Placa: p3lAf3
+ Marca: toyota
+ Modelo: MM4|<p4lAf4>Placa: p4lAf4
+ Marca: toyota
+ Modelo: MM5"]
+"Estructuras.NodoAB@5e8dc81a" -> "Estructuras.NodoAB@46b911b8"
+"Estructuras.NodoAB@46b911b8" [shape = record label = "<p36lAf36>Placa: p36lAf36
+ Marca: volvo
+ Modelo: MM37|<p37lAf37>Placa: p37lAf37
+ Marca: volvo
+ Modelo: MM38|<p38lAf38>Placa: p38lAf38
+ Marca: volvo
+ Modelo: MM39|<p3lAf3>Placa: p3lAf3
+ Marca: toyota
+ Modelo: MM4|<p4lAf4>Placa: p4lAf4
+ Marca: toyota
+ Modelo: MM5"]
+"Estructuras.NodoAB@5e8dc81a" -> "Estructuras.NodoAB@799da10b"
+"Estructuras.NodoAB@799da10b" [shape = record label = "<p39lAf39>Placa: p39lAf39
+ Marca: volvo
+ Modelo: MM40|<p3lAf3>Placa: p3lAf3
+ Marca: toyota
+ Modelo: MM4|<p40lAf40>Placa: p40lAf40
+ Marca: volvo
+ Modelo: MM41|<p41lAf41>Placa: p41lAf41
+ Marca: volvo
+ Modelo: MM42|<p4lAf4>Placa: p4lAf4
+ Marca: toyota
+ Modelo: MM5"]
+"Estructuras.NodoAB@5e8dc81a" -> "Estructuras.NodoAB@34ef6481"
+"Estructuras.NodoAB@34ef6481" [shape = record label = "<p6lAf6>Placa: p6lAf6
+ Marca: toyota
+ Modelo: MM7|<p7lAf7>Placa: p7lAf7
+ Marca: toyota
+ Modelo: MM8|<p8lAf8>Placa: p8lAf8
+ Marca: toyota
+ Modelo: MM9|<p9lAf9>Placa: p9lAf9
+ Marca: toyota
+ Modelo: MM10|"]
+"Estructuras.NodoAB@6e7bb75b" -> "Estructuras.NodoAB@49607b3a"
+"Estructuras.NodoAB@49607b3a" [shape = record label = "<p38lAf38>Placa: p38lAf38
+ Marca: volvo
+ Modelo: MM39|<p40lAf40>Placa: p40lAf40
+ Marca: volvo
+ Modelo: MM41|<p43lAf43>Placa: p43lAf43
+ Marca: modificado
+ Modelo: MM44|<p46lAf46>Placa: p46lAf46
+ Marca: volvo
+ Modelo: MM47|<p5lAf5>Placa: p5lAf5
+ Marca: toyota
+ Modelo: MM6"]
+"Estructuras.NodoAB@49607b3a" -> "Estructuras.NodoAB@46b911b8"
+"Estructuras.NodoAB@46b911b8" [shape = record label = "<p36lAf36>Placa: p36lAf36
+ Marca: volvo
+ Modelo: MM37|<p37lAf37>Placa: p37lAf37
+ Marca: volvo
+ Modelo: MM38|<p38lAf38>Placa: p38lAf38
+ Marca: volvo
+ Modelo: MM39|<p3lAf3>Placa: p3lAf3
+ Marca: toyota
+ Modelo: MM4|<p4lAf4>Placa: p4lAf4
+ Marca: toyota
+ Modelo: MM5"]
+"Estructuras.NodoAB@49607b3a" -> "Estructuras.NodoAB@799da10b"
+"Estructuras.NodoAB@799da10b" [shape = record label = "<p39lAf39>Placa: p39lAf39
+ Marca: volvo
+ Modelo: MM40|<p3lAf3>Placa: p3lAf3
+ Marca: toyota
+ Modelo: MM4|<p40lAf40>Placa: p40lAf40
+ Marca: volvo
+ Modelo: MM41|<p41lAf41>Placa: p41lAf41
+ Marca: volvo
+ Modelo: MM42|<p4lAf4>Placa: p4lAf4
+ Marca: toyota
+ Modelo: MM5"]
+"Estructuras.NodoAB@49607b3a" -> "Estructuras.NodoAB@592234dd"
+"Estructuras.NodoAB@592234dd" [shape = record label = "<p41lAf41>Placa: p41lAf41
+ Marca: volvo
+ Modelo: MM42|<p42lAf42>Placa: p42lAf42
+ Marca: volvo
+ Modelo: MM43|<p43lAf43>Placa: p43lAf43
+ Marca: modificado
+ Modelo: MM44|<p44lAf44>Placa: p44lAf44
+ Marca: volvo
+ Modelo: MM45|<p4lAf4>Placa: p4lAf4
+ Marca: toyota
+ Modelo: MM5"]
+"Estructuras.NodoAB@49607b3a" -> "Estructuras.NodoAB@5718ca90"
+"Estructuras.NodoAB@5718ca90" [shape = record label = "<p44lAf44>Placa: p44lAf44
+ Marca: volvo
+ Modelo: MM45|<p45lAf45>Placa: p45lAf45
+ Marca: volvo
+ Modelo: MM46|<p46lAf46>Placa: p46lAf46
+ Marca: volvo
+ Modelo: MM47|<p47lAf47>Placa: p47lAf47
+ Marca: volvo
+ Modelo: MM48|<p4lAf4>Placa: p4lAf4
+ Marca: toyota
+ Modelo: MM5"]
+"Estructuras.NodoAB@49607b3a" -> "Estructuras.NodoAB@4319bc81"
+"Estructuras.NodoAB@4319bc81" [shape = record label = "<p47lAf47>Placa: p47lAf47
+ Marca: volvo
+ Modelo: MM48|<p48lAf48>Placa: p48lAf48
+ Marca: volvo
+ Modelo: MM49|<p49lAf49>Placa: p49lAf49
+ Marca: volvo
+ Modelo: MM50|<p4lAf4>Placa: p4lAf4
+ Marca: toyota
+ Modelo: MM5|"]
+"Estructuras.NodoAB@49607b3a" -> "Estructuras.NodoAB@34ef6481"
+"Estructuras.NodoAB@34ef6481" [shape = record label = "<p6lAf6>Placa: p6lAf6
+ Marca: toyota
+ Modelo: MM7|<p7lAf7>Placa: p7lAf7
+ Marca: toyota
+ Modelo: MM8|<p8lAf8>Placa: p8lAf8
+ Marca: toyota
+ Modelo: MM9|<p9lAf9>Placa: p9lAf9
+ Marca: toyota
+ Modelo: MM10|"]
+"Estructuras.NodoAB@6e7bb75b" -> "Estructuras.NodoAB@9eaa673"
+"Estructuras.NodoAB@9eaa673" [shape = record label = "<p46lAf46>Placa: p46lAf46
+ Marca: volvo
+ Modelo: MM47|<p5lAf5>Placa: p5lAf5
+ Marca: toyota
+ Modelo: MM6|"]
+"Estructuras.NodoAB@9eaa673" -> "Estructuras.NodoAB@5718ca90"
+"Estructuras.NodoAB@5718ca90" [shape = record label = "<p44lAf44>Placa: p44lAf44
+ Marca: volvo
+ Modelo: MM45|<p45lAf45>Placa: p45lAf45
+ Marca: volvo
+ Modelo: MM46|<p46lAf46>Placa: p46lAf46
+ Marca: volvo
+ Modelo: MM47|<p47lAf47>Placa: p47lAf47
+ Marca: volvo
+ Modelo: MM48|<p4lAf4>Placa: p4lAf4
+ Marca: toyota
+ Modelo: MM5"]
+"Estructuras.NodoAB@9eaa673" -> "Estructuras.NodoAB@4319bc81"
+"Estructuras.NodoAB@4319bc81" [shape = record label = "<p47lAf47>Placa: p47lAf47
+ Marca: volvo
+ Modelo: MM48|<p48lAf48>Placa: p48lAf48
+ Marca: volvo
+ Modelo: MM49|<p49lAf49>Placa: p49lAf49
+ Marca: volvo
+ Modelo: MM50|<p4lAf4>Placa: p4lAf4
+ Marca: toyota
+ Modelo: MM5|"]
+"Estructuras.NodoAB@9eaa673" -> "Estructuras.NodoAB@34ef6481"
+"Estructuras.NodoAB@34ef6481" [shape = record label = "<p6lAf6>Placa: p6lAf6
+ Marca: toyota
+ Modelo: MM7|<p7lAf7>Placa: p7lAf7
+ Marca: toyota
+ Modelo: MM8|<p8lAf8>Placa: p8lAf8
+ Marca: toyota
+ Modelo: MM9|<p9lAf9>Placa: p9lAf9
+ Marca: toyota
+ Modelo: MM10|"]
+}
+subgraph cluster_block{label="Block chain"style=filled
+color=palegreen"Estructuras.NodoL@6ebb85f7" [label = "Llave: b915c52b74c325ff3a4e844a84641e"]
+"Estructuras.NodoL@6ebb85f7" -> "Estructuras.NodoL@74100f2b"
+"Estructuras.NodoL@6ebb85f7" -> "3000853700109"
+"Estructuras.NodoL@6ebb85f7" -> "1000853700102"
+"Estructuras.NodoL@6ebb85f7" -> "Estructuras.NodoAB@6e7bb75b"
+"Estructuras.NodoL@6ebb85f7" -> "Estructuras.NodoLS@74381a31"
+subgraph cluster_0{
+color=lightpink
+style=filled
+label="Lista simple""Estructuras.NodoLS@74381a31" [label = "Lugar: Gerona
+Tiempo recorrido: 0"]
+"Estructuras.NodoLS@74381a31" -> "Estructuras.NodoLS@55fcba5d"
+"Estructuras.NodoLS@55fcba5d" [label = "Lugar: Barcelona
+Tiempo recorrido: 100"]
+"Estructuras.NodoLS@55fcba5d" -> "Estructuras.NodoLS@6c207496"
+"Estructuras.NodoLS@6c207496" [label = "Lugar: Zaragoza
+Tiempo recorrido: 396"]
+"Estructuras.NodoLS@6c207496" -> "Estructuras.NodoLS@5665eab1"
+"Estructuras.NodoLS@5665eab1" [label = "Lugar: Madrid
+Tiempo recorrido: 721"]
+}"Estructuras.NodoL@74100f2b" [label = "Llave: 7fc69b94f66918538cd85953e11d95c0"]
+"Estructuras.NodoL@74100f2b" -> "Estructuras.NodoL@c8f90b6"
+"Estructuras.NodoL@74100f2b" -> "3000853708101"
+"Estructuras.NodoL@74100f2b" -> "1000853700100"
+"Estructuras.NodoL@74100f2b" -> "Estructuras.NodoAB@6e7bb75b"
+"Estructuras.NodoL@74100f2b" -> "Estructuras.NodoLS@62b88bde"
+subgraph cluster_1{
+color=lightpink
+style=filled
+label="Lista simple""Estructuras.NodoLS@62b88bde" [label = "Lugar: Oviedo
+Tiempo recorrido: 0"]
+"Estructuras.NodoLS@62b88bde" -> "Estructuras.NodoLS@5226eb86"
+"Estructuras.NodoLS@5226eb86" [label = "Lugar: Bilbao
+Tiempo recorrido: 304"]
+"Estructuras.NodoLS@5226eb86" -> "Estructuras.NodoLS@3dcda190"
+"Estructuras.NodoLS@3dcda190" [label = "Lugar: Zaragoza
+Tiempo recorrido: 628"]
+}"Estructuras.NodoL@c8f90b6" [label = "Llave: e61d2f5a5b3482e9971fd26c662b93"]
+"Estructuras.NodoL@c8f90b6" -> "Estructuras.NodoL@2918386f"
+"Estructuras.NodoL@c8f90b6" -> "3000853708101"
+"Estructuras.NodoL@c8f90b6" -> "1000853700100"
+"Estructuras.NodoL@c8f90b6" -> "Estructuras.NodoAB@6e7bb75b"
+"Estructuras.NodoL@c8f90b6" -> "Estructuras.NodoLS@4404f4fa"
+subgraph cluster_2{
+color=lightpink
+style=filled
+label="Lista simple""Estructuras.NodoLS@4404f4fa" [label = "Lugar: Barcelona
+Tiempo recorrido: 0"]
+"Estructuras.NodoLS@4404f4fa" -> "Estructuras.NodoLS@62c471df"
+"Estructuras.NodoLS@62c471df" [label = "Lugar: Valencia
+Tiempo recorrido: 349"]
+"Estructuras.NodoLS@62c471df" -> "Estructuras.NodoLS@7dbccda"
+"Estructuras.NodoLS@7dbccda" [label = "Lugar: Murcia
+Tiempo recorrido: 590"]
+}"Estructuras.NodoL@2918386f" [label = "Llave: 195dad37c695a9f5fc6d43caafed07e"]
+"Estructuras.NodoL@2918386f" -> "Estructuras.NodoL@1b3e9486"
+"Estructuras.NodoL@2918386f" -> "3000853700701"
+"Estructuras.NodoL@2918386f" -> "1000853700100"
+"Estructuras.NodoL@2918386f" -> "Estructuras.NodoAB@6e7bb75b"
+"Estructuras.NodoL@2918386f" -> "Estructuras.NodoLS@574a3c90"
+subgraph cluster_3{
+color=lightpink
+style=filled
+label="Lista simple""Estructuras.NodoLS@574a3c90" [label = "Lugar: Madrid
+Tiempo recorrido: 0"]
+"Estructuras.NodoLS@574a3c90" -> "Estructuras.NodoLS@340aa1a7"
+"Estructuras.NodoLS@340aa1a7" [label = "Lugar: Albacete
+Tiempo recorrido: 251"]
+}"Estructuras.NodoL@1b3e9486" [label = "Llave: 3d2c6431916b2052bd57a99e8e1b77f1"]
+"Estructuras.NodoL@1b3e9486" -> "Estructuras.NodoL@6ebb85f7"
+"Estructuras.NodoL@1b3e9486" -> "3000853700701"
+"Estructuras.NodoL@1b3e9486" -> "1000853700104"
+"Estructuras.NodoL@1b3e9486" -> "Estructuras.NodoAB@6e7bb75b"
+"Estructuras.NodoL@1b3e9486" -> "Estructuras.NodoLS@75816470"
+subgraph cluster_4{
+color=lightpink
+style=filled
+label="Lista simple""Estructuras.NodoLS@75816470" [label = "Lugar: Valladolid
+Tiempo recorrido: 0"]
+"Estructuras.NodoLS@75816470" -> "Estructuras.NodoLS@2c65db06"
+"Estructuras.NodoLS@2c65db06" [label = "Lugar: Madrid
+Tiempo recorrido: 193"]
+"Estructuras.NodoLS@2c65db06" -> "Estructuras.NodoLS@2a4ddca6"
+"Estructuras.NodoLS@2a4ddca6" [label = "Lugar: Badajoz
+Tiempo recorrido: 596"]
+}"Estructuras.NodoL@6ebb85f7" -> "Estructuras.NodoL@1b3e9486"
+"Estructuras.NodoL@1b3e9486" -> "Estructuras.NodoL@2918386f"
+"Estructuras.NodoL@2918386f" -> "Estructuras.NodoL@c8f90b6"
+"Estructuras.NodoL@c8f90b6" -> "Estructuras.NodoL@74100f2b"
+"Estructuras.NodoL@74100f2b" -> "Estructuras.NodoL@6ebb85f7"
+}
+subgraph cluster_grafo{
+label="grafo"
+style=filled
+color=paleturquoise
+"Oviedo" [ label = " Oviedo" ]
+"Bilbao" [ label = "Bilbao" ]
+"Oviedo" -> "Bilbao" [ label = "304"]
+"Bilbao" [ label = " Bilbao" ]
+"Valladolid" [ label = "Valladolid" ]
+"Bilbao" -> "Valladolid" [ label = "280"]
+"Madrid" [ label = "Madrid" ]
+"Bilbao" -> "Madrid" [ label = "395"]
+"Zaragoza" [ label = "Zaragoza" ]
+"Bilbao" -> "Zaragoza" [ label = "324"]
+"Oviedo" [ label = "Oviedo" ]
+"Bilbao" -> "Oviedo" [ label = "304"]
+"Coruna" [ label = " Coruna" ]
+"Valladolid" [ label = "Valladolid" ]
+"Coruna" -> "Valladolid" [ label = "455"]
+"Vigo" [ label = "Vigo" ]
+"Coruna" -> "Vigo" [ label = "171"]
+"Vigo" [ label = " Vigo" ]
+"Valladolid" [ label = "Valladolid" ]
+"Vigo" -> "Valladolid" [ label = "356"]
+"Coruna" [ label = "Coruna" ]
+"Vigo" -> "Coruna" [ label = "171"]
+"Valladolid" [ label = " Valladolid" ]
+"Madrid" [ label = "Madrid" ]
+"Valladolid" -> "Madrid" [ label = "193"]
+"Vigo" [ label = "Vigo" ]
+"Valladolid" -> "Vigo" [ label = "356"]
+"Coruna" [ label = "Coruna" ]
+"Valladolid" -> "Coruna" [ label = "455"]
+"Bilbao" [ label = "Bilbao" ]
+"Valladolid" -> "Bilbao" [ label = "280"]
+"Badajoz" [ label = " Badajoz" ]
+"Madrid" [ label = "Madrid" ]
+"Badajoz" -> "Madrid" [ label = "403"]
+"Zaragoza" [ label = " Zaragoza" ]
+"Barcelona" [ label = "Barcelona" ]
+"Zaragoza" -> "Barcelona" [ label = "296"]
+"Madrid" [ label = "Madrid" ]
+"Zaragoza" -> "Madrid" [ label = "325"]
+"Bilbao" [ label = "Bilbao" ]
+"Zaragoza" -> "Bilbao" [ label = "324"]
+"Gerona" [ label = " Gerona" ]
+"Barcelona" [ label = "Barcelona" ]
+"Gerona" -> "Barcelona" [ label = "100"]
+"Barcelona" [ label = " Barcelona" ]
+"Valencia" [ label = "Valencia" ]
+"Barcelona" -> "Valencia" [ label = "349"]
+"Gerona" [ label = "Gerona" ]
+"Barcelona" -> "Gerona" [ label = "100"]
+"Zaragoza" [ label = "Zaragoza" ]
+"Barcelona" -> "Zaragoza" [ label = "296"]
+"Albacete" [ label = " Albacete" ]
+"Murcia" [ label = "Murcia" ]
+"Albacete" -> "Murcia" [ label = "150"]
+"Valencia" [ label = "Valencia" ]
+"Albacete" -> "Valencia" [ label = "191"]
+"Madrid" [ label = "Madrid" ]
+"Albacete" -> "Madrid" [ label = "251"]
+"Valencia" [ label = " Valencia" ]
+"Murcia" [ label = "Murcia" ]
+"Valencia" -> "Murcia" [ label = "241"]
+"Albacete" [ label = "Albacete" ]
+"Valencia" -> "Albacete" [ label = "191"]
+"Barcelona" [ label = "Barcelona" ]
+"Valencia" -> "Barcelona" [ label = "349"]
+"Madrid" [ label = " Madrid" ]
+"Jaen" [ label = "Jaen" ]
+"Madrid" -> "Jaen" [ label = "335"]
+"Albacete" [ label = "Albacete" ]
+"Madrid" -> "Albacete" [ label = "251"]
+"Zaragoza" [ label = "Zaragoza" ]
+"Madrid" -> "Zaragoza" [ label = "325"]
+"Badajoz" [ label = "Badajoz" ]
+"Madrid" -> "Badajoz" [ label = "403"]
+"Valladolid" [ label = "Valladolid" ]
+"Madrid" -> "Valladolid" [ label = "193"]
+"Bilbao" [ label = "Bilbao" ]
+"Madrid" -> "Bilbao" [ label = "395"]
+"Murcia" [ label = " Murcia" ]
+"Granada" [ label = "Granada" ]
+"Murcia" -> "Granada" [ label = "278"]
+"Valencia" [ label = "Valencia" ]
+"Murcia" -> "Valencia" [ label = "241"]
+"Albacete" [ label = "Albacete" ]
+"Murcia" -> "Albacete" [ label = "150"]
+"Jaen" [ label = " Jaen" ]
+"Sevilla" [ label = "Sevilla" ]
+"Jaen" -> "Sevilla" [ label = "242"]
+"Granada" [ label = "Granada" ]
+"Jaen" -> "Granada" [ label = "99"]
+"Madrid" [ label = "Madrid" ]
+"Jaen" -> "Madrid" [ label = "335"]
+"Granada" [ label = " Granada" ]
+"Sevilla" [ label = "Sevilla" ]
+"Granada" -> "Sevilla" [ label = "256"]
+"Jaen" [ label = "Jaen" ]
+"Granada" -> "Jaen" [ label = "99"]
+"Murcia" [ label = "Murcia" ]
+"Granada" -> "Murcia" [ label = "278"]
+"Sevilla" [ label = " Sevilla" ]
+"Cadiz" [ label = "Cadiz" ]
+"Sevilla" -> "Cadiz" [ label = "125"]
+"Granada" [ label = "Granada" ]
+"Sevilla" -> "Granada" [ label = "256"]
+"Jaen" [ label = "Jaen" ]
+"Sevilla" -> "Jaen" [ label = "242"]
+"Cadiz" [ label = " Cadiz" ]
+"Sevilla" [ label = "Sevilla" ]
+"Cadiz" -> "Sevilla" [ label = "125"]
+}}
